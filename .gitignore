@@ -1,2 +1,3 @@
 *.uistate.json
+scripts/**.js
 ts-defs
