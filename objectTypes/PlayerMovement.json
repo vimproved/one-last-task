@@ -8,8 +8,13 @@
 	"behaviorTypes": [
 		{
 			"behaviorId": "EightDir",
-			"name": "8Direction",
+			"name": "LeftRight",
 			"sid": 168745573624791
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "UpDown",
+			"sid": 823072677601816
 		}
 	],
 	"effectTypes": [],

@@ -163,12 +163,24 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"8Direction": {
+						"LeftRight": {
 							"properties": {
 								"max-speed": 200,
 								"acceleration": 600,
 								"deceleration": 500,
-								"directions": "dir-8",
+								"directions": "left-right",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"UpDown": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "up-down",
 								"set-angle": "smooth",
 								"allow-sliding": false,
 								"default-controls": true,
