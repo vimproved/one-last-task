@@ -1,0 +1,57 @@
+{
+	"sid": 724153790867661,
+	"nodes": [
+		{
+			"sid": 679187822032425,
+			"pnSIDs": [],
+			"poSIDs": [],
+			"nodeSIDs": [],
+			"outputs": [
+				{
+					"sid": 700668068288957,
+					"cnSID": null,
+					"name": "Option 1",
+					"value": "Value 1",
+					"enable": true,
+					"default": false
+				},
+				{
+					"sid": 177838563669284,
+					"cnSID": null,
+					"name": "Option 2",
+					"value": "Value 2",
+					"enable": true,
+					"default": false
+				},
+				{
+					"sid": 918714321116673,
+					"cnSID": null,
+					"name": "Option 3",
+					"value": "Value 3",
+					"enable": true,
+					"default": false
+				}
+			],
+			"x": 9888,
+			"y": 9944.5,
+			"w": 420,
+			"h": 199,
+			"t": "",
+			"s": true,
+			"e": true,
+			"pi": 0,
+			"c": "Start node",
+			"ty": "dictionary",
+			"pr": false,
+			"prfsid": null,
+			"prfnsid": null
+		}
+	],
+	"preset-nodes": {
+		"items": [],
+		"subfolders": []
+	},
+	"name": "Flowchart 1",
+	"w": 20000,
+	"h": 20000
+}

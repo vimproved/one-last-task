@@ -1,0 +1,184 @@
+{
+	"name": "Title_Screen",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 179696254244033
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite3",
+					"sid": 998838355337301
+				},
+				{
+					"id": "destroy",
+					"objectClass": "DialogueText",
+					"sid": 109424715531377
+				}
+			],
+			"sid": 900934693353906
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 821536613631683
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 724707833432116,
+					"parameters": {
+						"layout": "Bedroom"
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 940092659255904,
+					"parameters": [
+						"\"This is the bedroom!\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 973785179433190,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 465553203802672,
+					"parameters": [
+						"\"Text 2\""
+					]
+				}
+			],
+			"sid": 178067323850836
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 384021581623812
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Player",
+					"sid": 412632844205381,
+					"parameters": {
+						"object": "PlayerMovement",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 712425134991660
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 812892242545635
+				}
+			],
+			"actions": [],
+			"sid": 300967526886588,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 115744983530290,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-running-typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 169459701907028
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-finish",
+							"objectClass": "DialogueText",
+							"sid": 953910350671797
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TestingObject",
+							"sid": 184710500387278,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 437382425433888
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 545853800141659,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-running-typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 721031248740799,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 327721227338621,
+							"parameters": {
+								"tag": "\"Next\""
+							}
+						}
+					],
+					"sid": 142220221190266
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 996382420373738
+				}
+			],
+			"actions": [],
+			"sid": 969459314671380
+		}
+	],
+	"sid": 826970310153839
+}

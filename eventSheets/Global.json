@@ -1,0 +1,275 @@
+{
+	"name": "Global",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogue",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "dialogue",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Text",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 237719496063171
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "DialogueText",
+							"sid": 184118473218279
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Speaker",
+							"sid": 681594881515453
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sprite3",
+							"sid": 794472103253293
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Speaker_Background",
+							"sid": 457935513459939
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 266543135158331,
+							"parameters": {
+								"object-to-create": "Sprite3",
+								"layer": "1",
+								"x": "421",
+								"y": "454",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 600496047998914,
+							"parameters": {
+								"object-to-create": "Speaker_Background",
+								"layer": "1",
+								"x": "100",
+								"y": "350",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 990624168150694,
+							"parameters": {
+								"object-to-create": "DialogueText",
+								"layer": "1",
+								"x": "200",
+								"y": "400",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 682501812290501,
+							"parameters": {
+								"object-to-create": "Speaker",
+								"layer": "1",
+								"x": "100",
+								"y": "350",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 959900642088084,
+							"parameters": {
+								"text": "Text",
+								"duration": "2"
+							}
+						}
+					],
+					"sid": 325381671373241
+				},
+				{
+					"functionName": "destroyDialogue",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "DialogueText",
+							"sid": 994734223409214
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sprite3",
+							"sid": 577450861489867
+						}
+					],
+					"sid": 952404883586310
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 604465549106429
+						}
+					],
+					"actions": [],
+					"sid": 530744745130040,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 462965572568328,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-running-typewriter-text",
+									"objectClass": "DialogueText",
+									"sid": 300835208826262
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 958170623059832,
+									"parameters": {
+										"seconds": ".1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "typewriter-finish",
+									"objectClass": "DialogueText",
+									"sid": 240707361565439
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 475908024526647,
+									"parameters": {
+										"seconds": "1",
+										"use-timescale": true
+									}
+								}
+							],
+							"sid": 375700978788776
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 531576115571583,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-running-typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 911301912677026,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 628552966464396,
+							"parameters": {
+								"tag": "\"Next\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TestingObject",
+							"sid": 513922526684520,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 382400213055169
+				}
+			],
+			"sid": 490461196352611
+		},
+		{
+			"eventType": "comment",
+			"text": "^^Controls Dialogue, Dimensions may be wrong as of now, change dimensions later"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 615651175101572
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Player",
+							"sid": 780562081622670,
+							"parameters": {
+								"object": "PlayerMovement",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 319502962085703
+				}
+			],
+			"sid": 826448344204255
+		}
+	],
+	"sid": 163430010393623
+}
