@@ -165,9 +165,9 @@
 					"behaviors": {
 						"LeftRight": {
 							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 500,
+								"max-speed": 150,
+								"acceleration": 1200,
+								"deceleration": 1200,
 								"directions": "left-right",
 								"set-angle": "smooth",
 								"allow-sliding": false,
@@ -177,9 +177,9 @@
 						},
 						"UpDown": {
 							"properties": {
-								"max-speed": 100,
-								"acceleration": 600,
-								"deceleration": 500,
+								"max-speed": 75,
+								"acceleration": 1200,
+								"deceleration": 1200,
 								"directions": "up-down",
 								"set-angle": "smooth",
 								"allow-sliding": false,
