@@ -1,5 +1,5 @@
 {
-	"name": "Bedroom",
+	"name": "BedroomTutorial",
 	"layers": [
 		{
 			"name": "BACKGROUND",
@@ -320,9 +320,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 449,
-						"y": 280,
-						"width": 417,
+						"x": 415.176314852672,
+						"y": 263.14011950069596,
+						"width": 341.4143598982879,
 						"height": 33.04441130618925,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -421,6 +421,131 @@
 							1
 						],
 						"angle": 5.829751095207266,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartBoxes",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"sid": 140177836929241,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 140177836929241,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 621,
+						"y": 320,
+						"width": 98.730639063676,
+						"height": 135.2618363952429,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.262979961291032,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Boundaries",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"sid": 797065721502600,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 797065721502600,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 675.0619654707053,
+						"y": 299.38801508564774,
+						"width": 133.4491958841479,
+						"height": 33.04441130618925,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.46241784356228344,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Boundaries",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"sid": 871675362788628,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 871675362788628,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 591,
+						"y": 300,
+						"width": 133.4491958841479,
+						"height": 33.04441130618925,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.584547289088343,
 						"zElevation": 0
 					}
 				}
@@ -683,5 +808,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Bedroom"
+	"eventSheet": "BedroomTutorial"
 }

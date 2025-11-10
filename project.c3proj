@@ -49,6 +49,20 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -74,7 +88,9 @@
 			"Player",
 			"Boundaries",
 			"Mouse",
-			"Card"
+			"Card",
+			"StartBoxes",
+			"TiledBackground"
 		],
 		"subfolders": [
 			{
@@ -96,6 +112,20 @@
 				],
 				"subfolders": [],
 				"name": "Start Screen"
+			},
+			{
+				"items": [
+					"Box1",
+					"Box2",
+					"Box3",
+					"Box4",
+					"Box1End",
+					"box2end",
+					"box4end",
+					"box3end"
+				],
+				"subfolders": [],
+				"name": "Box MiniGame"
 			}
 		]
 	},
@@ -109,16 +139,19 @@
 	"layouts": {
 		"items": [
 			"Start Screen",
-			"Bedroom"
+			"BedroomTutorial",
+			"Box Minigame",
+			"Bedroom2"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Title_Screen",
-			"Bedroom",
+			"BedroomTutorial",
 			"Global",
-			"Bedroom_Cutscene"
+			"BoxGameLogic",
+			"Bedroom"
 		],
 		"subfolders": []
 	},

@@ -2,6 +2,16 @@
 	"name": "Global",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "stress",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 970874955460711
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",

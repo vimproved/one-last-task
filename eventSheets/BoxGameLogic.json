@@ -1,0 +1,196 @@
+{
+	"name": "BoxGameLogic",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 126108914742426,
+					"parameters": {
+						"tag": "\"StartBoxe\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 315116096578798
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 192194685569836
+				}
+			],
+			"actions": [],
+			"sid": 963182995174441,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box1",
+							"sid": 576724983440502,
+							"parameters": {
+								"object": "Box1End"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box1",
+							"sid": 299360660132316,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 440494032916508
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box2",
+							"sid": 720820547040008,
+							"parameters": {
+								"object": "box2end"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box2",
+							"sid": 525977780194401,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 526573516972717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box3",
+							"sid": 680699974187632,
+							"parameters": {
+								"object": "box3end"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box3",
+							"sid": 957766819423058,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 460604831386037
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box4",
+							"sid": 626511359836628,
+							"parameters": {
+								"object": "box4end"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box4",
+							"sid": 777993458016754,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 398600140339029
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 387151279067835
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Box1",
+					"sid": 954249208121142,
+					"parameters": {
+						"object": "Box1End"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Box2",
+					"sid": 933834641947834,
+					"parameters": {
+						"object": "box2end"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Box3",
+					"sid": 175683536969917,
+					"parameters": {
+						"object": "box3end"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Box4",
+					"sid": 423384057652483,
+					"parameters": {
+						"object": "box4end"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 265906953625856,
+					"parameters": {
+						"tag": "\"Boxgamedone\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 900400374377513,
+					"parameters": {
+						"layout": "Bedroom2"
+					}
+				}
+			],
+			"sid": 321402091568901
+		}
+	],
+	"sid": 740444447150043
+}
