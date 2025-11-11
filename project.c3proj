@@ -73,7 +73,8 @@
 			"PlayerMovement",
 			"Player",
 			"Boundaries",
-			"Mouse"
+			"Mouse",
+			"Card"
 		],
 		"subfolders": [
 			{
