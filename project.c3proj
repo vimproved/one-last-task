@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -65,7 +72,8 @@
 			"Keyboard",
 			"PlayerMovement",
 			"Player",
-			"Boundaries"
+			"Boundaries",
+			"Mouse"
 		],
 		"subfolders": [
 			{
@@ -115,7 +123,32 @@
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "main.ts",
+					"type": "application/typescript",
+					"sid": 921621850799896,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mgMemory.ts",
+					"type": "application/typescript",
+					"sid": 773921676679595,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "importsForEvents.ts",
+					"type": "application/typescript",
+					"sid": 278481031654408,
+					"script-info": {
+						"purpose": "imports-for-events"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
