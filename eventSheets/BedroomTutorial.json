@@ -239,6 +239,61 @@
 				}
 			],
 			"sid": 385763363310620
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 237003941962146
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 585175541430570,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-bottom",
+					"objectClass": "HilightedBox",
+					"sid": 934673936726171
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "HilightedBox",
+					"sid": 686643167507395,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 787261632367066
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 552480061616393
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "HilightedBox",
+					"sid": 994493077605049,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 996028289006931
 		}
 	],
 	"sid": 214246851524803
