@@ -4,7 +4,7 @@ import { MgMemory } from "./mgMemory.js"
 
 export enum State {
 	Disabled,
-	Base,
+	Begin,
 	MgMemory,
 }
 
@@ -62,11 +62,9 @@ function Tick(runtime : IRuntime)
 	// 	}
 	// }
 	if (state != State.Disabled) {
-		if (state == State.Base) {
-			if (mouse.isMouseButtonDown(0)) {
-				state = State.MgMemory
-				mgMemory.initialize()
-			}
+		if (state == State.Begin) {
+			state = State.MgMemory
+			mgMemory.initialize()
 		} else if (state == State.MgMemory) {
 			mgMemory.tick()
 			if (mgMemory.isDone()) {

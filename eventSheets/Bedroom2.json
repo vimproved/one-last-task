@@ -21,6 +21,42 @@
 				}
 			],
 			"sid": 573558558804685
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 921931157391381
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 856984063416219,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 131219415296819,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.Begin)"
+					]
+				}
+			],
+			"sid": 870464386371177
 		}
 	],
 	"sid": 203754346391334

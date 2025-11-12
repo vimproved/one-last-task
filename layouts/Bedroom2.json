@@ -364,9 +364,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 241,
-						"y": 263,
-						"width": 417,
+						"x": 126.94859769478181,
+						"y": 318.5769836255649,
+						"width": 163.25584951212738,
 						"height": 33.04441130618925,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -421,43 +421,6 @@
 							1
 						],
 						"angle": 5.829751095207266,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "StartBoxes",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 40,
-					"sid": 523629448708817,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 523629448708817,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 621,
-						"y": 320,
-						"width": 98.730639063676,
-						"height": 135.2618363952429,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 5.262979961291032,
 						"zElevation": 0
 					}
 				},
@@ -763,6 +726,131 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "StartBoxes",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"sid": 718275763466871,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 718275763466871,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 265.3929491924311,
+						"y": 267.48445554337724,
+						"width": 131.13599623708848,
+						"height": 34.67338731487652,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 2.6179938779914944,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Boundaries",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"sid": 183281699856349,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 183281699856349,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 239,
+						"y": 243,
+						"width": 163.25584951212738,
+						"height": 33.04441130618925,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.829751095207266,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Boundaries",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 40,
+					"sid": 681052463894710,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 681052463894710,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 577,
+						"y": 334,
+						"width": 133.4491958841479,
+						"height": 33.04441130618925,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.46241784356228344,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 507744432202501,
@@ -808,5 +896,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Bedroom"
+	"eventSheet": null
 }

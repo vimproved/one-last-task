@@ -228,14 +228,6 @@
 					"parameters": {
 						"tag": "\"Boxgamedone\""
 					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 959802064779032,
-					"parameters": {
-						"layout": "BedroomTutorial"
-					}
 				}
 			],
 			"sid": 385763363310620
