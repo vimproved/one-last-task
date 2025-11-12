@@ -1,0 +1,221 @@
+{
+	"name": "Bedroom",
+	"events": [],
+	"sid": 203754346391334,
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "mgMemoryRunning",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 462511349214997
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 607271483176365
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 540089114908371,
+					"parameters": [
+						"\"Opal: Ok! That box goes in that corner, and the chair goes over there\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 359347160785906,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 512075952302224,
+					"parameters": [
+						"\"Mom: Alright, sweetie, what about your desk and computer?\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 434967376376727,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 559539901225472,
+					"parameters": [
+						"\"Opal: Hm… We’ll put it against that wall\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 437647970925870,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 444248994049402,
+					"parameters": [
+						"\"Mom: Alright, sweetie, what about your desk and computer?\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 491000141468647,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 613548805930380,
+					"parameters": [
+						"\"Dad: This really is a nice apartment, how much did they say you were paying for rent again?\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 708155096749715,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 593864397204706,
+					"parameters": [
+						"\"Opal: Dad! I told you I have it covered, I have enough saved to pay rent for 6 months and I’m about to get a job as a spellcrafter, then I won’t ever have to worry about it\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 924107025435184,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 250279297540710,
+					"parameters": [
+						"\"Dad: I know, just are you sure you want to do this before you already have the job\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 485848612802317,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 224987581671325,
+					"parameters": [
+						"\"Opal: Yes! It’ll be fine, I already have my certifications, all I have to do is apply\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 108324703562970,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 211281281442496,
+					"parameters": [
+						"\"Mom: Carper, we’ve already had this talk with them, and they’ve already signed the lease. It’ll be fine, but if need be we’ll cross that bridge when we come to it.\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 859920897244152,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 786988301306463,
+					"parameters": [
+						"\"Dad: You’re right, I’m sorry Opal\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 192231599028603,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 586629872061699,
+					"parameters": [
+						"\"Opal: It’s alright, but trust me, I’ve got this!\"\n"
+					]
+				},
+				{
+					"type": "comment",
+					"text": "^^ This is the dialogue, aka cutscene 1"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 733966265354461,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 938273154525786,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.Base)"
+					]
+				}
+			],
+			"sid": 627537260281178
+		}
+	],
+	"sid": 214246851524803
+}

@@ -6,3 +6,4 @@
 // Then you can use 'myModule' in script blocks in event sheets.
 
 import { MgMemory } from "./mgMemory.js"
+import { state, State, updateState } from "./main.js"
