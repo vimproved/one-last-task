@@ -18,6 +18,13 @@
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 725090180425704
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 917658015513363,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
+					]
 				}
 			],
 			"sid": 573558558804685
