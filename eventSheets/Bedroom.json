@@ -1,21 +1,9 @@
 {
 	"name": "Bedroom",
-	"events": [],
-	"sid": 203754346391334,
 	"events": [
 		{
 			"eventType": "include",
 			"includeSheet": "Global"
-		},
-		{
-			"eventType": "variable",
-			"name": "mgMemoryRunning",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 462511349214997
 		},
 		{
 			"eventType": "block",
