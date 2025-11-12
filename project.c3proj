@@ -90,7 +90,8 @@
 			"Mouse",
 			"Card",
 			"StartBoxes",
-			"TiledBackground"
+			"TiledBackground",
+			"HilightedBox"
 		],
 		"subfolders": [
 			{
