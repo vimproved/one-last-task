@@ -30,6 +30,7 @@ async function OnBeforeProjectStart(runtime : IRuntime)
 	// the first layout. Loading has finished and initial
 	// instances are created and available to use here.
 
+	runtime.goToLayout("Start Screen");
 	mouse = runtime.mouse!
 	mgMemory = new MgMemory(runtime)
 	

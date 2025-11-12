@@ -175,6 +175,50 @@
 				{
 					"type": "comment",
 					"text": "^^ This is the dialogue, aka cutscene 1"
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 117486725211879
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 923200223038949,
+					"parameters": {
+						"seconds": "4",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 722469165877189,
+					"parameters": [
+						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now... \""
+					]
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 859721220825393,
+					"parameters": {
+						"tag": "\"startStress\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "StresBar_background",
+					"sid": 629122584684126,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "StressLevel",
+					"sid": 265536633724557,
+					"parameters": {
+						"visibility": "visible"
+					}
 				}
 			],
 			"sid": 627537260281178

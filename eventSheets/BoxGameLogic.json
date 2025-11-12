@@ -13,7 +13,16 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 743985212936982,
+					"parameters": {
+						"tag": "\"stopStress\""
+					}
+				}
+			],
 			"sid": 315116096578798
 		},
 		{

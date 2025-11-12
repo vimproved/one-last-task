@@ -12,6 +12,16 @@
 			"sid": 970874955460711
 		},
 		{
+			"eventType": "variable",
+			"name": "AddStress",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 703357419894532
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",
@@ -289,6 +299,111 @@
 				}
 			],
 			"sid": 826448344204255
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 668177499854776,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 991237601442825,
+					"parameters": {
+						"variable": "AddStress"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 711774764171978,
+					"parameters": {
+						"variable": "stress",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "StressLevel",
+					"sid": 101822252807039,
+					"parameters": {
+						"text": "stress"
+					}
+				}
+			],
+			"sid": 695922474617407
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 739777799541915
+				}
+			],
+			"actions": [],
+			"sid": 459758369468842,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 941776666442287,
+							"parameters": {
+								"tag": "\"startStress\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 734422257816230,
+							"parameters": {
+								"variable": "AddStress",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 253975216652637
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 759466813214599,
+							"parameters": {
+								"tag": "\"stopStress\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 679033712128583,
+							"parameters": {
+								"variable": "AddStress",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 151773093909077
+				}
+			]
 		}
 	],
 	"sid": 163430010393623

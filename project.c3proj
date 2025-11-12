@@ -81,17 +81,12 @@
 	"objectTypes": {
 		"items": [
 			"IntroPage",
-			"BedroonBackground",
 			"TestingObject",
 			"Keyboard",
-			"PlayerMovement",
-			"Player",
 			"Boundaries",
 			"Mouse",
 			"Card",
-			"StartBoxes",
-			"TiledBackground",
-			"HilightedBox"
+			"TiledBackground"
 		],
 		"subfolders": [
 			{
@@ -127,6 +122,25 @@
 				],
 				"subfolders": [],
 				"name": "Box MiniGame"
+			},
+			{
+				"items": [
+					"BedroonBackground",
+					"HilightedBox",
+					"Player",
+					"PlayerMovement",
+					"StartBoxes"
+				],
+				"subfolders": [],
+				"name": "Bedroom"
+			},
+			{
+				"items": [
+					"StresBar_background",
+					"StressLevel"
+				],
+				"subfolders": [],
+				"name": "Stressbar"
 			}
 		]
 	},
