@@ -1,0 +1,27 @@
+{
+	"name": "Bedroom2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 661957235695102
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 725090180425704
+				}
+			],
+			"sid": 573558558804685
+		}
+	],
+	"sid": 203754346391334
+}

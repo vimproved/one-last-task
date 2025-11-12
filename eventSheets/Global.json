@@ -141,6 +141,16 @@
 							"id": "destroy",
 							"objectClass": "Sprite3",
 							"sid": 577450861489867
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Speaker_Background",
+							"sid": 546115298226877
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Speaker",
+							"sid": 829492408722176
 						}
 					],
 					"sid": 952404883586310
