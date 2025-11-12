@@ -64,6 +64,58 @@
 				}
 			],
 			"sid": 870464386371177
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 620360366601764
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 465921891324072,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "laptoptypeshiiiii",
+					"sid": 200473393188908,
+					"parameters": {
+						"animation": "\"lit\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 907641302236034
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 467580413646148
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "laptoptypeshiiiii",
+					"sid": 940101764055566,
+					"parameters": {
+						"animation": "\"normal\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 582815389491871
 		}
 	],
 	"sid": 203754346391334
