@@ -17,9 +17,9 @@
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 540089114908371,
+					"sid": 975782759610499,
 					"parameters": [
-						"\"Opal: Ok! That box goes in that corner, and the chair goes over there\""
+						"\"Opal: Ok! That box goes in that corner, and the chair goes over there (press space to continue dialogue)\""
 					]
 				},
 				{
@@ -191,9 +191,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 722469165877189,
+					"sid": 176293143659865,
 					"parameters": [
-						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now... \""
+						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now... (press E to interact)\""
 					]
 				},
 				{
