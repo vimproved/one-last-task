@@ -56,6 +56,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Progress bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -83,11 +90,14 @@
 			"IntroPage",
 			"TestingObject",
 			"Keyboard",
-			"Boundaries",
 			"Mouse",
 			"Card",
 			"TiledBackground",
-			"laptoptypeshiiiii"
+			"Sprite4",
+			"TiledBackground2",
+			"Sprite5",
+			"ProgressBar",
+			"Sprite2"
 		],
 		"subfolders": [
 			{
@@ -130,7 +140,7 @@
 					"HilightedBox",
 					"Player",
 					"PlayerMovement",
-					"StartBoxes"
+					"Full_background"
 				],
 				"subfolders": [],
 				"name": "Bedroom"
@@ -142,6 +152,17 @@
 				],
 				"subfolders": [],
 				"name": "Stressbar"
+			},
+			{
+				"items": [
+					"Boundaries",
+					"laptoptypeshiiiii",
+					"StartBoxes",
+					"SwitchRoom",
+					"Bathroom"
+				],
+				"subfolders": [],
+				"name": "Playerboundaries"
 			}
 		]
 	},
@@ -157,7 +178,8 @@
 			"Start Screen",
 			"BedroomTutorial",
 			"Box Minigame",
-			"Bedroom2"
+			"Bedroom2",
+			"Outside_bedroom"
 		],
 		"subfolders": []
 	},
@@ -167,7 +189,8 @@
 			"BedroomTutorial",
 			"Global",
 			"BoxGameLogic",
-			"Bedroom2"
+			"Bedroom2",
+			"Outside_bedroom"
 		],
 		"subfolders": []
 	},

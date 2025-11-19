@@ -25,6 +25,19 @@
 					"parameters": [
 						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
 					]
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 999150138919198,
+					"parameters": {
+						"seconds": "2",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 112983592188533
 				}
 			],
 			"sid": 573558558804685
@@ -116,6 +129,43 @@
 				}
 			],
 			"sid": 582815389491871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 335797628312585,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 866929503331096
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 427989599361230,
+					"parameters": {
+						"object": "SwitchRoom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 680090210409768,
+					"parameters": {
+						"layout": "\"Outside_bedroom\""
+					}
+				}
+			],
+			"sid": 142343867976408
 		}
 	],
 	"sid": 203754346391334

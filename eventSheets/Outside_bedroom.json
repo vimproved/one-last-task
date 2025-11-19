@@ -1,0 +1,174 @@
+{
+	"name": "Outside_bedroom",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 333752033596761
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 206167222045564
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 780505041409155,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
+					]
+				}
+			],
+			"sid": 974113826591588
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 912667170793903,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 206338237366554
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 576330062249702,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.Begin)"
+					]
+				}
+			],
+			"sid": 109373221483622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 478713862023010
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 251044731281107,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "laptoptypeshiiiii",
+					"sid": 266370525833875,
+					"parameters": {
+						"animation": "\"lit\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 483266778537752
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 305831232184767
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "laptoptypeshiiiii",
+					"sid": 218280586594919,
+					"parameters": {
+						"animation": "\"normal\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 926982814742772
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 520639604875134
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 522595856209648,
+					"parameters": {
+						"object": "Bathroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Full_background",
+					"sid": 681268804290021,
+					"parameters": {
+						"animation": "\"Bathroom\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 703512135629499
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 664552988786418
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Full_background",
+					"sid": 956976819681064,
+					"parameters": {
+						"animation": "\"Mainhall\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 793505786601499
+		}
+	],
+	"sid": 412262354200698
+}
