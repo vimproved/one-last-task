@@ -192,9 +192,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 900400374377513,
+					"sid": 276246960892133,
 					"parameters": {
-						"layout": "Bedroom2"
+						"layout": "Outside_bedroom"
 					}
 				}
 			],

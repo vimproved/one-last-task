@@ -10,7 +10,7 @@
 					"type": "Full_background",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Mainhall",
+						"initial-animation": "Bathroom",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -29,7 +29,7 @@
 					"world": {
 						"x": 420,
 						"y": 241.5,
-						"width": 830,
+						"width": 830.0000000000001,
 						"height": 498.41379310344837,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -77,6 +77,43 @@
 							1
 						],
 						"angle": 5.3406624313058435,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Start_Sink_minigame",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 61,
+					"sid": 284212537491312,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 284212537491312,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 400.57840627095874,
+						"y": 225.30291967461497,
+						"width": 61.30423628461051,
+						"height": 89.71109789535603,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
@@ -246,8 +283,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 650.984626251449,
-						"y": 407.9112633348422,
+						"x": 645.707995493147,
+						"y": 392.081371059936,
 						"width": 153.01537374855104,
 						"height": 15.088736665157796,
 						"originX": 0,
@@ -281,8 +318,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 644.7817268500315,
-						"y": 349.1214265830043,
+						"x": 646.2208079659322,
+						"y": 428.7505816628358,
 						"width": 152.86803618961304,
 						"height": 48.031073061185616,
 						"originX": 0.0864586315488119,

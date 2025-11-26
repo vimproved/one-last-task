@@ -1,0 +1,179 @@
+{
+	"name": "sink_minigame",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "dirtcount",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 745006837481668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 567197470425424
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Particles",
+					"sid": 846647522581205,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 791595510137321
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 664562583173933
+				}
+			],
+			"actions": [],
+			"sid": 490107062779969,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_Sponge",
+							"sid": 150652926470526,
+							"parameters": {
+								"object": "spr_Dirt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "spr_Dirt",
+							"sid": 291709858082325,
+							"parameters": {
+								"opacity": "Self.Opacity -5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Particles",
+							"sid": 843528878153447,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 992560891942970,
+							"parameters": {
+								"seconds": ".2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Particles",
+							"sid": 550723577038558,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 582004811000677
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 209866007129349
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Particles",
+					"sid": 603363965689053,
+					"parameters": {
+						"object": "spr_Sponge",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 199537072591355
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-opacity",
+					"objectClass": "spr_Dirt",
+					"sid": 129995939334054,
+					"parameters": {
+						"comparison": 3,
+						"opacity": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "spr_Dirt",
+					"sid": 685371658476232
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 998394186475937,
+					"parameters": {
+						"variable": "dirtcount",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 301276090473575
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 497829936945238,
+					"parameters": {
+						"variable": "dirtcount",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 143727714184855,
+					"parameters": {
+						"layout": "Outside_bedroom"
+					}
+				}
+			],
+			"sid": 690666006681597
+		}
+	],
+	"sid": 253040524237248
+}

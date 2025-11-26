@@ -168,6 +168,64 @@
 				}
 			],
 			"sid": 793505786601499
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 322296150379898
+				}
+			],
+			"actions": [
+				{
+					"id": "set-progress",
+					"objectClass": "ProgressBar",
+					"sid": 927276840667423,
+					"parameters": {
+						"value": "stress"
+					}
+				}
+			],
+			"sid": 980339702519802
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 740401338193077
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 732663684703957,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 130530045978910,
+					"parameters": {
+						"tag": "\"sinkMinigame\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 405960014605770,
+					"parameters": {
+						"layout": "sinkMinigame"
+					}
+				}
+			],
+			"sid": 675419199454469
 		}
 	],
 	"sid": 412262354200698

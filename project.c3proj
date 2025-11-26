@@ -36,6 +36,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -97,7 +104,13 @@
 			"TiledBackground2",
 			"Sprite5",
 			"ProgressBar",
-			"Sprite2"
+			"Sprite2",
+			"Start_Sink_minigame",
+			"Sink",
+			"spr_Sponge",
+			"spr_Dirt",
+			"Particles",
+			"Sprite6"
 		],
 		"subfolders": [
 			{
@@ -179,7 +192,8 @@
 			"BedroomTutorial",
 			"Box Minigame",
 			"Bedroom2",
-			"Outside_bedroom"
+			"Outside_bedroom",
+			"sinkMinigame"
 		],
 		"subfolders": []
 	},
@@ -190,7 +204,8 @@
 			"Global",
 			"BoxGameLogic",
 			"Bedroom2",
-			"Outside_bedroom"
+			"Outside_bedroom",
+			"sink_minigame"
 		],
 		"subfolders": []
 	},
@@ -219,6 +234,14 @@
 					"sid": 278481031654408,
 					"script-info": {
 						"purpose": "imports-for-events"
+					}
+				},
+				{
+					"name": "mgSink.ts",
+					"type": "application/typescript",
+					"sid": 285860699660075,
+					"script-info": {
+						"purpose": "none"
 					}
 				}
 			],
