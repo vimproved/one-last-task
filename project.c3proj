@@ -110,7 +110,8 @@
 			"spr_Sponge",
 			"spr_Dirt",
 			"Particles",
-			"Sprite6"
+			"Sprite6",
+			"MgMemoryBg"
 		],
 		"subfolders": [
 			{

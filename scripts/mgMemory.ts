@@ -9,14 +9,14 @@ export class MgMemory {
     private cards: InstanceType.Card[] = [];
 
     private face = [
-        "redface",
-        "blueface",
-        "greenface",
-        "yellowface",
-        "orangeface",
-        "purpleface",
-        "blackface",
-        "brownface",
+        "chariot",
+        "tower",
+        "fool",
+        "hermit",
+        "wheel",
+        "magician",
+        "star",
+        "death",
     ]
 
     constructor(runtime: IRuntime) {
@@ -28,13 +28,15 @@ export class MgMemory {
         this.runtime.layout.getLayer("MgMemory")!.isVisible = true
         for (let i = 0; i < 4; ++i) {
             for (let j = 0; j < 4; ++j) {
-                this.cards.push(this.runtime.objects.Card.createInstance(4, 100 + 100*i, 100 + 100*j));
+                this.cards.push(this.runtime.objects.Card.createInstance(4, 230 + 130*i, 60 + 120*j));
                 // this.runtime.objects.Card.createInstance()
                 // this.cards[i].setAnimation("empty")
             }	
         }
         for (let i = 0; i < this.cards.length; ++i) {
             this.cards[i].setAnimation("back")
+            this.cards[i].width = this.cards[i].width / 11.5
+            this.cards[i].height = this.cards[i].height / 11.5
         }
 
         for (let i = this.cards.length - 1; i > 0; i--) {
