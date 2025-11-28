@@ -25,6 +25,15 @@
 					"parameters": [
 						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
 					]
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 251315308377591,
+					"parameters": {
+						"x": "474",
+						"y": "421"
+					}
 				}
 			],
 			"sid": 974113826591588
