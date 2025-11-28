@@ -1,0 +1,9 @@
+{
+	"name": "SpellInput1",
+	"plugin-id": "TextBox",
+	"sid": 788866278423765,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

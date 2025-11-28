@@ -2,6 +2,7 @@
 // import * as myModule from "./mymodule.js";
 import { MgMemory } from "./mgMemory.js"
 import { MgPotion } from "./mgPotion.js"
+import { MgApps } from "./mgApps.js"
 
 export enum State {
 	Disabled,
@@ -9,6 +10,8 @@ export enum State {
 	MgMemory,
 	MgPotionBegin,
 	MgPotion,
+	MgAppsBegin,
+	MgApps,
 }
 
 export function updateState(newState: State) {
@@ -19,6 +22,7 @@ export let state = State.Disabled
 let mouse: IMouseObjectType
 let mgMemory: MgMemory
 let mgPotion: MgPotion
+let mgApps: MgApps
 
 runOnStartup(async runtime =>
 {
@@ -84,6 +88,15 @@ function Tick(runtime : IRuntime)
 		} else if (state == State.MgPotion) {
 			mgPotion.tick()
 			if (mgPotion.isDone()) {
+				state = State.Disabled
+			}
+		} else if (state == State.MgAppsBegin) {
+			state = State.MgApps
+			mgApps = new MgApps(runtime)
+			mgApps.initialize()
+		} else if (state == State.MgApps) {
+			mgApps.tick()
+			if (mgApps.isDone()) {
 				state = State.Disabled
 			}
 		}

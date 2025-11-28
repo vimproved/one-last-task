@@ -7,43 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "BedroonBackground",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 32,
-					"sid": 575220648162601,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 575220648162601,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 426.5,
-						"y": 246.5,
-						"width": 819,
-						"height": 483.99999999999994,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "TestingObject",
 					"properties": {
 						"initially-visible": true,
@@ -236,8 +199,8 @@
 						"y": 214,
 						"width": 51.17465753424658,
 						"height": 110.18363939899832,
-						"originX": 0.46075085324232085,
-						"originY": 0.8716666666666667,
+						"originX": 0.4197952218430034,
+						"originY": 0.8325,
 						"color": [
 							1,
 							1,
@@ -603,43 +566,6 @@
 					}
 				},
 				{
-					"type": "laptoptypeshiiiii",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "normal",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 54,
-					"sid": 643263450801675,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 643263450801675,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 204.84058392676425,
-						"y": 157.14310596441607,
-						"width": 52.39665765520343,
-						"height": 30.804966210148297,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 5.766056327478605,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "SwitchRoom",
 					"properties": {
 						"initially-visible": true,
@@ -712,43 +638,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite3",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 43,
-					"sid": 301830553200036,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 301830553200036,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 421,
-						"y": 454,
-						"width": 748.0799999999999,
-						"height": 97.54400000000001,
-						"originX": 0.4957627118644068,
-						"originY": 0.9069767441860465,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "DialogueText",
 					"properties": {
 						"text": "PLACEHOLDER DIALOGUE TEXT",
@@ -791,43 +680,6 @@
 						"height": 68,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Speaker_Background",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 45,
-					"sid": 127303378254031,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 127303378254031,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 113,
-						"y": 356,
-						"width": 96,
-						"height": 23,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,

@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "HTMLElement",
+			"name": "HTML Element",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -24,6 +31,13 @@
 			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "List",
+			"name": "List",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -57,6 +71,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -64,8 +85,22 @@
 		},
 		{
 			"type": "plugin",
+			"id": "iframe",
+			"name": "iframe",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "progressbar",
 			"name": "Progress bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -80,6 +115,13 @@
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -108,13 +150,10 @@
 	"uniqueId": "k43vav0srtm",
 	"objectTypes": {
 		"items": [
-			"IntroPage",
 			"TestingObject",
 			"Keyboard",
 			"Mouse",
-			"Card",
 			"TiledBackground",
-			"Sprite4",
 			"TiledBackground2",
 			"Sprite5",
 			"ProgressBar",
@@ -125,25 +164,24 @@
 			"spr_Dirt",
 			"Particles",
 			"Sprite6",
-			"MgMemoryBg"
+			"FullApartment",
+			"SliderBar"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"Sprite3",
-					"Sprite",
 					"DialogueText",
 					"Dialogue_Storage",
 					"Speaker",
-					"Speaker_Background"
+					"DialogueBox",
+					"Sprite"
 				],
 				"subfolders": [],
-				"name": "Dialogue Images"
+				"name": "Dialogue"
 			},
 			{
 				"items": [
-					"Button",
-					"Background"
+					"SSBackground"
 				],
 				"subfolders": [],
 				"name": "Start Screen"
@@ -164,11 +202,14 @@
 			},
 			{
 				"items": [
-					"BedroonBackground",
-					"HilightedBox",
 					"Player",
 					"PlayerMovement",
-					"Full_background"
+					"Full_background",
+					"OnlyBedroom",
+					"BoxHighlight",
+					"OnlyBedHighlight",
+					"SleepBox",
+					"Sleep"
 				],
 				"subfolders": [],
 				"name": "Bedroom"
@@ -184,11 +225,11 @@
 			{
 				"items": [
 					"Boundaries",
-					"laptoptypeshiiiii",
 					"StartBoxes",
 					"SwitchRoom",
 					"Bathroom",
-					"Bedroom"
+					"Bedroom",
+					"BoxStartBox"
 				],
 				"subfolders": [],
 				"name": "Playerboundaries"
@@ -209,6 +250,30 @@
 				],
 				"subfolders": [],
 				"name": "MgPotion"
+			},
+			{
+				"items": [
+					"Card",
+					"MgMemoryBg",
+					"Screen",
+					"JobApps",
+					"TarotGame",
+					"ComputerExit",
+					"Fireflux",
+					"NameInput",
+					"SpellInput1",
+					"SpellInput2",
+					"SpellInput3",
+					"CertInput",
+					"HTMLElement",
+					"iframe",
+					"IntroPage",
+					"JobSubmit",
+					"Tabs",
+					"TermsAndConds"
+				],
+				"subfolders": [],
+				"name": "Computer"
 			}
 		]
 	},
@@ -283,6 +348,14 @@
 					"name": "mgPotion.ts",
 					"type": "application/typescript",
 					"sid": 451805336343180,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mgApps.ts",
+					"type": "application/typescript",
+					"sid": 994617459387441,
 					"script-info": {
 						"purpose": "none"
 					}

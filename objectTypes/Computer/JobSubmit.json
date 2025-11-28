@@ -1,0 +1,9 @@
+{
+	"name": "JobSubmit",
+	"plugin-id": "Button",
+	"sid": 881928858873872,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

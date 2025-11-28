@@ -12,6 +12,24 @@
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 333752033596761
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 886129344907876,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 754458639931629,
+					"parameters": {
+						"variable": "DayBegin"
+					}
 				}
 			],
 			"actions": [
@@ -20,8 +38,39 @@
 					"sid": 206167222045564
 				},
 				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 852277144655529,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 172819045321386,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 787717892630199,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 206345168207007,
+					"parameters": [
+						"\"Opal: I should probably finish unpacking ...\""
+					]
+				},
+				{
 					"callFunction": "dialogue",
 					"sid": 780505041409155,
+					"disabled": true,
 					"parameters": [
 						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
 					]
@@ -29,22 +78,385 @@
 				{
 					"id": "set-position",
 					"objectClass": "PlayerMovement",
-					"sid": 251315308377591,
+					"sid": 746866614430893,
 					"parameters": {
-						"x": "474",
-						"y": "421"
+						"x": "350",
+						"y": "240"
 					}
 				},
 				{
-					"id": "set-animation-frame",
-					"objectClass": "Full_background",
-					"sid": 465624454751435,
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 936570255152173,
 					"parameters": {
-						"frame-number": "0"
+						"variable": "DayBegin",
+						"value": "false"
 					}
 				}
 			],
 			"sid": 974113826591588
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 333917496173521
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 678773290035044,
+					"disabled": true,
+					"parameters": {
+						"object": "Bathroom"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 335736030559607,
+					"disabled": true,
+					"parameters": {
+						"object": "Bedroom"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 147617958098561,
+					"parameters": {
+						"animation": "\"Hall\"",
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 588632927866729
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 725560867601107
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 366859813024031,
+					"parameters": {
+						"object": "Bathroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 942062020484966,
+					"parameters": {
+						"animation": "\"Bath\"",
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 341327687068457
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 212850525539216
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 261149414729414,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 810742648423840,
+					"parameters": {
+						"animation": "\"Bed\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 988363926734848
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 856684785981067
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 355281059440094,
+					"parameters": {
+						"object": "BoxStartBox"
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 744488644436922,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 756251134551755,
+					"parameters": {
+						"value": "BoxesDone"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 173385416684845,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 829117465904427,
+					"parameters": {
+						"tag": "\"StartBoxe\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 228990227945253,
+					"parameters": {
+						"layout": "Box Minigame"
+					}
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 748049859140547,
+					"parameters": {
+						"tag": "\"Boxgamedone\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 671259073457256,
+					"parameters": {
+						"variable": "BoxesDone",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 289913162421274
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 468589199744549
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 660308472558503,
+					"parameters": {
+						"object": "BoxStartBox"
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 101447762163038,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 681310922702067,
+					"parameters": {
+						"value": "BoxesDone"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 382542334889428,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 873188345807750,
+					"parameters": [
+						"\"Opal: I think I finished unpacking.\""
+					]
+				}
+			],
+			"sid": 542121702952182
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 305080075740164
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 640647344776045,
+					"parameters": {
+						"object": "BoxStartBox"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 743662562723201,
+					"parameters": {
+						"value": "CutscenesDone"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 914886426609472,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 125166731958145,
+					"parameters": {
+						"animation": "\"BoxHL\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 280446918708988
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 249907839479065
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 905567863926289,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 465465094466573,
+					"parameters": {
+						"object": "Bathroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 738388088126002,
+					"parameters": {
+						"animation": "\"MirrorHL\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 509862206650370
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 489801009666977,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 967527245622657
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 273777002427427,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 528653340736126,
+					"parameters": {
+						"tag": "\"sinkMinigame\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 282394031280896,
+					"parameters": {
+						"layout": "sinkMinigame"
+					}
+				}
+			],
+			"sid": 146960828237697
 		},
 		{
 			"eventType": "block",
@@ -73,11 +485,22 @@
 			],
 			"actions": [
 				{
-					"type": "script",
-					"language": "typescript",
-					"script": [
-						"updateState(State.MgPotionBegin)"
-					]
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 449268874281748,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 575849881573108,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 109373221483622
@@ -88,12 +511,12 @@
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 478713862023010
+					"sid": 735558447988948
 				},
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "PlayerMovement",
-					"sid": 251044731281107,
+					"sid": 386655018201091,
 					"parameters": {
 						"object": "StartBoxes"
 					}
@@ -102,89 +525,125 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "laptoptypeshiiiii",
-					"sid": 266370525833875,
+					"objectClass": "FullApartment",
+					"sid": 129218785402113,
 					"parameters": {
-						"animation": "\"lit\"",
+						"animation": "\"ComputerHL\"",
 						"from": "beginning"
 					}
 				}
 			],
-			"sid": 483266778537752
+			"sid": 656290771322140
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 305831232184767
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "laptoptypeshiiiii",
-					"sid": 218280586594919,
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 384851882227446,
 					"parameters": {
-						"animation": "\"normal\"",
-						"from": "beginning"
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ComputerExit"
 					}
-				}
-			],
-			"sid": 926982814742772
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 520639604875134
 				},
 				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 522595856209648,
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 342814147729769,
 					"parameters": {
-						"object": "Bathroom"
+						"layer": "\"ComputerScreen\""
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-animation",
-					"objectClass": "Full_background",
-					"sid": 681268804290021,
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 933886079929202,
 					"parameters": {
-						"animation": "\"Bathroom\"",
-						"from": "beginning"
+						"layer": "\"ComputerScreen\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 410796291747173,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"interactive": false
 					}
 				}
 			],
-			"sid": 703512135629499
+			"sid": 280110133117497
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "else",
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 775173176442264,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "JobApps"
+					}
+				},
+				{
+					"id": "layer-is-visible",
 					"objectClass": "System",
-					"sid": 664552988786418
+					"sid": 467607657675427,
+					"parameters": {
+						"layer": "\"ComputerScreen\""
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-animation",
-					"objectClass": "Full_background",
-					"sid": 956976819681064,
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.MgAppsBegin)"
+					]
+				}
+			],
+			"sid": 116009269696598
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 111261735297453,
 					"parameters": {
-						"animation": "\"Mainhall\"",
-						"from": "beginning"
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TarotGame"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 213166506845345,
+					"parameters": {
+						"layer": "\"ComputerScreen\""
 					}
 				}
 			],
-			"sid": 793505786601499
+			"actions": [
+				{
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.MgMemoryBegin)"
+					]
+				}
+			],
+			"sid": 788260252847199
 		},
 		{
 			"eventType": "block",
@@ -205,112 +664,8 @@
 					}
 				}
 			],
-			"sid": 980339702519802
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 740401338193077
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 732663684703957,
-					"parameters": {
-						"object": "Start_Sink_minigame"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Full_background",
-					"sid": 204744141947448,
-					"parameters": {
-						"animation": "\"Bathroom+sinkgame\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 675419199454469
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 974952297335835,
-					"parameters": {
-						"key": 69
-					}
-				},
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 683550311679822
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 736181778639805,
-					"parameters": {
-						"object": "Start_Sink_minigame"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "signal",
-					"objectClass": "System",
-					"sid": 295506520116462,
-					"parameters": {
-						"tag": "\"sinkMinigame\""
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 338741140811689,
-					"parameters": {
-						"layout": "sinkMinigame"
-					}
-				}
-			],
-			"sid": 731629858261503
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 691508464001901
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 846637396061009,
-					"parameters": {
-						"object": "Bedroom"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Full_background",
-					"sid": 103502909683181,
-					"parameters": {
-						"animation": "\"Bedroom\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 893116545379003
+			"sid": 980339702519802,
+			"disabled": true
 		}
 	],
 	"sid": 412262354200698
