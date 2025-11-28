@@ -736,6 +736,47 @@
 								"angle": 0,
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "Timer",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 79,
+							"sid": 408206329551448,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Timer": {
+									"properties": {}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 408206329551448,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 76,
+								"y": 124,
+								"width": 141,
+								"height": 96,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 207500731784886,

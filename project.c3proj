@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -189,7 +196,8 @@
 					"SubmitButton",
 					"IngButton",
 					"Cauldron",
-					"OrderTray"
+					"OrderTray",
+					"Timer"
 				],
 				"subfolders": [],
 				"name": "MgPotion"
