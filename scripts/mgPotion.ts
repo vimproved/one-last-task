@@ -157,6 +157,11 @@ export class MgPotion {
                                     }
                                 }
                             }
+                            if (this.goodResult) {
+                                this.result.behaviors.Tween.startTween("position", [this.orders[this.orderToFinish]!.x, this.orders[this.orderToFinish]!.y], 1.0, "out-quadratic")
+                            } else {
+                                this.result.behaviors.Tween.startTween("position", [-50, this.cauldron!.y], 1.0, "in-quadratic")
+                            }
                             this.timer!.behaviors.Timer.startTimer(2.0, "levitateTimer", "once")
                             break
                         }
@@ -201,29 +206,14 @@ export class MgPotion {
                 this.dragNDrop.destroy()
             }
         }
-        // if (this.result && this.result.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
         if (this.result) {
-            let t = Math.min(this.timer!.behaviors.Timer.getCurrentTime("levitateTimer"), 1.0)
+            // if (this.timer!.behaviors.Timer.hasFinished("levitateTimer")) {
             if (this.timer!.behaviors.Timer.getCurrentTime("levitateTimer") > 1.2) {
                 this.orderStatuses[this.orderToFinish] = true
                 this.result.destroy()
                 this.orders[this.orderToFinish].destroy()
-                this.goodResult = false
-            } else {
-                // this.result.x = 
-                // this.result.y = 
-                if (this.goodResult) {
-                    this.result.setPosition((1-t) * this.cauldron!.x + t * this.orders[this.orderToFinish]!.x, (1-t) * this.cauldron!.y + t * this.orders[this.orderToFinish]!.y)
-                } else {
-                    this.result.setPosition((1-t) * this.cauldron!.x + t * -50, this.cauldron!.y)
-                }
-
-                // this.result.y = this.mouse.getMouseY()
+                // this.goodResult = false
             }
-            // if (this.mouse.isMouseButtonDown(0)) {
-            // } else
-            // if (this.fallingEdge) {
-            // }
         }
         
     }
