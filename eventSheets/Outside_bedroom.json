@@ -34,6 +34,14 @@
 						"x": "474",
 						"y": "421"
 					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Full_background",
+					"sid": 465624454751435,
+					"parameters": {
+						"frame-number": "0"
+					}
 				}
 			],
 			"sid": 974113826591588
@@ -218,9 +226,47 @@
 			],
 			"actions": [
 				{
+					"id": "set-animation",
+					"objectClass": "Full_background",
+					"sid": 204744141947448,
+					"parameters": {
+						"animation": "\"Bathroom+sinkgame\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 675419199454469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 974952297335835,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 683550311679822
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 736181778639805,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "signal",
 					"objectClass": "System",
-					"sid": 130530045978910,
+					"sid": 295506520116462,
 					"parameters": {
 						"tag": "\"sinkMinigame\""
 					}
@@ -228,13 +274,43 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 405960014605770,
+					"sid": 338741140811689,
 					"parameters": {
 						"layout": "sinkMinigame"
 					}
 				}
 			],
-			"sid": 675419199454469
+			"sid": 731629858261503
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 691508464001901
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 846637396061009,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Full_background",
+					"sid": 103502909683181,
+					"parameters": {
+						"animation": "\"Bedroom\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 893116545379003
 		}
 	],
 	"sid": 412262354200698

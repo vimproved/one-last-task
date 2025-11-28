@@ -180,7 +180,8 @@
 					"laptoptypeshiiiii",
 					"StartBoxes",
 					"SwitchRoom",
-					"Bathroom"
+					"Bathroom",
+					"Bedroom"
 				],
 				"subfolders": [],
 				"name": "Playerboundaries"
