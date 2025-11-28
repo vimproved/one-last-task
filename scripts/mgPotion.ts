@@ -15,6 +15,10 @@ export class MgPotion {
     private dragNDrop?: InstanceType.Ingredient
     private mixture: Set<string> = new Set<string>()
     private result?: InstanceType.Potion
+    private goodResult = false
+    private orderToFinish = -1
+
+    private timer?: InstanceType.Timer
     // WARNING: if you try to make multiple potions, the original one will disappear
     
     private readonly ing = [
@@ -87,6 +91,8 @@ export class MgPotion {
             this.ingButtons[i].isVisible = false
         }
         this.cauldron = this.runtime.objects.Cauldron.getFirstInstance()!
+        
+        this.timer = this.runtime.objects.Timer.getFirstInstance()!
     }
 
     tick() {
@@ -129,12 +135,22 @@ export class MgPotion {
                             }
                         }
                         if (equal) {
-                            // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
-                            this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
+                            this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
+                            // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
                             this.result.setAnimation(potion)
                             this.result.width = this.result.width / 10
                             this.result.height = this.result.height / 10
                             valid = true
+                            this.goodResult = false
+                            // WARNING: how does this go with destroyed orders?
+                            for (let i = 0; i < 4; ++i) {
+                                if (this.orders[i].animationName == this.result!.animationName) {
+                                    this.goodResult = true
+                                    this.timer!.behaviors.Timer.startTimer(1.3, "levitateTimer", "once")
+                                    this.orderToFinish = i
+                                    break
+                                }
+                            }
                             break
                         }
                     }
@@ -161,6 +177,13 @@ export class MgPotion {
             }
             
         }
+
+
+
+
+
+
+
         if (this.dragNDrop) {
             this.dragNDrop.x = this.mouse.getMouseX()
             this.dragNDrop.y = this.mouse.getMouseY()
@@ -172,26 +195,33 @@ export class MgPotion {
             }
         }
         // if (this.result && this.result.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
-        if (this.result) {
+        if (this.result && this.goodResult) {
+            let t = Math.min(this.timer!.behaviors.Timer.getCurrentTime("levitateTimer"), 1.0)
+            if (this.timer!.behaviors.Timer.getCurrentTime("levitateTimer") > 1.2) {
+                this.result.destroy()
+                this.orders[this.orderToFinish].destroy()
+            } else {
+                this.result.x = (1-t) * this.cauldron!.x + t * this.orders[this.orderToFinish]!.x
+                this.result.y = (1-t) * this.cauldron!.y + t * this.orders[this.orderToFinish]!.y
+                // this.result.y = this.mouse.getMouseY()
+            }
             // if (this.mouse.isMouseButtonDown(0)) {
-                this.result.x = this.mouse.getMouseX()
-                this.result.y = this.mouse.getMouseY()
             // } else
             // if (this.fallingEdge) {
-            //     for (let i = 0; i < 4; ++i) {
-            //         if (this.orderTrays[i].containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY()) && this.orders[i].animationName == this.result.animationName) {
-            //             this.orders[i].destroy()
-            //             break
-            //         }
-            //     }
             // }
         }
         
     }
 
     isDone() {
-        // print()
-        return false;
+        let done = true
+        for (let i = 0; i < 4; ++i) {
+            if (this.orders[i]) {
+                done = false
+            }
+        }
+        this.runtime.layout.getLayer("MgPotion")!.isVisible = false
+        return done
     }
 }
 
