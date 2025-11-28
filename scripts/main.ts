@@ -36,8 +36,8 @@ async function OnBeforeProjectStart(runtime : IRuntime)
 
 	runtime.goToLayout("Start Screen");
 	mouse = runtime.mouse!
-	mgMemory = new MgMemory(runtime)
-	mgPotion = new MgPotion(runtime)
+	// mgMemory = new MgMemory(runtime)
+	// mgPotion = new MgPotion(runtime)
 	
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
@@ -70,6 +70,7 @@ function Tick(runtime : IRuntime)
 	if (state != State.Disabled) {
 		if (state == State.MgMemoryBegin) {
 			state = State.MgMemory
+			mgMemory = new MgMemory(runtime)
 			mgMemory.initialize()
 		} else if (state == State.MgMemory) {
 			mgMemory.tick()
@@ -78,12 +79,13 @@ function Tick(runtime : IRuntime)
 			}
 		} else if (state == State.MgPotionBegin) {
 			state = State.MgPotion
+			mgPotion = new MgPotion(runtime)
 			mgPotion.initialize()
 		} else if (state == State.MgPotion) {
 			mgPotion.tick()
-			// if (mgPotion.isDone()) {
-			// 	state = State.Disabled
-			// }
+			if (mgPotion.isDone()) {
+				state = State.Disabled
+			}
 		}
 	}
 }

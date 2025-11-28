@@ -136,10 +136,11 @@ export class MgPotion {
                             }
                         }
                         if (equal) {
-                            if (this.result) {
-                                this.result.destroy()
-                            }
+                            // if (this.result) {
+                            //     this.result.destroy()
+                            // }
                             this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
+                            this.result.opacity = 1
                             // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
                             this.result.setAnimation(potion)
                             this.result.width = this.result.width / 10
@@ -148,14 +149,15 @@ export class MgPotion {
                             this.goodResult = false
                             // WARNING: how does this go with destroyed orders?
                             for (let i = 0; i < 4; ++i) {
-                                if (this.orders[i].animationName == this.result!.animationName) {
-                                    this.goodResult = true
-                                    this.timer!.behaviors.Timer.startTimer(1.3, "levitateTimer", "once")
-                                    this.orderToFinish = i
-                                    this.orderStatuses[i] = true
-                                    break
+                                if (!this.orderStatuses[i]) {
+                                    if (this.orders[i].animationName == this.result!.animationName) {
+                                        this.goodResult = true
+                                        this.orderToFinish = i
+                                        break
+                                    }
                                 }
                             }
+                            this.timer!.behaviors.Timer.startTimer(2.0, "levitateTimer", "once")
                             break
                         }
                     }
@@ -200,14 +202,22 @@ export class MgPotion {
             }
         }
         // if (this.result && this.result.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
-        if (this.result && this.goodResult) {
+        if (this.result) {
             let t = Math.min(this.timer!.behaviors.Timer.getCurrentTime("levitateTimer"), 1.0)
             if (this.timer!.behaviors.Timer.getCurrentTime("levitateTimer") > 1.2) {
+                this.orderStatuses[this.orderToFinish] = true
                 this.result.destroy()
                 this.orders[this.orderToFinish].destroy()
+                this.goodResult = false
             } else {
-                this.result.x = (1-t) * this.cauldron!.x + t * this.orders[this.orderToFinish]!.x
-                this.result.y = (1-t) * this.cauldron!.y + t * this.orders[this.orderToFinish]!.y
+                // this.result.x = 
+                // this.result.y = 
+                if (this.goodResult) {
+                    this.result.setPosition((1-t) * this.cauldron!.x + t * this.orders[this.orderToFinish]!.x, (1-t) * this.cauldron!.y + t * this.orders[this.orderToFinish]!.y)
+                } else {
+                    this.result.setPosition((1-t) * this.cauldron!.x + t * -50, this.cauldron!.y)
+                }
+
                 // this.result.y = this.mouse.getMouseY()
             }
             // if (this.mouse.isMouseButtonDown(0)) {
@@ -230,6 +240,7 @@ export class MgPotion {
             this.runtime.layout.getLayer("MgPotion")!.isVisible = false
         }
         return done
+        // return false
     }
 }
 
