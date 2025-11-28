@@ -20,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9419399,
+						"imageSpriteId": 6259230,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -45,14 +45,55 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 605777,
+						"imageSpriteId": 5858113,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 846884967941798,
+				"sid": 547444189587331,
 				"name": "Bathroom",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1677,
+						"height": 2058,
+						"originX": 0.23971377459749552,
+						"originY": 0.5517492711370262,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9541440,
+						"collisionPoly": {
+							"points": [
+								0.5177069927642648,
+								0,
+								1,
+								0.018699455347875628,
+								1,
+								0.9430485785873424,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0.16214757456501971
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 180691634758919,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

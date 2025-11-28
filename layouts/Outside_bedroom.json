@@ -10,7 +10,7 @@
 					"type": "Full_background",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Bathroom",
+						"initial-animation": "Mainhall",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -27,10 +27,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 420,
-						"y": 241.5,
-						"width": 830.0000000000001,
-						"height": 498.41379310344837,
+						"x": 429,
+						"y": 223,
+						"width": 846.0000000000001,
+						"height": 585.4137931034484,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -64,19 +64,19 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 471,
-						"y": 257,
-						"width": 224.78877677645082,
-						"height": 111.48648163615847,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 520,
+						"y": 354,
+						"width": 345.6984273738435,
+						"height": 105.65653642507961,
+						"originX": 0.4369369369369369,
+						"originY": 1.1527777777777777,
 						"color": [
 							1,
 							1,
 							1,
 							1
 						],
-						"angle": 5.3406624313058435,
+						"angle": 5.868288725922637,
 						"zElevation": 0
 					}
 				},
@@ -452,8 +452,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 543,
-						"y": 187,
+						"x": 474,
+						"y": 421,
 						"width": 23,
 						"height": 21,
 						"originX": 0.5,
@@ -610,8 +610,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 107,
-								"y": 0,
+								"x": 153.53028941411844,
+								"y": 93.06057882823683,
 								"width": 640,
 								"height": 480,
 								"originX": 0,
@@ -827,8 +827,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 107,
-								"y": 0,
+								"x": 151.61151459291773,
+								"y": 82.50731731163268,
 								"width": 640,
 								"height": 480,
 								"originX": 0,
