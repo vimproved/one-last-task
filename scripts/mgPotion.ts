@@ -47,7 +47,8 @@ export class MgPotion {
         this.runtime.layout.getLayer("MgPotion")!.isVisible = true
         // this.runtime.goToLayout("MgPotion")
         for (let i = 0; i < 4; ++i) {
-            this.orders.push(this.runtime.objects.Potion.createInstance("MgPotionBg", 192 + 154*i, 80))
+            // this.orders.push(this.runtime.objects.Potion.createInstance("MgPotionBg", 192 + 154*i, 80))
+            this.orders.push(this.runtime.objects.Potion.createInstance("MgPotionBg", 195.5 + 154.5*i, 78))
             // this.runtime.objects.Potion.createInstance
         }
         for (let i = 0; i < 4; ++i) {
@@ -106,56 +107,59 @@ export class MgPotion {
 
         // this.runtime.layout.getLayer("recipes")!.isVisible = true
         if (this.risingEdge) {
-            if (this.recipeButton!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY()) && !this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible) {
-                this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible = true
-            // }
+            if (!this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible) {
+                if (this.recipeButton!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                        this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible = true
+                // }
+                } else if (this.submitButton!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                    let valid = false
+                    // WARNING: currently does not handle duplicates
+                    for (let [potion, recipe] of this.recipes) {
+                        let equal = true
+                        for (let element of this.mixture) {
+                            if (!recipe.has(element)) {
+                                equal = false
+                                break
+                            }
+                        }
+                        for (let element of recipe) {
+                            if (!this.mixture.has(element)) {
+                                equal = false
+                                break
+                            }
+                        }
+                        if (equal) {
+                            // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
+                            this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
+                            this.result.setAnimation(potion)
+                            this.result.width = this.result.width / 10
+                            this.result.height = this.result.height / 10
+                            valid = true
+                            break
+                        }
+                    }
+                    if (!valid) {
+                        this.cauldron!.setAnimation("explode")
+                        this.cauldron!.isVisible = true
+                        setTimeout(() => { this.cauldron!.setAnimation("normal"); this.cauldron!.isVisible = false }, 1000)
+                    }
+                    this.mixture.clear()
+                }
+                else {
+                    for (let i = 0; i < this.ingButtons.length; ++i) {
+                        if (this.ingButtons[i]!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                            this.dragNDrop = this.runtime.objects.Ingredient.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
+                            this.dragNDrop.setAnimation(this.ing[i])
+                            this.dragNDrop.width = this.dragNDrop.width / 8
+                            this.dragNDrop.height = this.dragNDrop.height / 8
+                            break
+                        }
+                    }
+                }
             } else if (this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible) {
                 this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible = false
-            } else if (this.submitButton!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY()) && !this.runtime.layout.getLayer("MgPotionRecipes")!.isVisible) {
-                let valid = false
-                // WARNING: currently does not handle duplicates
-                for (let [potion, recipe] of this.recipes) {
-                    let equal = true
-                    for (let element of this.mixture) {
-                        if (!recipe.has(element)) {
-                            equal = false
-                            break
-                        }
-                    }
-                    for (let element of recipe) {
-                        if (!this.mixture.has(element)) {
-                            equal = false
-                            break
-                        }
-                    }
-                    if (equal) {
-                        this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
-                        this.result.setAnimation(potion)
-                        this.result.width = this.result.width / 10
-                        this.result.height = this.result.height / 10
-                        valid = true
-                        break
-                    }
-                }
-                if (!valid) {
-                    this.cauldron!.setAnimation("explode")
-                    this.cauldron!.isVisible = true
-                    setTimeout(() => { this.cauldron!.setAnimation("normal"); this.cauldron!.isVisible = false }, 1000)
-                }
-                this.mixture.clear()
             }
             
-            else {
-                for (let i = 0; i < this.ingButtons.length; ++i) {
-                    if (this.ingButtons[i]!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
-                        this.dragNDrop = this.runtime.objects.Ingredient.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
-                        this.dragNDrop.setAnimation(this.ing[i])
-                        this.dragNDrop.width = this.dragNDrop.width / 8
-                        this.dragNDrop.height = this.dragNDrop.height / 8
-                        break
-                    }
-                }
-            }
         }
         if (this.dragNDrop) {
             this.dragNDrop.x = this.mouse.getMouseX()
@@ -166,6 +170,21 @@ export class MgPotion {
                 }
                 this.dragNDrop.destroy()
             }
+        }
+        // if (this.result && this.result.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+        if (this.result) {
+            // if (this.mouse.isMouseButtonDown(0)) {
+                this.result.x = this.mouse.getMouseX()
+                this.result.y = this.mouse.getMouseY()
+            // } else
+            // if (this.fallingEdge) {
+            //     for (let i = 0; i < 4; ++i) {
+            //         if (this.orderTrays[i].containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY()) && this.orders[i].animationName == this.result.animationName) {
+            //             this.orders[i].destroy()
+            //             break
+            //         }
+            //     }
+            // }
         }
         
     }
