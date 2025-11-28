@@ -17,6 +17,7 @@ export class MgPotion {
     private result?: InstanceType.Potion
     private goodResult = false
     private orderToFinish = -1
+    private orderStatuses = [false, false, false, false]
 
     private timer?: InstanceType.Timer
     // WARNING: if you try to make multiple potions, the original one will disappear
@@ -135,6 +136,9 @@ export class MgPotion {
                             }
                         }
                         if (equal) {
+                            if (this.result) {
+                                this.result.destroy()
+                            }
                             this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
                             // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
                             this.result.setAnimation(potion)
@@ -148,6 +152,7 @@ export class MgPotion {
                                     this.goodResult = true
                                     this.timer!.behaviors.Timer.startTimer(1.3, "levitateTimer", "once")
                                     this.orderToFinish = i
+                                    this.orderStatuses[i] = true
                                     break
                                 }
                             }
@@ -216,11 +221,14 @@ export class MgPotion {
     isDone() {
         let done = true
         for (let i = 0; i < 4; ++i) {
-            if (this.orders[i]) {
+            if (!this.orderStatuses[i]) {
                 done = false
+                break
             }
         }
-        this.runtime.layout.getLayer("MgPotion")!.isVisible = false
+        if (done) {
+            this.runtime.layout.getLayer("MgPotion")!.isVisible = false
+        }
         return done
     }
 }
