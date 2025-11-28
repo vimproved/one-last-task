@@ -177,6 +177,22 @@
 				],
 				"subfolders": [],
 				"name": "Playerboundaries"
+			},
+			{
+				"items": [
+					"MgPotionBg",
+					"Potion",
+					"MainPotionBg",
+					"Recipes",
+					"RecipeButton",
+					"Ingredient",
+					"SubmitButton",
+					"IngButton",
+					"Cauldron",
+					"OrderTray"
+				],
+				"subfolders": [],
+				"name": "MgPotion"
 			}
 		]
 	},
@@ -194,7 +210,8 @@
 			"Box Minigame",
 			"Bedroom2",
 			"Outside_bedroom",
-			"sinkMinigame"
+			"sinkMinigame",
+			"MgPotion"
 		],
 		"subfolders": []
 	},
@@ -206,7 +223,8 @@
 			"BoxGameLogic",
 			"Bedroom2",
 			"Outside_bedroom",
-			"sink_minigame"
+			"sink_minigame",
+			"MgPotion"
 		],
 		"subfolders": []
 	},
@@ -241,6 +259,14 @@
 					"name": "mgSink.ts",
 					"type": "application/typescript",
 					"sid": 285860699660075,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mgPotion.ts",
+					"type": "application/typescript",
+					"sid": 451805336343180,
 					"script-info": {
 						"purpose": "none"
 					}

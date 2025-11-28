@@ -59,7 +59,7 @@
 					"type": "script",
 					"language": "typescript",
 					"script": [
-						"updateState(State.Begin)"
+						"updateState(State.MgPotionBegin)"
 					]
 				}
 			],

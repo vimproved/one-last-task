@@ -1,0 +1,30 @@
+{
+	"name": "MgPotion",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 294129962895330
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.MgPotionBegin)"
+					]
+				}
+			],
+			"sid": 531158834567163
+		}
+	],
+	"sid": 205369033824256
+}

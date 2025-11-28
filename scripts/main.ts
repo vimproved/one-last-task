@@ -1,11 +1,14 @@
 // Import any other script files here, e.g.:
 // import * as myModule from "./mymodule.js";
 import { MgMemory } from "./mgMemory.js"
+import { MgPotion } from "./mgPotion.js"
 
 export enum State {
 	Disabled,
-	Begin,
+	MgMemoryBegin,
 	MgMemory,
+	MgPotionBegin,
+	MgPotion,
 }
 
 export function updateState(newState: State) {
@@ -15,6 +18,7 @@ export function updateState(newState: State) {
 export let state = State.Disabled
 let mouse: IMouseObjectType
 let mgMemory: MgMemory
+let mgPotion: MgPotion
 
 runOnStartup(async runtime =>
 {
@@ -33,6 +37,7 @@ async function OnBeforeProjectStart(runtime : IRuntime)
 	runtime.goToLayout("Start Screen");
 	mouse = runtime.mouse!
 	mgMemory = new MgMemory(runtime)
+	mgPotion = new MgPotion(runtime)
 	
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
@@ -63,7 +68,7 @@ function Tick(runtime : IRuntime)
 	// 	}
 	// }
 	if (state != State.Disabled) {
-		if (state == State.Begin) {
+		if (state == State.MgMemoryBegin) {
 			state = State.MgMemory
 			mgMemory.initialize()
 		} else if (state == State.MgMemory) {
@@ -71,6 +76,14 @@ function Tick(runtime : IRuntime)
 			if (mgMemory.isDone()) {
 				state = State.Disabled
 			}
+		} else if (state == State.MgPotionBegin) {
+			state = State.MgPotion
+			mgPotion.initialize()
+		} else if (state == State.MgPotion) {
+			mgPotion.tick()
+			// if (mgPotion.isDone()) {
+			// 	state = State.Disabled
+			// }
 		}
 	}
 }

@@ -28,7 +28,7 @@ export class MgMemory {
         this.runtime.layout.getLayer("MgMemory")!.isVisible = true
         for (let i = 0; i < 4; ++i) {
             for (let j = 0; j < 4; ++j) {
-                this.cards.push(this.runtime.objects.Card.createInstance(4, 230 + 130*i, 60 + 120*j));
+                this.cards.push(this.runtime.objects.Card.createInstance("MgMemory", 230 + 130*i, 60 + 120*j));
                 // this.runtime.objects.Card.createInstance()
                 // this.cards[i].setAnimation("empty")
             }	
