@@ -1,0 +1,52 @@
+{
+	"name": "Bedroom",
+	"plugin-id": "Sprite",
+	"sid": 841115089438395,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 222,
+						"height": 72,
+						"originX": 0.4369369369369369,
+						"originY": 1.1527777777777777,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5622577,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.013888888888888888,
+								0.6891891891891889,
+								0,
+								1,
+								1,
+								0.26576576576576566,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 667953886694969,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

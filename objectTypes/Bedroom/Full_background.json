@@ -45,6 +45,31 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
+						"imageSpriteId": 9242624,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 146108942259310,
+				"name": "Bedroom",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 4776,
+						"height": 3336,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 5858113,
 						"useCollisionPoly": true,
 						"duration": 1,
@@ -62,29 +87,54 @@
 			{
 				"frames": [
 					{
-						"width": 1677,
-						"height": 2058,
-						"originX": 0.23971377459749552,
-						"originY": 0.5517492711370262,
+						"width": 4776,
+						"height": 3336,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9541440,
+						"imageSpriteId": 1948002,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 999233332509016,
+				"name": "Bathroom+sinkgame",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1919,
+						"height": 2198,
+						"originX": 0.699843668577384,
+						"originY": 0.7691082802547771,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5654659,
 						"collisionPoly": {
 							"points": [
-								0.5177069927642648,
-								0,
-								1,
-								0.018699455347875628,
-								1,
-								0.9430485785873424,
-								0,
-								1,
-								0,
-								1,
-								0,
-								0.16214757456501971
+								0.5112037519541428,
+								0.00045495905368516835,
+								0.9984366857738406,
+								0.24613284804367608,
+								0.9989577905158937,
+								0.7402183803457689,
+								0.4825429911412194,
+								0.9977252047315741,
+								0.001563314226159458,
+								0.7520473157415832,
+								0.0026055237102657635,
+								0.25614194722474976
 							]
 						},
 						"useCollisionPoly": true,
@@ -92,7 +142,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 180691634758919,
+				"sid": 393694988558882,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

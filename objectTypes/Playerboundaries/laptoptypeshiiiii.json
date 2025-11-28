@@ -20,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6130328,
+						"imageSpriteId": 5797313,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -45,13 +45,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8157432,
+						"imageSpriteId": 6465313,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 991879276527861,
+				"sid": 126823640771597,
 				"name": "lit",
 				"isLooping": false,
 				"isPingPong": false,
