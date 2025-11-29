@@ -38,6 +38,23 @@
 					"sid": 206167222045564
 				},
 				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 258994689631455,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 277504264831850,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "set-animation-frame",
 					"objectClass": "FullApartment",
 					"sid": 852277144655529,
@@ -76,15 +93,6 @@
 					]
 				},
 				{
-					"id": "set-position",
-					"objectClass": "PlayerMovement",
-					"sid": 746866614430893,
-					"parameters": {
-						"x": "350",
-						"y": "240"
-					}
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 936570255152173,
@@ -100,10 +108,43 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
+					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 333917496173521
+					"sid": 549295051843464
 				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 124795855645952,
+					"parameters": {
+						"variable": "DayBegin"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "PlayerMovement",
+					"sid": 657474318360879,
+					"parameters": {
+						"x": "PlayerX"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "PlayerMovement",
+					"sid": 137046682777878,
+					"parameters": {
+						"y": "PlayerY"
+					}
+				}
+			],
+			"sid": 279576919788234
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "PlayerMovement",
@@ -250,6 +291,24 @@
 					}
 				},
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 227865402529089,
+					"parameters": {
+						"variable": "PlayerX",
+						"value": "PlayerMovement.X"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 708038178188588,
+					"parameters": {
+						"variable": "PlayerY",
+						"value": "PlayerMovement.Y"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 228990227945253,
@@ -261,17 +320,9 @@
 					"id": "wait-for-signal",
 					"objectClass": "System",
 					"sid": 748049859140547,
+					"disabled": true,
 					"parameters": {
 						"tag": "\"Boxgamedone\""
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 671259073457256,
-					"parameters": {
-						"variable": "BoxesDone",
-						"value": "true"
 					}
 				}
 			],
@@ -343,14 +394,6 @@
 					"sid": 640647344776045,
 					"parameters": {
 						"object": "BoxStartBox"
-					}
-				},
-				{
-					"id": "evaluate-expression",
-					"objectClass": "System",
-					"sid": 743662562723201,
-					"parameters": {
-						"value": "CutscenesDone"
 					}
 				},
 				{
@@ -445,6 +488,24 @@
 					"sid": 528653340736126,
 					"parameters": {
 						"tag": "\"sinkMinigame\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 145587053114154,
+					"parameters": {
+						"variable": "PlayerX",
+						"value": "PlayerMovement.X"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 839356861732326,
+					"parameters": {
+						"variable": "PlayerY",
+						"value": "PlayerMovement.Y"
 					}
 				},
 				{

@@ -52,6 +52,26 @@
 			"sid": 791329527975368
 		},
 		{
+			"eventType": "variable",
+			"name": "PlayerX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 339721914781866
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 363944234252616
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",

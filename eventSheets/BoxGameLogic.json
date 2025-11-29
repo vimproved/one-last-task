@@ -190,6 +190,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 898790233487452,
+					"parameters": {
+						"variable": "BoxesDone",
+						"value": "true"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 276246960892133,
