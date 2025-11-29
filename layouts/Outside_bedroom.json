@@ -744,7 +744,7 @@
 							1,
 							1
 						],
-						"angle": 0.47936836715381315,
+						"angle": 0.4886921905584123,
 						"zElevation": 0
 					}
 				},
@@ -1429,8 +1429,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 512.0330706272392,
-						"y": -12.265283351048716,
+						"x": 44.946594152794205,
+						"y": 115.66832877154744,
 						"width": 63.93280382143323,
 						"height": 117.83601316581424,
 						"originX": 0.4197952218430034,
@@ -1491,8 +1491,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 497.58142011666894,
-						"y": 56.638652876126514,
+						"x": 350,
+						"y": 248,
 						"width": 15.375012530658175,
 						"height": 14.57324447754338,
 						"originX": 0.5,
@@ -1532,6 +1532,80 @@
 						"y": 255.44060674338988,
 						"width": 24.244784882103176,
 						"height": 18.57133260783232,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.794493116621174,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SleepBox",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 120,
+					"sid": 251077555134282,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 251077555134282,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 364.03071930647695,
+						"y": 214.77265682936212,
+						"width": 104.21992707606005,
+						"height": 4.314906991690362,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.4886921905584123,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WorkStartBox",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 121,
+					"sid": 609006764710918,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 609006764710918,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 497.9864325389582,
+						"y": 439.6200656456045,
+						"width": 66.33919458343955,
+						"height": 38.31202078125214,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

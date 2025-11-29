@@ -307,9 +307,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 352954287463774
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 390866435183548,
+					"parameters": {
+						"key": 69
+					}
 				},
 				{
 					"id": "is-overlapping-another-object",
@@ -317,14 +320,6 @@
 					"sid": 910380250825128,
 					"parameters": {
 						"object": "StartBoxes"
-					}
-				},
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 806057207174138,
-					"parameters": {
-						"key": 69
 					}
 				},
 				{
@@ -488,9 +483,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 594815066606507
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 719452276281830,
+					"parameters": {
+						"key": 69
+					}
 				},
 				{
 					"id": "is-overlapping-another-object",
@@ -498,14 +496,6 @@
 					"sid": 213567516907682,
 					"parameters": {
 						"object": "SleepBox"
-					}
-				},
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 394280653217655,
-					"parameters": {
-						"key": 69
 					}
 				},
 				{

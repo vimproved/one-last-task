@@ -50,6 +50,7 @@ export class MgPotion {
     initialize() {
         // this.runtime.viewportHeight
         this.runtime.layout.getLayer("MgPotion")!.isVisible = true
+        this.runtime.layout.getLayer("MgPotion")!.isInteractive = true
         // this.runtime.goToLayout("MgPotion")
         for (let i = 0; i < 4; ++i) {
             // this.orders.push(this.runtime.objects.Potion.createInstance("MgPotionBg", 192 + 154*i, 80))
@@ -228,6 +229,8 @@ export class MgPotion {
         }
         if (done) {
             this.runtime.layout.getLayer("MgPotion")!.isVisible = false
+            this.runtime.layout.getLayer("MgPotion")!.isInteractive = false
+            this.runtime.signal("WorkDone")
         }
         return done
         // return false

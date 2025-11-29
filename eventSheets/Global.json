@@ -72,6 +72,16 @@
 			"sid": 363944234252616
 		},
 		{
+			"eventType": "variable",
+			"name": "WorkComplete",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 664772612164987
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",

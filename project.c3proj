@@ -165,7 +165,8 @@
 			"Particles",
 			"Sprite6",
 			"FullApartment",
-			"SliderBar"
+			"SliderBar",
+			"FullApartment2"
 		],
 		"subfolders": [
 			{
@@ -229,7 +230,8 @@
 					"SwitchRoom",
 					"Bathroom",
 					"Bedroom",
-					"BoxStartBox"
+					"BoxStartBox",
+					"WorkStartBox"
 				],
 				"subfolders": [],
 				"name": "Playerboundaries"
@@ -246,7 +248,8 @@
 					"IngButton",
 					"Cauldron",
 					"OrderTray",
-					"Timer"
+					"Timer",
+					"WorkBg"
 				],
 				"subfolders": [],
 				"name": "MgPotion"
@@ -292,7 +295,8 @@
 			"Bedroom2",
 			"Outside_bedroom",
 			"sinkMinigame",
-			"MgPotion"
+			"MgPotion",
+			"Work"
 		],
 		"subfolders": []
 	},
@@ -305,7 +309,8 @@
 			"Bedroom2",
 			"Outside_bedroom",
 			"sink_minigame",
-			"MgPotion"
+			"MgPotion",
+			"Work"
 		],
 		"subfolders": []
 	},
