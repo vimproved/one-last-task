@@ -25,6 +25,7 @@ export class MgMemory {
     }
 
     initialize() {
+        this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = false
         this.runtime.layout.getLayer("MgMemory")!.isVisible = true
         this.runtime.layout.getLayer("MgMemory")!.isInteractive = true
         for (let i = 0; i < 4; ++i) {
@@ -101,6 +102,7 @@ export class MgMemory {
             }
             this.runtime.layout.getLayer("MgMemory")!.isVisible = false
             this.runtime.layout.getLayer("MgMemory")!.isInteractive = false
+            this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = true
         }
         return this.done
     }

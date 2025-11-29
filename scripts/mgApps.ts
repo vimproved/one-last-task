@@ -18,6 +18,7 @@ export class MgApps {
     }
 
     initialize() {
+        this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = false
         this.runtime.layout.getLayer("MgApps")!.isVisible = true
         this.runtime.layout.getLayer("MgApps")!.isInteractive = true
         this.name = this.runtime.objects.NameInput.getFirstInstance()!
@@ -42,31 +43,32 @@ export class MgApps {
     }
 
     tick() {
-        if (
-            this.name!.text == "Opal" &&
-            this.spell1!.text == "Andrew" &&
-            this.spell2!.text == "BBB" &&
-            this.spell3!.text == "Colovaria" &&
-            this.cert!.getItemText(this.cert!.selectedIndex) == "UASC Apprentice Level 3"
-        ) {
-            this.terms!.isEnabled = true
-        }
-        if (
-            this.name!.text == "Opal" &&
-            this.spell1!.text == "Andrew" &&
-            this.spell2!.text == "BBB" &&
-            this.spell3!.text == "Colovaria" &&
-            this.cert!.getItemText(this.cert!.selectedIndex) == "UASC Apprentice Level 3" &&
-            this.terms!.isChecked
-        ) {
-            this.submit!.isEnabled = true
-        }
+        // if (
+        //     this.name!.text == "Opal" &&
+        //     this.spell1!.text == "Andrew" &&
+        //     this.spell2!.text == "BBB" &&
+        //     this.spell3!.text == "Colovaria" &&
+        //     this.cert!.getItemText(this.cert!.selectedIndex) == "UASC Apprentice Level 3"
+        // ) {
+        //     this.terms!.isEnabled = true
+        // }
+        // if (
+        //     this.name!.text == "Opal" &&
+        //     this.spell1!.text == "Andrew" &&
+        //     this.spell2!.text == "BBB" &&
+        //     this.spell3!.text == "Colovaria" &&
+        //     this.cert!.getItemText(this.cert!.selectedIndex) == "UASC Apprentice Level 3" &&
+        //     this.terms!.isChecked
+        // ) {
+        //     this.submit!.isEnabled = true
+        // }
     }
 
     isDone() {
         if (this.done) {
             this.runtime.layout.getLayer("MgApps")!.isVisible = false
             this.runtime.layout.getLayer("MgApps")!.isInteractive = false
+            this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = true
         }
         return this.done
     }
