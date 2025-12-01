@@ -1137,6 +1137,44 @@
 			"sid": 823804763474363
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SFX",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 382308423638889,
+							"parameters": {
+								"tag": "\"StartBoxe\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 458224549650382,
+							"parameters": {
+								"audio-file": "box",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 483213109799922
+				}
+			],
+			"sid": 520797987209021
+		},
+		{
 			"eventType": "comment",
 			"text": "debug stress keys"
 		},

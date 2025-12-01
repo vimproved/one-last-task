@@ -560,6 +560,18 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 511970402203127,
+					"parameters": {
+						"audio-file": "alarm",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"alarm\""
+					}
+				},
+				{
 					"callFunction": "dialogue",
 					"sid": 625137109764300,
 					"parameters": [
@@ -572,6 +584,26 @@
 					"sid": 268241046323272,
 					"parameters": {
 						"tag": "\"Next\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 750890452706333,
+					"parameters": {
+						"tag": "\"alarm\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 432356332110545,
+					"parameters": {
+						"audio-file": "button",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{

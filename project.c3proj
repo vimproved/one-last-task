@@ -384,7 +384,32 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "alarm.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 111094282023092,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "button.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 944627792373937,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "box.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 879787485829657,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
