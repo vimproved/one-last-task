@@ -311,6 +311,200 @@
 						}
 					],
 					"sid": 319502962085703
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerMovement",
+							"sid": 385839459105833,
+							"behaviorType": "LeftRight",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 431187933549374,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "PlayerMovement",
+									"sid": 678902546433022,
+									"behaviorType": "UpDown",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 664370536364018,
+									"parameters": {
+										"animation": "\"Standing\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "start-animation",
+									"objectClass": "Player",
+									"sid": 466774053653218,
+									"parameters": {
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 191306527976397
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "PlayerMovement",
+									"sid": 612482532415813,
+									"behaviorType": "UpDown"
+								}
+							],
+							"actions": [],
+							"sid": 326823294647155,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 468581125592281,
+											"parameters": {
+												"key": 40
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 910595152811734,
+											"parameters": {
+												"animation": "\"Walking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 538935203752817
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 502627684929816,
+											"parameters": {
+												"key": 38
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 434934341210144,
+											"parameters": {
+												"animation": "\"Walking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 571704033306380
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerMovement",
+							"sid": 322715752679266,
+							"behaviorType": "LeftRight"
+						}
+					],
+					"actions": [],
+					"sid": 979729669558877,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 899656510709941,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 750985360856013,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 994136879143456,
+									"parameters": {
+										"animation": "\"Walking\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 215048086329681
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 163556135825651,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 115681097236617,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 193589034472211,
+									"parameters": {
+										"animation": "\"Walking\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 277457113179370
+						}
+					]
 				}
 			],
 			"sid": 826448344204255

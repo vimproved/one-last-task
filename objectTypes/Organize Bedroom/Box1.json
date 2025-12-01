@@ -1,20 +1,15 @@
 {
-	"name": "PlayerMovement",
+	"name": "Box1",
 	"plugin-id": "Sprite",
-	"sid": 677347493770721,
+	"sid": 535225783775173,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "EightDir",
-			"name": "LeftRight",
-			"sid": 168745573624791
-		},
-		{
-			"behaviorId": "EightDir",
-			"name": "UpDown",
-			"sid": 823072677601816
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 685625154295736
 		}
 	],
 	"effectTypes": [],
@@ -23,27 +18,37 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 376,
+						"height": 307,
+						"originX": 0.5106382978723404,
+						"originY": 0.5211726384364821,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8559868,
+						"imageSpriteId": 7948241,
+						"collisionPoly": {
+							"points": [
+								0.7154255319148937,
+								0.006514657980456026,
+								0.9893617021276596,
+								0.498371335504886,
+								0.02925531914893617,
+								0.5374592833876222
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 845825580412369,
+				"sid": 701822105081033,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 3
+				"speed": 5
 			}
 		],
 		"subfolders": []

@@ -99,7 +99,7 @@
 						"expanded": true
 					},
 					"showing": true,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 85,
 						"y": 0,
@@ -136,7 +136,7 @@
 						"expanded": true
 					},
 					"showing": true,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 85,
 						"y": 0,
@@ -276,7 +276,7 @@
 					"behaviors": {
 						"LeftRight": {
 							"properties": {
-								"max-speed": 150,
+								"max-speed": 100,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "left-right",
@@ -288,7 +288,7 @@
 						},
 						"UpDown": {
 							"properties": {
-								"max-speed": 80,
+								"max-speed": 55,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "up-down",
@@ -345,10 +345,10 @@
 					"world": {
 						"x": 165.85122669027555,
 						"y": 179.66917422139792,
-						"width": 104.1832191780822,
-						"height": 224.4991652754591,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 53.433713,
+						"height": 121.925581,
+						"originX": 0.4928751047778709,
+						"originY": 0.8458077709611452,
 						"color": [
 							1,
 							1,

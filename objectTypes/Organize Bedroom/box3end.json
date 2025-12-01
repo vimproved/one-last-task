@@ -1,49 +1,50 @@
 {
-	"name": "PlayerMovement",
+	"name": "box3end",
 	"plugin-id": "Sprite",
-	"sid": 677347493770721,
+	"sid": 497628991374210,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "EightDir",
-			"name": "LeftRight",
-			"sid": 168745573624791
-		},
-		{
-			"behaviorId": "EightDir",
-			"name": "UpDown",
-			"sid": 823072677601816
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 194,
+						"height": 436,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.5481651376146789,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8559868,
+						"imageSpriteId": 9777637,
+						"collisionPoly": {
+							"points": [
+								0.9690721649484536,
+								0.013761467889908258,
+								0.9742268041237113,
+								0.7614678899082569,
+								0.01546391752577554,
+								0.9908256880733946,
+								0.01546391752577554,
+								0.231651376146789
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 845825580412369,
+				"sid": 518647267425963,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 3
+				"speed": 5
 			}
 		],
 		"subfolders": []

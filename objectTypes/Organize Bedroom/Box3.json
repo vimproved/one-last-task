@@ -1,7 +1,7 @@
 {
-	"name": "Box4",
+	"name": "Box3",
 	"plugin-id": "Sprite",
-	"sid": 966194330653166,
+	"sid": 849562041206876,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,7 +9,7 @@
 		{
 			"behaviorId": "DragnDrop",
 			"name": "DragDrop",
-			"sid": 528239257074985
+			"sid": 454213760544944
 		}
 	],
 	"effectTypes": [],
@@ -18,21 +18,21 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 240,
+						"height": 169,
+						"originX": 0.4708333333333333,
+						"originY": 0.5266272189349113,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5769282,
+						"imageSpriteId": 8630577,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 901466503530886,
+				"sid": 535531741917613,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -58,6 +58,15 @@
 							"parameters": {
 								"state": "disabled"
 							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Box1",
+							"sid": 643418336749335,
+							"parameters": {
+								"object": "Box1End",
+								"image-point-optional": "0"
+							}
 						}
 					],
 					"sid": 440494032916508
@@ -82,6 +91,15 @@
 							"behaviorType": "DragDrop",
 							"parameters": {
 								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Box2",
+							"sid": 556187109029180,
+							"parameters": {
+								"object": "box2end",
+								"image-point-optional": "0"
 							}
 						}
 					],
@@ -108,6 +126,15 @@
 							"parameters": {
 								"state": "disabled"
 							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Box3",
+							"sid": 817398766685341,
+							"parameters": {
+								"object": "box3end",
+								"image-point-optional": "0"
+							}
 						}
 					],
 					"sid": 460604831386037
@@ -132,6 +159,15 @@
 							"behaviorType": "DragDrop",
 							"parameters": {
 								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Box4",
+							"sid": 760309525612750,
+							"parameters": {
+								"object": "box4end",
+								"image-point-optional": "0"
 							}
 						}
 					],

@@ -1,7 +1,7 @@
 {
-	"name": "box3end",
+	"name": "Sprite3",
 	"plugin-id": "Sprite",
-	"sid": 497628991374210,
+	"sid": 219039854706331,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8304175,
+						"imageSpriteId": 5738191,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 518647267425963,
+				"sid": 962062498206582,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
