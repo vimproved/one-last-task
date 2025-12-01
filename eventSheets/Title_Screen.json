@@ -2,6 +2,10 @@
 	"name": "Title_Screen",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

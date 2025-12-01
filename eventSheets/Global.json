@@ -13,9 +13,9 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "AddStress",
+			"name": "false",
 			"type": "boolean",
-			"initialValue": "false",
+			"initialValue": "true",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -80,6 +80,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 664772612164987
+		},
+		{
+			"eventType": "variable",
+			"name": "musicStarted",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 956339204151363
+		},
+		{
+			"eventType": "variable",
+			"name": "musicVol",
+			"type": "number",
+			"initialValue": "-5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 430216103031172
 		},
 		{
 			"eventType": "group",
@@ -331,7 +351,7 @@
 					"objectClass": "System",
 					"sid": 991237601442825,
 					"parameters": {
-						"variable": "AddStress"
+						"variable": "false"
 					}
 				}
 			],
@@ -386,7 +406,7 @@
 							"objectClass": "System",
 							"sid": 734422257816230,
 							"parameters": {
-								"variable": "AddStress",
+								"variable": "false",
 								"value": "true"
 							}
 						}
@@ -411,7 +431,7 @@
 							"objectClass": "System",
 							"sid": 679033712128583,
 							"parameters": {
-								"variable": "AddStress",
+								"variable": "false",
 								"value": "false"
 							}
 						}
@@ -419,6 +439,562 @@
 					"sid": 151773093909077
 				}
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Music",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 136323853868391
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 724269135840031,
+							"parameters": {
+								"first-value": "musicStarted",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 605401205621212,
+							"parameters": {
+								"audio-file": "stress1",
+								"loop": "looping",
+								"volume": "musicVol",
+								"stereo-pan": "0",
+								"tag-optional": "\"stress1\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 451273112039098,
+							"parameters": {
+								"audio-file": "stress2",
+								"loop": "looping",
+								"volume": "-100",
+								"stereo-pan": "0",
+								"tag-optional": "\"stress2\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 640194712926201,
+							"parameters": {
+								"audio-file": "stress3",
+								"loop": "looping",
+								"volume": "-100",
+								"stereo-pan": "0",
+								"tag-optional": "\"stress3\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 807161376506770,
+							"parameters": {
+								"audio-file": "stress4",
+								"loop": "looping",
+								"volume": "-100",
+								"stereo-pan": "0",
+								"tag-optional": "\"stress4\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 927806846939883,
+							"parameters": {
+								"audio-file": "stress5",
+								"loop": "looping",
+								"volume": "-100",
+								"stereo-pan": "0",
+								"tag-optional": "\"stress5\""
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 327529853491612,
+							"parameters": {
+								"variable": "musicStarted"
+							}
+						}
+					],
+					"sid": 345615555596071
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 431323241186451,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 3,
+								"second-value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 103829855572862,
+							"parameters": {
+								"tag": "\"stress1\"",
+								"db": "musicVol",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 492426585105753,
+							"parameters": {
+								"tag": "\"stress2\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 951108896964647,
+							"parameters": {
+								"tag": "\"stress3\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 976058458446032,
+							"parameters": {
+								"tag": "\"stress4\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 519055692930059,
+							"parameters": {
+								"tag": "\"stress5\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						}
+					],
+					"sid": 577444302040985
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 384726648129453,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 4,
+								"second-value": "20"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 629481886822745,
+							"parameters": {
+								"first-value": "stress ",
+								"comparison": 3,
+								"second-value": "40"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 864761098095897,
+							"parameters": {
+								"tag": "\"stress1\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 412817795968604,
+							"parameters": {
+								"tag": "\"stress2\"",
+								"db": "musicVol",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 614368450976779,
+							"parameters": {
+								"tag": "\"stress3\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 466862882539081,
+							"parameters": {
+								"tag": "\"stress4\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 716605543189538,
+							"parameters": {
+								"tag": "\"stress5\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						}
+					],
+					"sid": 553762682947793
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 481395874438845,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 4,
+								"second-value": "40"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 240456773854983,
+							"parameters": {
+								"first-value": "stress ",
+								"comparison": 3,
+								"second-value": "60"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 444828060444151,
+							"parameters": {
+								"tag": "\"stress1\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 651784690016806,
+							"parameters": {
+								"tag": "\"stress2\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 671799291778702,
+							"parameters": {
+								"tag": "\"stress3\"",
+								"db": "musicVol",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 921100984112109,
+							"parameters": {
+								"tag": "\"stress4\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 487709693074890,
+							"parameters": {
+								"tag": "\"stress5\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						}
+					],
+					"sid": 511539942916123
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 882050775450154,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 4,
+								"second-value": "60"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 366899720504613,
+							"parameters": {
+								"first-value": "stress ",
+								"comparison": 3,
+								"second-value": "80"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 554692287157618,
+							"parameters": {
+								"tag": "\"stress1\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 365974936854885,
+							"parameters": {
+								"tag": "\"stress2\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 950701993694797,
+							"parameters": {
+								"tag": "\"stress3\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 736188539372431,
+							"parameters": {
+								"tag": "\"stress4\"",
+								"db": "musicVol",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 234942184992671,
+							"parameters": {
+								"tag": "\"stress5\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						}
+					],
+					"sid": 173967571617600
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 250891652744983,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 4,
+								"second-value": "80"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 935694908478072,
+							"parameters": {
+								"tag": "\"stress1\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 577074913427692,
+							"parameters": {
+								"tag": "\"stress2\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 551586161741751,
+							"parameters": {
+								"tag": "\"stress3\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 310632494452391,
+							"parameters": {
+								"tag": "\"stress4\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 800297914734716,
+							"parameters": {
+								"tag": "\"stress5\"",
+								"db": "musicVol",
+								"duration": "3",
+								"ending": "keep-playing"
+							}
+						}
+					],
+					"sid": 115371092024328
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 606061648485730
+				}
+			],
+			"sid": 823804763474363
+		},
+		{
+			"eventType": "comment",
+			"text": "debug stress keys"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 903707519432858,
+					"parameters": {
+						"key": 219
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 316180042218290,
+					"parameters": {
+						"variable": "stress",
+						"value": "-5"
+					}
+				}
+			],
+			"sid": 390872938039494
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 905482988490875,
+					"parameters": {
+						"key": 221
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 614005435940277,
+					"parameters": {
+						"variable": "stress",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 926208549560092
 		}
 	],
 	"sid": 163430010393623
