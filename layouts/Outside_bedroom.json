@@ -1772,7 +1772,7 @@
 							"type": "Cauldron",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "normal",
+								"initial-animation": "explode",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -1791,10 +1791,10 @@
 							"world": {
 								"x": 307,
 								"y": 309,
-								"width": 272.88275870783775,
-								"height": 272.88275870783775,
-								"originX": 0.5,
-								"originY": 0.5,
+								"width": 3003.8934078558777,
+								"height": 2252.9200558919083,
+								"originX": 0,
+								"originY": 0,
 								"color": [
 									1,
 									1,
@@ -2188,7 +2188,7 @@
 				{
 					"type": "JobApps",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -2206,10 +2206,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 245,
-						"y": 234,
-						"width": 250,
-						"height": 250,
+						"x": 255.5,
+						"y": 240.5,
+						"width": 253,
+						"height": 341,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2225,7 +2225,7 @@
 				{
 					"type": "TarotGame",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -2243,10 +2243,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 608,
-						"y": 230,
-						"width": 250,
-						"height": 250,
+						"x": 589.5,
+						"y": 242,
+						"width": 249,
+						"height": 336,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2280,10 +2280,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 70,
-						"y": 48,
-						"width": 136.72111410999491,
-						"height": 79.35862774838824,
+						"x": 53.72858311673371,
+						"y": 35.779366856400635,
+						"width": 122.17828034346233,
+						"height": 70.91736146118951,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
