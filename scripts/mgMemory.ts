@@ -25,7 +25,9 @@ export class MgMemory {
     }
 
     initialize() {
+        this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = false
         this.runtime.layout.getLayer("MgMemory")!.isVisible = true
+        this.runtime.layout.getLayer("MgMemory")!.isInteractive = true
         for (let i = 0; i < 4; ++i) {
             for (let j = 0; j < 4; ++j) {
                 this.cards.push(this.runtime.objects.Card.createInstance("MgMemory", 230 + 130*i, 60 + 120*j));
@@ -99,6 +101,8 @@ export class MgMemory {
                 card.destroy()
             }
             this.runtime.layout.getLayer("MgMemory")!.isVisible = false
+            this.runtime.layout.getLayer("MgMemory")!.isInteractive = false
+            this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = true
         }
         return this.done
     }

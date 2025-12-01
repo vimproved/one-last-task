@@ -13,11 +13,6 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "Sprite3",
-					"sid": 998838355337301
-				},
-				{
-					"id": "destroy",
 					"objectClass": "DialogueText",
 					"sid": 109424715531377
 				}
@@ -28,16 +23,48 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked",
-					"objectClass": "Button",
-					"sid": 821536613631683
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 142493846932269,
+					"parameters": {
+						"key": 32
+					}
 				}
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 275945207493265,
+					"disabled": true,
+					"parameters": {
+						"variable": "Day",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 920041049221367,
+					"disabled": true,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "true"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 724707833432116,
+					"sid": 133471324687021,
+					"disabled": true,
+					"parameters": {
+						"layout": "Outside_bedroom"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 728819708750298,
 					"parameters": {
 						"layout": "BedroomTutorial"
 					}

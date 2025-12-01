@@ -1,0 +1,137 @@
+{
+	"name": "Work",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "BeganPotion",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 151211180358512
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 414519785525173
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 262815944762900
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 763155212713851,
+					"parameters": [
+						"\"Manager: Oh good, you're here, customers are already at the register. Punch in quick. (insert cutscene and dialogue here)\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 483037055317388,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 855703371414798,
+					"parameters": [
+						"\"(Pretend we have a shop here, press space to begin making potions)\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 847880737458683,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 665175520307961
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 116665635983372,
+					"parameters": {
+						"variable": "BeganPotion",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 617345156271045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 324858155797445,
+					"parameters": {
+						"variable": "BeganPotion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 457901760005463,
+					"parameters": {
+						"variable": "BeganPotion",
+						"value": "false"
+					}
+				},
+				{
+					"type": "script",
+					"language": "typescript",
+					"script": [
+						"updateState(State.MgPotionBegin)"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 855076329543257,
+					"parameters": {
+						"tag": "\"WorkDone\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 731944512327490,
+					"parameters": {
+						"variable": "WorkComplete",
+						"value": "true"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 797712351789595,
+					"parameters": {
+						"layout": "Outside_bedroom"
+					}
+				}
+			],
+			"sid": 545034627673263
+		}
+	],
+	"sid": 307636830378548
+}

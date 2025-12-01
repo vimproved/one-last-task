@@ -50,6 +50,7 @@ export class MgPotion {
     initialize() {
         // this.runtime.viewportHeight
         this.runtime.layout.getLayer("MgPotion")!.isVisible = true
+        this.runtime.layout.getLayer("MgPotion")!.isInteractive = true
         // this.runtime.goToLayout("MgPotion")
         for (let i = 0; i < 4; ++i) {
             // this.orders.push(this.runtime.objects.Potion.createInstance("MgPotionBg", 192 + 154*i, 80))
@@ -136,10 +137,11 @@ export class MgPotion {
                             }
                         }
                         if (equal) {
-                            if (this.result) {
-                                this.result.destroy()
-                            }
+                            // if (this.result) {
+                            //     this.result.destroy()
+                            // }
                             this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
+                            this.result.opacity = 1
                             // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
                             this.result.setAnimation(potion)
                             this.result.width = this.result.width / 10
@@ -148,14 +150,20 @@ export class MgPotion {
                             this.goodResult = false
                             // WARNING: how does this go with destroyed orders?
                             for (let i = 0; i < 4; ++i) {
-                                if (this.orders[i].animationName == this.result!.animationName) {
-                                    this.goodResult = true
-                                    this.timer!.behaviors.Timer.startTimer(1.3, "levitateTimer", "once")
-                                    this.orderToFinish = i
-                                    this.orderStatuses[i] = true
-                                    break
+                                if (!this.orderStatuses[i]) {
+                                    if (this.orders[i].animationName == this.result!.animationName) {
+                                        this.goodResult = true
+                                        this.orderToFinish = i
+                                        break
+                                    }
                                 }
                             }
+                            if (this.goodResult) {
+                                this.result.behaviors.Tween.startTween("position", [this.orders[this.orderToFinish]!.x, this.orders[this.orderToFinish]!.y], 1.0, "out-quadratic")
+                            } else {
+                                this.result.behaviors.Tween.startTween("position", [-50, this.cauldron!.y], 1.0, "in-quadratic")
+                            }
+                            this.timer!.behaviors.Timer.startTimer(2.0, "levitateTimer", "once")
                             break
                         }
                     }
@@ -199,21 +207,14 @@ export class MgPotion {
                 this.dragNDrop.destroy()
             }
         }
-        // if (this.result && this.result.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
-        if (this.result && this.goodResult) {
-            let t = Math.min(this.timer!.behaviors.Timer.getCurrentTime("levitateTimer"), 1.0)
+        if (this.result) {
+            // if (this.timer!.behaviors.Timer.hasFinished("levitateTimer")) {
             if (this.timer!.behaviors.Timer.getCurrentTime("levitateTimer") > 1.2) {
+                this.orderStatuses[this.orderToFinish] = true
                 this.result.destroy()
                 this.orders[this.orderToFinish].destroy()
-            } else {
-                this.result.x = (1-t) * this.cauldron!.x + t * this.orders[this.orderToFinish]!.x
-                this.result.y = (1-t) * this.cauldron!.y + t * this.orders[this.orderToFinish]!.y
-                // this.result.y = this.mouse.getMouseY()
+                // this.goodResult = false
             }
-            // if (this.mouse.isMouseButtonDown(0)) {
-            // } else
-            // if (this.fallingEdge) {
-            // }
         }
         
     }
@@ -228,8 +229,11 @@ export class MgPotion {
         }
         if (done) {
             this.runtime.layout.getLayer("MgPotion")!.isVisible = false
+            this.runtime.layout.getLayer("MgPotion")!.isInteractive = false
+            this.runtime.signal("WorkDone")
         }
         return done
+        // return false
     }
 }
 

@@ -7,43 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Background",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"sid": 518675972823787,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 518675972823787,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 427,
-						"y": 240.5,
-						"width": 864,
-						"height": 497,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "IntroPage",
 					"properties": {
 						"text": "PLACEHOLDER",
@@ -97,34 +60,30 @@
 					}
 				},
 				{
-					"type": "Button",
+					"type": "SSBackground",
 					"properties": {
-						"type": "button",
-						"text": "PLAY",
-						"tooltip": "",
 						"initially-visible": true,
-						"enabled": true,
-						"auto-font-size": true,
-						"checked": false,
-						"id": "",
-						"class": ""
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 7,
-					"sid": 695510494168547,
+					"uid": 3,
+					"sid": 268111252838803,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 695510494168547,
+						"sid": 268111252838803,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 384,
-						"y": 300,
-						"width": 72,
-						"height": 24,
+						"x": 85,
+						"y": 0,
+						"width": 685.22,
+						"height": 480,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -132,7 +91,9 @@
 							1,
 							1,
 							1
-						]
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
@@ -148,9 +109,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0.2627450980392157,
+				0.3803921568627451,
+				0.45098039215686275,
 				1
 			],
 			"isTransparent": false,

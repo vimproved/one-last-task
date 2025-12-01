@@ -2,6 +2,7 @@
 // import * as myModule from "./mymodule.js";
 import { MgMemory } from "./mgMemory.js"
 import { MgPotion } from "./mgPotion.js"
+import { MgApps } from "./mgApps.js"
 
 export enum State {
 	Disabled,
@@ -9,6 +10,8 @@ export enum State {
 	MgMemory,
 	MgPotionBegin,
 	MgPotion,
+	MgAppsBegin,
+	MgApps,
 }
 
 export function updateState(newState: State) {
@@ -19,6 +22,7 @@ export let state = State.Disabled
 let mouse: IMouseObjectType
 let mgMemory: MgMemory
 let mgPotion: MgPotion
+let mgApps: MgApps
 
 runOnStartup(async runtime =>
 {
@@ -36,8 +40,8 @@ async function OnBeforeProjectStart(runtime : IRuntime)
 
 	runtime.goToLayout("Start Screen");
 	mouse = runtime.mouse!
-	mgMemory = new MgMemory(runtime)
-	mgPotion = new MgPotion(runtime)
+	// mgMemory = new MgMemory(runtime)
+	// mgPotion = new MgPotion(runtime)
 	
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
@@ -70,6 +74,7 @@ function Tick(runtime : IRuntime)
 	if (state != State.Disabled) {
 		if (state == State.MgMemoryBegin) {
 			state = State.MgMemory
+			mgMemory = new MgMemory(runtime)
 			mgMemory.initialize()
 		} else if (state == State.MgMemory) {
 			mgMemory.tick()
@@ -78,12 +83,22 @@ function Tick(runtime : IRuntime)
 			}
 		} else if (state == State.MgPotionBegin) {
 			state = State.MgPotion
+			mgPotion = new MgPotion(runtime)
 			mgPotion.initialize()
 		} else if (state == State.MgPotion) {
 			mgPotion.tick()
-			// if (mgPotion.isDone()) {
-			// 	state = State.Disabled
-			// }
+			if (mgPotion.isDone()) {
+				state = State.Disabled
+			}
+		} else if (state == State.MgAppsBegin) {
+			state = State.MgApps
+			mgApps = new MgApps(runtime)
+			mgApps.initialize()
+		} else if (state == State.MgApps) {
+			mgApps.tick()
+			if (mgApps.isDone()) {
+				state = State.Disabled
+			}
 		}
 	}
 }

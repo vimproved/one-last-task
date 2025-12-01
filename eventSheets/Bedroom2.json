@@ -95,17 +95,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "laptoptypeshiiiii",
-					"sid": 200473393188908,
-					"parameters": {
-						"animation": "\"lit\"",
-						"from": "beginning"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 907641302236034
 		},
 		{
@@ -117,17 +107,7 @@
 					"sid": 467580413646148
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "laptoptypeshiiiii",
-					"sid": 940101764055566,
-					"parameters": {
-						"animation": "\"normal\"",
-						"from": "beginning"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 582815389491871
 		},
 		{

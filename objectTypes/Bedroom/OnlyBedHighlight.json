@@ -1,0 +1,54 @@
+{
+	"name": "OnlyBedHighlight",
+	"plugin-id": "Sprite",
+	"sid": 187178898414988,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 4776,
+						"height": 3595,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1232080,
+						"collisionPoly": {
+							"points": [
+								0.4480737018425461,
+								0.2770514603616134,
+								0.5649078726968174,
+								0.4222531293463143,
+								0.48199329983249584,
+								0.5196105702364395,
+								0.3888190954773869,
+								0.44923504867872044,
+								0.3515494137353434,
+								0.34102920723226704
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 955612311665527,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

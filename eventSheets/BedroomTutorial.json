@@ -2,6 +2,26 @@
 	"name": "BedroomTutorial",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Slept",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 663683978858320
+		},
+		{
+			"eventType": "variable",
+			"name": "CutscenesDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 146496577033061
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "Global"
 		},
@@ -17,9 +37,9 @@
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 975782759610499,
+					"sid": 273539867632582,
 					"parameters": [
-						"\"Opal: Ok! That box goes in that corner, and the chair goes over there (press space to continue dialogue)\""
+						"\"Opal: Ok! That box goes in that corner, and the chair goes over there.\n(Press space to continue dialogue)\""
 					]
 				},
 				{
@@ -47,9 +67,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 559539901225472,
+					"sid": 666387977569046,
 					"parameters": [
-						"\"Opal: Hm… We’ll put it against that wall\"\n"
+						"\"Opal: Hm… We’ll put it against that wall.\"\n"
 					]
 				},
 				{
@@ -173,33 +193,68 @@
 					]
 				},
 				{
-					"type": "comment",
-					"text": "^^ This is the dialogue, aka cutscene 1"
-				},
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 117486725211879
-				},
-				{
-					"id": "wait",
+					"id": "wait-for-signal",
 					"objectClass": "System",
-					"sid": 923200223038949,
+					"sid": 985979541827796,
 					"parameters": {
-						"seconds": "4",
-						"use-timescale": true
+						"tag": "\"Next\""
 					}
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 176293143659865,
+					"sid": 423921693531524,
 					"parameters": [
-						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now... (press E to interact)\""
+						"\"(pretend more cutscene stuff is here)\"\n"
 					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 936183615208313,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 346345390656610,
+					"parameters": [
+						"\"(Press arrow keys to move and E to interact with highlighted objects) (we can switch to WASD if needed)\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 358365870033939,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 599489538767831,
+					"parameters": [
+						"\"Opal: Wow I’m exhausted, can’t wait to try out my new bed.\"\n"
+					]
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 278841141992489,
+					"parameters": {
+						"variable": "CutscenesDone",
+						"value": "true"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "^^ This is the dialogue, aka cutscene 1"
 				},
 				{
 					"id": "signal",
 					"objectClass": "System",
-					"sid": 859721220825393,
+					"sid": 417721231957565,
+					"disabled": true,
 					"parameters": {
 						"tag": "\"startStress\""
 					}
@@ -207,7 +262,8 @@
 				{
 					"id": "set-visible",
 					"objectClass": "StresBar_background",
-					"sid": 629122584684126,
+					"sid": 643320972751001,
+					"disabled": true,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -215,13 +271,85 @@
 				{
 					"id": "set-visible",
 					"objectClass": "StressLevel",
-					"sid": 265536633724557,
+					"sid": 282199490591933,
+					"disabled": true,
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 117486725211879,
+					"disabled": true
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 923200223038949,
+					"disabled": true,
+					"parameters": {
+						"seconds": "4",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 627113567666125,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now...\""
+					]
 				}
 			],
 			"sid": 627537260281178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 390866435183548,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 910380250825128,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 838544706420559,
+					"parameters": {
+						"value": "Slept"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 688279688586017,
+					"parameters": {
+						"value": "CutscenesDone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 780186364581518,
+					"parameters": [
+						"\"(It’s late and you should probably head to bed.)\"\n"
+					]
+				}
+			],
+			"sid": 874923812544581
 		},
 		{
 			"eventType": "block",
@@ -245,6 +373,22 @@
 					"sid": 198747645820190,
 					"parameters": {
 						"key": 69
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 751785114119003,
+					"parameters": {
+						"value": "Slept"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 574907157211026,
+					"parameters": {
+						"value": "CutscenesDone"
 					}
 				}
 			],
@@ -274,7 +418,8 @@
 					}
 				}
 			],
-			"sid": 385763363310620
+			"sid": 385763363310620,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -287,22 +432,25 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "PlayerMovement",
-					"sid": 585175541430570,
+					"sid": 893120045282673,
 					"parameters": {
 						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 539460155715837,
+					"parameters": {
+						"value": "CutscenesDone"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "move-to-bottom",
-					"objectClass": "HilightedBox",
-					"sid": 934673936726171
-				},
-				{
 					"id": "set-visible",
-					"objectClass": "HilightedBox",
-					"sid": 686643167507395,
+					"objectClass": "BoxHighlight",
+					"sid": 171002528933620,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -322,14 +470,196 @@
 			"actions": [
 				{
 					"id": "set-visible",
-					"objectClass": "HilightedBox",
-					"sid": 994493077605049,
+					"objectClass": "BoxHighlight",
+					"sid": 277724535750759,
 					"parameters": {
 						"visibility": "invisible"
 					}
 				}
 			],
 			"sid": 996028289006931
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 719452276281830,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 213567516907682,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 998888510620949,
+					"parameters": {
+						"value": "CutscenesDone"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 241628799298365,
+					"parameters": {
+						"value": "Slept"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 438447692903230
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 239317199167216,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 313796849875432,
+					"behaviorType": "FadeIn"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 782638160894719,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 613364733230644,
+					"parameters": [
+						"\"...\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 971261742683009,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 625137109764300,
+					"parameters": [
+						"\"(Waking up to DAY 1)\"\n"
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 268241046323272,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 752961379283917,
+					"parameters": {
+						"variable": "Day",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 525296131788574,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "true"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 393956221563355,
+					"parameters": {
+						"layout": "Outside_bedroom"
+					}
+				}
+			],
+			"sid": 780105509288601
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 692341976772643
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 745383899591699,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 695262281811559,
+					"parameters": {
+						"value": "CutscenesDone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "OnlyBedHighlight",
+					"sid": 153759702137288,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 749406590953228
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 611393702594117
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "OnlyBedHighlight",
+					"sid": 638946917059952,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 989363445045201
 		}
 	],
 	"sid": 214246851524803

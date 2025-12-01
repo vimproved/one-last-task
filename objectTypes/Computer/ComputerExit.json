@@ -1,0 +1,52 @@
+{
+	"name": "ComputerExit",
+	"plugin-id": "Sprite",
+	"sid": 137410989514626,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1902,
+						"height": 1104,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8224970,
+						"collisionPoly": {
+							"points": [
+								0.12302839116719243,
+								0.09239130434782608,
+								0.8964248159831756,
+								0.11141304347826086,
+								0.8564668769716088,
+								0.8478260869565217,
+								0.11356466876971609,
+								0.8369565217391305
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 761088557621146,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

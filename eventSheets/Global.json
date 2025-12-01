@@ -22,6 +22,66 @@
 			"sid": 703357419894532
 		},
 		{
+			"eventType": "variable",
+			"name": "Day",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 128965950575842
+		},
+		{
+			"eventType": "variable",
+			"name": "DayBegin",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 751944283014540
+		},
+		{
+			"eventType": "variable",
+			"name": "BoxesDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 791329527975368
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 339721914781866
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 363944234252616
+		},
+		{
+			"eventType": "variable",
+			"name": "WorkComplete",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 664772612164987
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",
@@ -58,49 +118,13 @@
 							"sid": 681594881515453
 						},
 						{
-							"id": "destroy",
-							"objectClass": "Sprite3",
-							"sid": 794472103253293
-						},
-						{
-							"id": "destroy",
-							"objectClass": "Speaker_Background",
-							"sid": 457935513459939
-						},
-						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 266543135158331,
-							"parameters": {
-								"object-to-create": "Sprite3",
-								"layer": "1",
-								"x": "421",
-								"y": "454",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 600496047998914,
-							"parameters": {
-								"object-to-create": "Speaker_Background",
-								"layer": "1",
-								"x": "100",
-								"y": "350",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 990624168150694,
+							"sid": 490420554177006,
 							"parameters": {
 								"object-to-create": "DialogueText",
-								"layer": "1",
-								"x": "200",
+								"layer": "\"Dialogue\"",
+								"x": "205",
 								"y": "400",
 								"create-hierarchy": false,
 								"template-name": "\"\""
@@ -110,6 +134,7 @@
 							"id": "create-object",
 							"objectClass": "System",
 							"sid": 682501812290501,
+							"disabled": true,
 							"parameters": {
 								"object-to-create": "Speaker",
 								"layer": "1",
@@ -146,16 +171,6 @@
 							"id": "destroy",
 							"objectClass": "DialogueText",
 							"sid": 994734223409214
-						},
-						{
-							"id": "destroy",
-							"objectClass": "Sprite3",
-							"sid": 577450861489867
-						},
-						{
-							"id": "destroy",
-							"objectClass": "Speaker_Background",
-							"sid": 546115298226877
 						},
 						{
 							"id": "destroy",
