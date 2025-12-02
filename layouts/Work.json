@@ -234,7 +234,7 @@
 							"type": "Cauldron",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "normal",
+								"initial-animation": "explode",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -251,12 +251,12 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 307,
-								"y": 309,
-								"width": 272.88275870783775,
-								"height": 272.88275870783775,
-								"originX": 0.5,
-								"originY": 0.5,
+								"x": 107,
+								"y": 0,
+								"width": 640,
+								"height": 480,
+								"originX": 0,
+								"originY": 0,
 								"color": [
 									1,
 									1,
