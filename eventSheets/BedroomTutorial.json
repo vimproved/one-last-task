@@ -37,9 +37,9 @@
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 728929413228755,
+					"sid": 273539867632582,
 					"parameters": [
-						"\"Opal: Ok! That box goes in that corner, and the chair goes over there.\n\n(Press space to continue dialogue)\""
+						"\"Opal: Ok! That box goes in that corner, and the chair goes over there.\n(Press space to continue dialogue)\""
 					]
 				},
 				{

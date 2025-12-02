@@ -288,7 +288,7 @@
 						},
 						"UpDown": {
 							"properties": {
-								"max-speed": 75,
+								"max-speed": 80,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "up-down",
