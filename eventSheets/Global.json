@@ -129,7 +129,7 @@
 					"actions": [
 						{
 							"id": "set-opacity",
-							"objectClass": "Sprite8",
+							"objectClass": "SpacePrompt",
 							"sid": 583811520969364,
 							"parameters": {
 								"opacity": "0"
@@ -295,7 +295,7 @@
 						},
 						{
 							"id": "stop-all-tweens",
-							"objectClass": "Sprite8",
+							"objectClass": "SpacePrompt",
 							"sid": 259450001807385,
 							"behaviorType": "Tween"
 						},
@@ -322,7 +322,7 @@
 					"actions": [
 						{
 							"id": "tween-one-property",
-							"objectClass": "Sprite8",
+							"objectClass": "SpacePrompt",
 							"sid": 249592260399407,
 							"behaviorType": "Tween",
 							"parameters": {

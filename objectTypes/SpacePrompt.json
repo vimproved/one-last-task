@@ -1,32 +1,38 @@
 {
-	"name": "Sprite8",
+	"name": "SpacePrompt",
 	"plugin-id": "Sprite",
-	"sid": 396574516908827,
+	"sid": 766720366892312,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 114937378861986
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 46,
+						"height": 24,
+						"originX": -0.6304347826086957,
+						"originY": -2.6666666666666665,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 782808,
+						"imageSpriteId": 4534296,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 182294329865897,
+				"sid": 986438241528152,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

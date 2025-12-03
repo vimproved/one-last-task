@@ -37,9 +37,9 @@
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 273539867632582,
+					"sid": 956137904423815,
 					"parameters": [
-						"\"Opal: Ok! That box goes in that corner, and the chair goes over there.\n(Press space to continue dialogue)\""
+						"\"Opal: Okay! That box goes in that corner, and the chair goes over there.\""
 					]
 				},
 				{
@@ -52,9 +52,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 512075952302224,
+					"sid": 553187938737219,
 					"parameters": [
-						"\"Mom: Alright, sweetie, what about your desk and computer?\"\n"
+						"\"Mom: Alright, sweetie! What about your desk and computer?\"\n"
 					]
 				},
 				{
@@ -67,9 +67,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 666387977569046,
+					"sid": 514147901530781,
 					"parameters": [
-						"\"Opal: Hm… We’ll put it against that wall.\"\n"
+						"\"Opal: Hmm… We’ll put it against that wall.\"\n"
 					]
 				},
 				{
@@ -82,24 +82,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 444248994049402,
+					"sid": 230022412711938,
 					"parameters": [
-						"\"Mom: Alright, sweetie, what about your desk and computer?\"\n"
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 491000141468647,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 613548805930380,
-					"parameters": [
-						"\"Dad: This really is a nice apartment, how much did they say you were paying for rent again?\"\n"
+						"\"Dad: This really is a nice apartment! How much did they say you were paying for rent again?\"\n"
 					]
 				},
 				{
@@ -112,9 +97,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 593864397204706,
+					"sid": 808156194299279,
 					"parameters": [
-						"\"Opal: Dad! I told you I have it covered, I have enough saved to pay rent for 6 months and I’m about to get a job as a spellcrafter, then I won’t ever have to worry about it\""
+						"\"Opal: Dad! I told you I have it covered. I have enough saved to pay rent for 6 months, and I’m about to get a job as a spellcrafter, so then I won’t ever have to worry about it again.\""
 					]
 				},
 				{
@@ -127,9 +112,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 250279297540710,
+					"sid": 862788883844013,
 					"parameters": [
-						"\"Dad: I know, just are you sure you want to do this before you already have the job\""
+						"\"Dad: I know, but are you sure you want to do this before you have the job?\""
 					]
 				},
 				{
@@ -142,9 +127,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 224987581671325,
+					"sid": 243434020130132,
 					"parameters": [
-						"\"Opal: Yes! It’ll be fine, I already have my certifications, all I have to do is apply\"\n"
+						"\"Opal: Yes! It’ll be fine, I already have my certifications, all I have to do is apply.\"\n"
 					]
 				},
 				{
@@ -157,9 +142,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 211281281442496,
+					"sid": 490266348134662,
 					"parameters": [
-						"\"Mom: Carper, we’ve already had this talk with them, and they’ve already signed the lease. It’ll be fine, but if need be we’ll cross that bridge when we come to it.\""
+						"\"Mom: Carper, we’ve already had this talk, and they’ve already signed the lease. It’ll be fine, but if need be we’ll cross that bridge when we come to it.\""
 					]
 				},
 				{
@@ -172,9 +157,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 786988301306463,
+					"sid": 124002978320254,
 					"parameters": [
-						"\"Dad: You’re right, I’m sorry Opal\"\n"
+						"\"Dad: You’re right, I’m sorry Opal.\"\n"
 					]
 				},
 				{
@@ -187,9 +172,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 586629872061699,
+					"sid": 950239594880877,
 					"parameters": [
-						"\"Opal: It’s alright, but trust me, I’ve got this!\"\n"
+						"\"Opal: It’s alright. Trust me, I’ve got this!\"\n"
 					]
 				},
 				{
