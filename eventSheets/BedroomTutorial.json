@@ -37,9 +37,10 @@
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 956137904423815,
+					"sid": 224285840029679,
 					"parameters": [
-						"\"Opal: Okay! That box goes in that corner, and the chair goes over there.\""
+						"\"Okay! That box goes in that corner, and the chair goes over there.\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -52,9 +53,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 553187938737219,
+					"sid": 195105463749934,
 					"parameters": [
-						"\"Mom: Alright, sweetie! What about your desk and computer?\"\n"
+						"\"Alright, sweetie! What about your desk and computer?\"\n",
+						"\"Mom\""
 					]
 				},
 				{
@@ -67,9 +69,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 514147901530781,
+					"sid": 384357146558028,
 					"parameters": [
-						"\"Opal: Hmm… We’ll put it against that wall.\"\n"
+						"\"Hmm… We’ll put it against that wall.\"\n",
+						"\"Opal\""
 					]
 				},
 				{
@@ -82,9 +85,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 230022412711938,
+					"sid": 718443694914890,
 					"parameters": [
-						"\"Dad: This really is a nice apartment! How much did they say you were paying for rent again?\"\n"
+						"\"This really is a nice apartment! How much did they say you were paying for rent again?\"\n",
+						"\"Dad\""
 					]
 				},
 				{
@@ -97,9 +101,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 808156194299279,
+					"sid": 270553918806592,
 					"parameters": [
-						"\"Opal: Dad! I told you I have it covered. I have enough saved to pay rent for 6 months, and I’m about to get a job as a spellcrafter, so then I won’t ever have to worry about it again.\""
+						"\"Dad! I told you I have it covered. I have enough saved to pay rent for 6 months, and I’m about to get a job as a spellcrafter, so then I won’t ever have to worry about it again.\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -112,9 +117,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 862788883844013,
+					"sid": 453384953402236,
 					"parameters": [
-						"\"Dad: I know, but are you sure you want to do this before you have the job?\""
+						"\"I know, but are you sure you want to do this before you have the job?\"",
+						"\"Dad\""
 					]
 				},
 				{
@@ -127,9 +133,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 243434020130132,
+					"sid": 363600753908007,
 					"parameters": [
-						"\"Opal: Yes! It’ll be fine, I already have my certifications, all I have to do is apply.\"\n"
+						"\"Yes! It’ll be fine, I already have my certifications, all I have to do is apply.\"\n",
+						"\"Opal\""
 					]
 				},
 				{
@@ -142,9 +149,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 490266348134662,
+					"sid": 206197771265927,
 					"parameters": [
-						"\"Mom: Carper, we’ve already had this talk, and they’ve already signed the lease. It’ll be fine, but if need be we’ll cross that bridge when we come to it.\""
+						"\"Carper, we’ve already had this talk, and they’ve already signed the lease. It’ll be fine, but if need be we’ll cross that bridge when we come to it.\"",
+						"\"Mom\""
 					]
 				},
 				{
@@ -157,9 +165,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 124002978320254,
+					"sid": 629175903753231,
 					"parameters": [
-						"\"Dad: You’re right, I’m sorry Opal.\"\n"
+						"\"You’re right, I’m sorry Opal.\"\n",
+						"\"Dad\""
 					]
 				},
 				{
@@ -172,9 +181,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 950239594880877,
+					"sid": 277442542063357,
 					"parameters": [
-						"\"Opal: It’s alright. Trust me, I’ve got this!\"\n"
+						"\"It’s alright. Trust me, I’ve got this!\"\n",
+						"\"Opal\""
 					]
 				},
 				{
@@ -186,11 +196,35 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 148342433229007,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 699297358259458,
+					"behaviorType": "FadeIn"
+				},
+				{
 					"callFunction": "dialogue",
-					"sid": 423921693531524,
+					"sid": 732832442752955,
 					"parameters": [
-						"\"(pretend more cutscene stuff is here)\"\n"
+						"\"...\"\n",
+						"\"None\""
 					]
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 710757181683945,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
 				},
 				{
 					"id": "wait-for-signal",
@@ -201,10 +235,34 @@
 					}
 				},
 				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 118195024234028,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 757778080897641,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 242128029660226,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"callFunction": "dialogue",
-					"sid": 346345390656610,
+					"sid": 649490528673953,
 					"parameters": [
-						"\"(Press arrow keys to move and E to interact with highlighted objects) (we can switch to WASD if needed)\"\n"
+						"\"That’s about it for now, Thank you guys so much for helping!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -217,9 +275,154 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 599489538767831,
+					"sid": 395604143063786,
 					"parameters": [
-						"\"Opal: Wow I’m exhausted, can’t wait to try out my new bed.\"\n"
+						"\"Wouldn’t have it any other way! It is getting late so we’ll give you some time to settle in now, don’t hesitate to reach out if you ever need anything.\"",
+						"\"Dad\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 714890649488148,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 201803878059422,
+					"parameters": [
+						"\"And remember to call, moving out wont get rid of us!\"",
+						"\"Mom\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 428044159691042,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 359090533962179,
+					"parameters": [
+						"\"Mom! You know I will!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 681765769802060,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 481296257851583,
+					"parameters": [
+						"\"Heh, just messing with you!\"",
+						"\"Mom\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 321780701921190,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 130824442279521,
+					"parameters": [
+						"\"Say goodbye to your brother, sweetie!\"",
+						"\"Mom\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 413262058581999,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 220517649283617,
+					"parameters": [
+						"\"Goodbye, Fishbert!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 137979728844745,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 790377732910516,
+					"parameters": [
+						"\"blub blub bluh blub blub bluh blub\"",
+						"\"Fishbert\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 416780503288851,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 554197381992356,
+					"parameters": [
+						"\"Goodbye, we love you!\"",
+						"\"Dad\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 973135231288442,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 494213378882364,
+					"parameters": [
+						"\"Love you too!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 488471884988466,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 589202983714079,
+					"parameters": [
+						"\"Wow I’m exhausted, can’t wait to try out my new bed.\"\n",
+						"\"Opal\""
 					]
 				},
 				{
@@ -282,7 +485,8 @@
 					"sid": 627113567666125,
 					"disabled": true,
 					"parameters": [
-						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now...\""
+						"\"Opal: Maybe I should go organize the boxes? Let me get this out of the way for now...\"",
+						"\"None\""
 					]
 				}
 			],
@@ -330,7 +534,8 @@
 					"callFunction": "dialogue",
 					"sid": 780186364581518,
 					"parameters": [
-						"\"(It’s late and you should probably head to bed.)\"\n"
+						"\"(It’s late and you should probably head to bed.)\"\n",
+						"\"None\""
 					]
 				}
 			],
@@ -533,7 +738,8 @@
 					"callFunction": "dialogue",
 					"sid": 613364733230644,
 					"parameters": [
-						"\"...\"\n"
+						"\"...\"\n",
+						"\"None\""
 					]
 				},
 				{
@@ -560,7 +766,8 @@
 					"callFunction": "dialogue",
 					"sid": 625137109764300,
 					"parameters": [
-						"\"(Waking up to DAY 1)\"\n"
+						"\"(Waking up to DAY 1)\"\n",
+						"\"None\""
 					]
 				},
 				{

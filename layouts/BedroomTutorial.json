@@ -1056,32 +1056,85 @@
 					}
 				},
 				{
-					"type": "Sprite8",
+					"type": "Bustup",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Opal",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 36,
-					"sid": 427184183968213,
+					"sid": 720560805087568,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 427184183968213,
+						"sid": 720560805087568,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 37,
-						"y": 356,
-						"width": 250,
-						"height": 250,
+						"x": 100.33353009527453,
+						"y": 479.510926430253,
+						"width": 158.74096356616604,
+						"height": 190.21546496290588,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Speaker",
+					"properties": {
+						"text": "PLACEHOLDER SPEAKER",
+						"enable-bbcode": true,
+						"font": "Segoe Print",
+						"size": 16,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 37,
+					"sid": 571030734828100,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 571030734828100,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 197.39216378463607,
+						"y": 362.16965809668125,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

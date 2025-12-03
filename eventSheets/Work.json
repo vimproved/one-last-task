@@ -33,7 +33,8 @@
 					"callFunction": "dialogue",
 					"sid": 763155212713851,
 					"parameters": [
-						"\"Manager: Oh good, you're here, customers are already at the register. Punch in quick. (insert cutscene and dialogue here)\""
+						"\"Manager: Oh good, you're here, customers are already at the register. Punch in quick. (insert cutscene and dialogue here)\"",
+						"\"None\""
 					]
 				},
 				{
@@ -48,7 +49,8 @@
 					"callFunction": "dialogue",
 					"sid": 855703371414798,
 					"parameters": [
-						"\"(Pretend we have a shop here, press space to begin making potions)\""
+						"\"(Pretend we have a shop here, press space to begin making potions)\"",
+						"\"None\""
 					]
 				},
 				{

@@ -81,7 +81,8 @@
 					"callFunction": "dialogue",
 					"sid": 206345168207007,
 					"parameters": [
-						"\"Opal: I should probably finish unpacking ...\""
+						"\"Opal: I should probably finish unpacking ...\"",
+						"\"None\""
 					]
 				},
 				{
@@ -89,7 +90,8 @@
 					"sid": 780505041409155,
 					"disabled": true,
 					"parameters": [
-						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
 					]
 				},
 				{
@@ -215,7 +217,8 @@
 					"callFunction": "dialogue",
 					"sid": 154309160207131,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\""
+						"\"Opal: Oh wow, it's time for me to get to work!\"",
+						"\"None\""
 					]
 				},
 				{
@@ -231,7 +234,8 @@
 					"sid": 467528265492180,
 					"disabled": true,
 					"parameters": [
-						"\"Opal: Hmm... Maybe I should go to the laptop and work... \""
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
 					]
 				},
 				{
@@ -311,7 +315,8 @@
 					"callFunction": "dialogue",
 					"sid": 709039644974726,
 					"parameters": [
-						"\"Opal: Oh wow I'm exhausted, I should probably get some job applications done though …\""
+						"\"Opal: Oh wow I'm exhausted, I should probably get some job applications done though …\"",
+						"\"None\""
 					]
 				}
 			],
@@ -577,7 +582,8 @@
 					"callFunction": "dialogue",
 					"sid": 873188345807750,
 					"parameters": [
-						"\"Opal: I think I finished unpacking.\""
+						"\"Opal: I think I finished unpacking.\"",
+						"\"None\""
 					]
 				}
 			],
@@ -1000,7 +1006,8 @@
 					"callFunction": "dialogue",
 					"sid": 316498507334256,
 					"parameters": [
-						"\"...\"\n"
+						"\"...\"\n",
+						"\"None\""
 					]
 				},
 				{
@@ -1015,7 +1022,8 @@
 					"callFunction": "dialogue",
 					"sid": 261580686939173,
 					"parameters": [
-						"\"(Waking up to DAY \" & Day & \")\"\n"
+						"\"(Waking up to DAY \" & Day & \")\"\n",
+						"\"None\""
 					]
 				},
 				{

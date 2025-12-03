@@ -122,11 +122,27 @@
 							"initialValue": "",
 							"comment": "",
 							"sid": 237719496063171
+						},
+						{
+							"name": "Speaker",
+							"type": "string",
+							"initialValue": "None",
+							"comment": "",
+							"sid": 593856794965975
 						}
 					],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Bustup",
+							"sid": 753855070931062,
+							"parameters": {
+								"animation": "Speaker",
+								"from": "beginning"
+							}
+						},
 						{
 							"id": "set-opacity",
 							"objectClass": "SpacePrompt",
@@ -159,20 +175,6 @@
 							}
 						},
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 682501812290501,
-							"disabled": true,
-							"parameters": {
-								"object-to-create": "Speaker",
-								"layer": "1",
-								"x": "100",
-								"y": "350",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
 							"sid": 959900642088084,
@@ -182,7 +184,48 @@
 							}
 						}
 					],
-					"sid": 325381671373241
+					"sid": 325381671373241,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 658443705881720,
+									"parameters": {
+										"first-value": "Speaker",
+										"comparison": 1,
+										"second-value": "\"None\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 644705926955508,
+									"parameters": {
+										"object-to-create": "Speaker",
+										"layer": "1",
+										"x": "205",
+										"y": "360",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Speaker",
+									"sid": 448511390973397,
+									"parameters": {
+										"text": "Speaker"
+									}
+								}
+							],
+							"sid": 124425533591700
+						}
+					]
 				},
 				{
 					"functionName": "destroyDialogue",
