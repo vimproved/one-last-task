@@ -281,7 +281,7 @@
 								"deceleration": 1200,
 								"directions": "left-right",
 								"set-angle": "smooth",
-								"allow-sliding": false,
+								"allow-sliding": true,
 								"default-controls": true,
 								"enabled": true
 							}
@@ -293,7 +293,7 @@
 								"deceleration": 1200,
 								"directions": "up-down",
 								"set-angle": "smooth",
-								"allow-sliding": false,
+								"allow-sliding": true,
 								"default-controls": true,
 								"enabled": true
 							}
@@ -306,10 +306,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 358.3259117839734,
-						"y": 255.1792000020959,
-						"width": 14.901023342956762,
-						"height": 13.637293948142542,
+						"x": 373.98443272479324,
+						"y": 271.3461637865032,
+						"width": 15.360520449667248,
+						"height": 13.746194479063208,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -346,7 +346,7 @@
 						"x": 165.85122669027555,
 						"y": 179.66917422139792,
 						"width": 53.433713,
-						"height": 121.925581,
+						"height": 121.92558099999998,
 						"originX": 0.4928751047778709,
 						"originY": 0.8458077709611452,
 						"color": [

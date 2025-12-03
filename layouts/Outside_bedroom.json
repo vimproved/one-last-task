@@ -1466,7 +1466,7 @@
 								"deceleration": 1200,
 								"directions": "left-right",
 								"set-angle": "smooth",
-								"allow-sliding": false,
+								"allow-sliding": true,
 								"default-controls": true,
 								"enabled": true
 							}
@@ -1478,7 +1478,7 @@
 								"deceleration": 1200,
 								"directions": "up-down",
 								"set-angle": "smooth",
-								"allow-sliding": false,
+								"allow-sliding": true,
 								"default-controls": true,
 								"enabled": true
 							}
