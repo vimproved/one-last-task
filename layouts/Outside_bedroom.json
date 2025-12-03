@@ -1461,7 +1461,7 @@
 					"behaviors": {
 						"LeftRight": {
 							"properties": {
-								"max-speed": 100,
+								"max-speed": 80,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "left-right",
@@ -1473,7 +1473,7 @@
 						},
 						"UpDown": {
 							"properties": {
-								"max-speed": 55,
+								"max-speed": 44,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "up-down",
