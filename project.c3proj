@@ -177,7 +177,8 @@
 			"Sprite3",
 			"Sprite4",
 			"Sprite7",
-			"Audio"
+			"Audio",
+			"Sprite8"
 		],
 		"subfolders": [
 			{
@@ -587,7 +588,7 @@
 		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
 		"framerateMode": "vsync",
-		"sampling": "trilinear",
+		"sampling": "nearest",
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",

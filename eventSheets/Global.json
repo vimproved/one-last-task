@@ -128,6 +128,14 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-opacity",
+							"objectClass": "Sprite8",
+							"sid": 583811520969364,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
 							"id": "destroy",
 							"objectClass": "DialogueText",
 							"sid": 184118473218279
@@ -286,6 +294,12 @@
 							}
 						},
 						{
+							"id": "stop-all-tweens",
+							"objectClass": "Sprite8",
+							"sid": 259450001807385,
+							"behaviorType": "Tween"
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "TestingObject",
 							"sid": 513922526684520,
@@ -295,6 +309,36 @@
 						}
 					],
 					"sid": 382400213055169
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-typewriter-text-finished",
+							"objectClass": "DialogueText",
+							"sid": 848254211371847
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "Sprite8",
+							"sid": 249592260399407,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "yes",
+								"ping-pong": "yes",
+								"repeat-count": "99999999999999"
+							}
+						}
+					],
+					"sid": 692767096978138
 				}
 			],
 			"sid": 490461196352611

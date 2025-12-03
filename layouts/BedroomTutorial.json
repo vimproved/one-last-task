@@ -1011,6 +1011,49 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Sprite8",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 34,
+					"sid": 297762553931961,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 297762553931961,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 584.6146103525871,
+						"y": 381.9339027821572,
+						"width": 39.78369524390417,
+						"height": 20.756710562036957,
+						"originX": -0.6304347826086957,
+						"originY": -2.6666666666666665,
+						"color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 736311610147448,
