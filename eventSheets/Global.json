@@ -653,6 +653,14 @@
 					"parameters": {
 						"text": "stress"
 					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "ProgressBar",
+					"sid": 450785545883333,
+					"parameters": {
+						"value": "stress"
+					}
 				}
 			],
 			"sid": 695922474617407
