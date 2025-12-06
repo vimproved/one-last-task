@@ -426,6 +426,18 @@
 					]
 				},
 				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 214011551401931,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 262166713410018
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 278841141992489,

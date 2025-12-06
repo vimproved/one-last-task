@@ -178,8 +178,6 @@
 			"Sprite4",
 			"Sprite7",
 			"Audio",
-			"SpacePrompt",
-			"Bustup",
 			"LikeMagic",
 			"Endings"
 		],
@@ -190,7 +188,9 @@
 					"Dialogue_Storage",
 					"Speaker",
 					"DialogueBox",
-					"Sprite"
+					"Sprite",
+					"SpacePrompt",
+					"Bustup"
 				],
 				"subfolders": [],
 				"name": "Dialogue"

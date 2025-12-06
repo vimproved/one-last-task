@@ -145,9 +145,41 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-visible",
+							"objectClass": "DialogueBox",
+							"sid": 498560871803489,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SpacePrompt",
+							"sid": 156251223844952,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Bustup",
+							"sid": 887023489573505,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Sprite",
+							"sid": 412821714394243,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "Bustup",
-							"sid": 753855070931062,
+							"sid": 773284676093926,
 							"parameters": {
 								"animation": "Speaker",
 								"from": "beginning"
@@ -257,6 +289,38 @@
 							"id": "destroy",
 							"objectClass": "Speaker",
 							"sid": 829492408722176
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueBox",
+							"sid": 845780952112774,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SpacePrompt",
+							"sid": 613699304182267,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Bustup",
+							"sid": 958039388776181,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Sprite",
+							"sid": 739377412799033,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 952404883586310
