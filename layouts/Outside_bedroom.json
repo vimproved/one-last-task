@@ -2921,6 +2921,43 @@
 								"angle": 0,
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "ComputerExit2",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 50,
+							"sid": 436120994364045,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 436120994364045,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 53.728583,
+								"y": 35.779367,
+								"width": 122.17828034346235,
+								"height": 70.91736146118951,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 824132390164715,

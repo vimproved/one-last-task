@@ -38,6 +38,10 @@ export class MgApps {
 
     private submit?: InstanceType.JobSubmit
 
+    private exit?: InstanceType.ComputerExit2
+
+    private submitted = false
+
     constructor(runtime: IRuntime) {
         this.runtime = runtime
         this.mouse = runtime.mouse!
@@ -91,6 +95,8 @@ export class MgApps {
 
         this.submit = this.runtime.objects.JobSubmit.getFirstInstance()!
 
+        this.exit = this.runtime.objects.ComputerExit2.getFirstInstance()!
+
 
         this.submit!.addEventListener("click", () => {
             if (
@@ -117,6 +123,7 @@ export class MgApps {
                 this.likeMagic!.getItemText(this.likeMagic!.selectedIndex) == "Yes"
             ) {
                 this.done = true
+                this.submitted = true
             }
         })
     }
@@ -142,6 +149,9 @@ export class MgApps {
         //     this.submit!.isEnabled = true
         // }
         if (this.mouse.isMouseButtonDown(0)) {
+            if (this.exit!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.done = true
+            }
             if (this.opalP1!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
                 this.opalInfo!.setAnimation("P1")
             } else if (this.opalP2!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
@@ -211,7 +221,9 @@ export class MgApps {
             this.runtime.layout.getLayer("App1")!.isInteractive = true
             this.runtime.layout.getLayer("App2")!.isInteractive = false
             this.runtime.layout.getLayer("App3")!.isInteractive = false
-            this.runtime.signal("submittedJobApp")
+            if (this.submitted) {
+                this.runtime.signal("submittedJobApp")
+            }
         }
         return this.done
     }

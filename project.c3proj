@@ -313,7 +313,8 @@
 							"Leadership",
 							"SpellExperience",
 							"SunMoon",
-							"WithMagic"
+							"WithMagic",
+							"ComputerExit2"
 						],
 						"subfolders": [],
 						"name": "job"

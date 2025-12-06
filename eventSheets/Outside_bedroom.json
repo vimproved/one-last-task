@@ -1526,6 +1526,18 @@
 						"\"I think I finished unpacking.\"",
 						"\"Opal\""
 					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 728543440051588,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 166753267206125
 				}
 			],
 			"sid": 542121702952182
