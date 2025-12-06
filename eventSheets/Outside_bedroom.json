@@ -87,10 +87,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 206345168207007,
+					"sid": 855954557259323,
 					"parameters": [
-						"\"Opal: I should probably finish unpacking ...\"",
-						"\"None\""
+						"\"I should probably finish unpacking...\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -235,10 +235,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 154309160207131,
+					"sid": 427755011272716,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\"",
-						"\"None\""
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -257,14 +257,6 @@
 						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
 						"\"None\""
 					]
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialogueBox",
-					"sid": 866356283775681,
-					"parameters": {
-						"visibility": "invisible"
-					}
 				},
 				{
 					"callFunction": "destroyDialogue",
@@ -333,11 +325,39 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 709039644974726,
+					"sid": 637169778666840,
 					"parameters": [
-						"\"Opal: Oh wow I'm exhausted, I should probably get some job applications done though …\"",
-						"\"None\""
+						"\"Wow, I'm tired...\"",
+						"\"Opal\""
 					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 703160081449750,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 714225865610166,
+					"parameters": [
+						"\"Still need to get some Job Applications done though.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 433443752543283,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 530882714261025
 				}
 			],
 			"sid": 530539341429235
@@ -451,10 +471,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 565887281915376,
+					"sid": 332754113514940,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\"",
-						"\"None\""
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -598,10 +618,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 528233339161720,
+					"sid": 454140913916476,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\"",
-						"\"None\""
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -720,10 +740,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 606687475667879,
+					"sid": 334376788947293,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\"",
-						"\"None\""
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -861,10 +881,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 363695942836368,
+					"sid": 295252869841620,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\"",
-						"\"None\""
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -1002,10 +1022,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 213826748365633,
+					"sid": 976857364201770,
 					"parameters": [
-						"\"Opal: Oh wow, it's time for me to get to work!\"",
-						"\"None\""
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
 					]
 				},
 				{
@@ -1307,10 +1327,10 @@
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 873188345807750,
+					"sid": 644630171997143,
 					"parameters": [
-						"\"Opal: I think I finished unpacking.\"",
-						"\"None\""
+						"\"I think I finished unpacking.\"",
+						"\"Opal\""
 					]
 				}
 			],
