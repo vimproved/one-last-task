@@ -73,9 +73,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 169767748282482,
+					"sid": 268499367351779,
 					"parameters": [
-						"\" Unfortunate, but we have customers waiting, no time to chat. Now like I said before, go punch in.\"\n",
+						"\"Unfortunate, but we have customers waiting, no time to chat. Now like I said before, go punch in.\"\n",
 						"\"Bill\""
 					]
 				},
@@ -89,9 +89,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 383180162746597,
+					"sid": 877679072342247,
 					"parameters": [
-						"\"ok, I’m sorry\"\n",
+						"\"Okay, I’m sorry...\"\n",
 						"\"Opal\""
 					]
 				},
@@ -155,9 +155,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 107692543040289,
+					"sid": 795707047569535,
 					"parameters": [
-						"\"Good Morning!\"\n",
+						"\"Good morning!\"\n",
 						"\"Opal\""
 					]
 				},
@@ -171,9 +171,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 777986089739710,
+					"sid": 579612332533324,
 					"parameters": [
-						"\"Morning, everything should be the same today\"",
+						"\"Morning, everything should be the same today.\"",
 						"\"Bill\""
 					]
 				},
@@ -237,9 +237,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 594741666938539,
+					"sid": 719189064866002,
 					"parameters": [
-						"\"You’re late\"\n",
+						"\"You’re late.\"\n",
 						"\"Bill\""
 					]
 				},
@@ -253,9 +253,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 931820931381971,
+					"sid": 922610660821767,
 					"parameters": [
-						"\" I’m sorry! I’ve been exhausted and slept through my alarm\"",
+						"\"I’m sorry! I’ve been exhausted and slept through my alarm...\"",
 						"\"Opal\""
 					]
 				},
@@ -269,9 +269,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 511954272251264,
+					"sid": 155305812587614,
 					"parameters": [
-						"\"Excuses, don’t let it happen again\"",
+						"\"Excuses, excuses. Don’t let it happen again.\"",
 						"\"Bill\""
 					]
 				},
@@ -285,9 +285,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 243224847578412,
+					"sid": 294561481161615,
 					"parameters": [
-						"\" Sorry, will do!\"",
+						"\"Sorry, I won't.\"",
 						"\"Opal\""
 					]
 				},
@@ -360,9 +360,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 308767436610951,
+					"sid": 894108673029648,
 					"parameters": [
-						"\"You’re late\"\n",
+						"\"You’re late.\"\n",
 						"\"Bill\""
 					]
 				},
@@ -376,9 +376,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 284724616044388,
+					"sid": 172344193006922,
 					"parameters": [
-						"\" I’m sorry! I’ve been exhausted and slept through my alarm\"",
+						"\"I’m sorry! I’ve been exhausted and slept through my alarm...\"",
 						"\"Opal\""
 					]
 				},
@@ -392,9 +392,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 815550965619935,
+					"sid": 659238349527463,
 					"parameters": [
-						"\"Excuses, don’t let it happen again\"",
+						"\"Excuses, excuses. Don’t let it happen again.\"",
 						"\"Bill\""
 					]
 				},
@@ -408,9 +408,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 216253954468343,
+					"sid": 961961908914922,
 					"parameters": [
-						"\" Sorry, will do!\"",
+						"\"Sorry, I won't.\"",
 						"\"Opal\""
 					]
 				},
@@ -483,9 +483,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 518906883657477,
+					"sid": 459617975803145,
 					"parameters": [
-						"\"good morning!\"\n",
+						"\"Good morning!\"\n",
 						"\"Opal\""
 					]
 				},
@@ -499,9 +499,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 539009818912964,
+					"sid": 506596828771662,
 					"parameters": [
-						"\"Bill: morning, everything should be the same today\"",
+						"\"Morning, everything should be the same today.\"",
 						"\"Bill\""
 					]
 				},
@@ -568,9 +568,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 604787556406952,
+					"sid": 945377246557285,
 					"parameters": [
-						"\"Manager: We were behind on orders all day\"\n",
+						"\"We were behind on orders all day.\"\n",
 						"\"Bill\""
 					]
 				},
@@ -584,9 +584,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 532071496299046,
+					"sid": 242125881026888,
 					"parameters": [
-						"\"Oh, that’s not good\"",
+						"\"Oh, that’s not good...\"",
 						"\"Opal\""
 					]
 				},
@@ -600,9 +600,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 453915290661119,
+					"sid": 905806716939354,
 					"parameters": [
-						"\"No its not, go faster tomorrow. Now get out of here so I can close up\"\n",
+						"\"No, it's not. Go faster tomorrow. Now get out of here so I can close up.\"\n",
 						"\"Bill\""
 					]
 				},
