@@ -102,6 +102,16 @@
 			"sid": 430216103031172
 		},
 		{
+			"eventType": "variable",
+			"name": "JobMeter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 567782844540019
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",
@@ -728,6 +738,31 @@
 					"sid": 151773093909077
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 633132772230913,
+					"parameters": {
+						"tag": "\"submittedJobApp\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 247397256851813,
+					"parameters": {
+						"variable": "JobMeter",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 656150658110713
 		},
 		{
 			"eventType": "group",

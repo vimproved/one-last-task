@@ -1,0 +1,9 @@
+{
+	"name": "SpellExperience",
+	"plugin-id": "Button",
+	"sid": 799472283610383,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

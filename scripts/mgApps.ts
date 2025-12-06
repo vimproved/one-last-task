@@ -3,6 +3,9 @@ export class MgApps {
     private readonly mouse: IMouseObjectType
     private done = false
 
+    private opalInfo?: InstanceType.OpalInfo
+    private appInfo?: InstanceType.AppInfo
+
     private opalP1?: InstanceType.OpalP1
     private opalP2?: InstanceType.OpalP2
     private opalP3?: InstanceType.OpalP3
@@ -22,7 +25,18 @@ export class MgApps {
     private species?: InstanceType.Species
     private ssn?: InstanceType.SSN
 
-    private submit?: InstanceType.SubmitButton
+    private halfHuman?: InstanceType.HalfHuman
+    private withMagic?: InstanceType.WithMagic
+    private gender?: InstanceType.Gender
+    private diploma?: InstanceType.Diploma
+    private crimeRecord?: InstanceType.CrimeRecord
+    private spellExperience?: InstanceType.SpellExperience
+    private leadership?: InstanceType.Leadership
+    private cake?: InstanceType.Cake
+    private sunMoon?: InstanceType.SunMoon
+    private likeMagic?: InstanceType.LikeMagic
+
+    private submit?: InstanceType.JobSubmit
 
     constructor(runtime: IRuntime) {
         this.runtime = runtime
@@ -39,6 +53,9 @@ export class MgApps {
         this.runtime.layout.getLayer("App1")!.isInteractive = true
         this.runtime.layout.getLayer("App2")!.isInteractive = false
         this.runtime.layout.getLayer("App3")!.isInteractive = false
+
+        this.opalInfo = this.runtime.objects.OpalInfo.getFirstInstance()!
+        this.appInfo = this.runtime.objects.AppInfo.getFirstInstance()!
 
         this.opalP1 = this.runtime.objects.OpalP1.getFirstInstance()!
         this.opalP2 = this.runtime.objects.OpalP2.getFirstInstance()!
@@ -59,26 +76,45 @@ export class MgApps {
         this.species = this.runtime.objects.Species.getFirstInstance()!
         this.ssn = this.runtime.objects.SSN.getFirstInstance()!
 
+        this.halfHuman = this.runtime.objects.HalfHuman.getFirstInstance()!
+        this.withMagic = this.runtime.objects.WithMagic.getFirstInstance()!
+        this.gender = this.runtime.objects.Gender.getFirstInstance()!
+        this.diploma = this.runtime.objects.Diploma.getFirstInstance()!
+        this.crimeRecord = this.runtime.objects.CrimeRecord.getFirstInstance()!
+        this.spellExperience = this.runtime.objects.SpellExperience.getFirstInstance()!
+        this.leadership = this.runtime.objects.Leadership.getFirstInstance()!
+        this.cake = this.runtime.objects.Cake.getFirstInstance()!
+        this.sunMoon = this.runtime.objects.SunMoon.getFirstInstance()!
+        this.likeMagic = this.runtime.objects.LikeMagic.getFirstInstance()!
+
+        this.experience = this.runtime.objects.Experience.getFirstInstance()!
+
+        this.submit = this.runtime.objects.JobSubmit.getFirstInstance()!
+
 
         this.submit!.addEventListener("click", () => {
             if (
-                this.name!.text == "Opal" &&
-                this.spell1!.text == "Andrew" &&
-                this.spell2!.text == "BBB" &&
-                this.spell3!.text == "Colovaria" &&
-                this.cert!.getItemText(this.cert!.selectedIndex) == "UASC Apprentice Level 3" &&
-                this.terms!.isChecked &&
                 this.address!.text == "123 Kelp Lane, Aquaville Atlantis" &&
                 this.bankAccount!.text == "12345678" &&
                 this.bankRouting!.text == "87654321" &&
-                this.experience!.text.length > 5 &&
+                this.experience!.text.length > 12 &&
                 this.favAnimal!.text == "Ferret" &&
                 this.favColor!.text == "Green" &&
                 this.fullName!.text == "Opal Codson" &&
-                this.honors!.text.length > 5 &&
-                this.otherCerts!.text.length > 5 &&
+                this.honors!.text.length > 12 &&
+                this.otherCerts!.text.length > 12 &&
                 (this.species!.text == "Human" || this.species!.text == "human") &&
-                this.ssn!.text == "111-11-1112"
+                this.ssn!.text == "111-11-1112" &&
+                this.halfHuman!.isChecked &&
+                this.withMagic!.isChecked &&
+                this.gender!.getItemText(this.gender!.selectedIndex) == "Other" &&
+                this.diploma!.isChecked &&
+                !(this.crimeRecord!.isChecked) &&
+                this.spellExperience!.isChecked &&
+                this.leadership!.isChecked &&
+                this.cake!.getItemText(this.cake!.selectedIndex) == "Yes" &&
+                this.sunMoon!.getItemText(this.sunMoon!.selectedIndex) == "Moon" &&
+                this.likeMagic!.getItemText(this.likeMagic!.selectedIndex) == "Yes"
             ) {
                 this.done = true
             }
@@ -106,16 +142,76 @@ export class MgApps {
         //     this.submit!.isEnabled = true
         // }
         if (this.mouse.isMouseButtonDown(0)) {
-            if (this)
+            if (this.opalP1!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.opalInfo!.setAnimation("P1")
+            } else if (this.opalP2!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.opalInfo!.setAnimation("P2")
+            } else if (this.opalP3!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.opalInfo!.setAnimation("P3")
+            } else if (this.appP1!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.appInfo!.setAnimation("P1")
+                this.runtime.layout.getLayer("App1")!.isVisible = true
+                this.runtime.layout.getLayer("App2")!.isVisible = false
+                this.runtime.layout.getLayer("App3")!.isVisible = false
+                this.runtime.layout.getLayer("App1")!.isInteractive = true
+                this.runtime.layout.getLayer("App2")!.isInteractive = false
+                this.runtime.layout.getLayer("App3")!.isInteractive = false
+            } else if (this.appP2!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.appInfo!.setAnimation("P2")
+                this.runtime.layout.getLayer("App1")!.isVisible = false
+                this.runtime.layout.getLayer("App2")!.isVisible = true
+                this.runtime.layout.getLayer("App3")!.isVisible = false
+                this.runtime.layout.getLayer("App1")!.isInteractive = false
+                this.runtime.layout.getLayer("App2")!.isInteractive = true
+                this.runtime.layout.getLayer("App3")!.isInteractive = false
+            } else if (this.appP3!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.appInfo!.setAnimation("P3")
+                this.runtime.layout.getLayer("App1")!.isVisible = false
+                this.runtime.layout.getLayer("App2")!.isVisible = false
+                this.runtime.layout.getLayer("App3")!.isVisible = true
+                this.runtime.layout.getLayer("App1")!.isInteractive = false
+                this.runtime.layout.getLayer("App2")!.isInteractive = false
+                this.runtime.layout.getLayer("App3")!.isInteractive = true
+            }
         }
     }
 
     isDone() {
         if (this.done) {
-            this.fullName!.text = ""
             this.runtime.layout.getLayer("MgApps")!.isVisible = false
             this.runtime.layout.getLayer("MgApps")!.isInteractive = false
             this.runtime.layout.getLayer("ComputerScreen")!.isInteractive = true
+
+            this.address!.text = ""
+            this.bankAccount!.text = ""
+            this.bankRouting!.text = ""
+            this.experience!.text = ""
+            this.favAnimal!.text = ""
+            this.favColor!.text = ""
+            this.fullName!.text = ""
+            this.honors!.text = ""
+            this.otherCerts!.text = ""
+            this.species!.text = ""
+            this.ssn!.text = ""
+            this.halfHuman!.isChecked = false
+            this.withMagic!.isChecked = false
+            this.gender!.selectedIndex = 0
+            this.diploma!.isChecked = false
+            this.crimeRecord!.isChecked = false
+            this.spellExperience!.isChecked = false
+            this.leadership!.isChecked = false
+            this.cake!.selectedIndex = -1
+            this.sunMoon!.selectedIndex = 0
+            this.likeMagic!.selectedIndex = -1
+
+            this.appInfo!.setAnimation("P1")
+            this.runtime.layout.getLayer("App1")!.isVisible = true
+            this.runtime.layout.getLayer("App2")!.isVisible = false
+            this.runtime.layout.getLayer("App3")!.isVisible = false
+            this.runtime.layout.getLayer("App1")!.isInteractive = true
+            this.runtime.layout.getLayer("App2")!.isInteractive = false
+            this.runtime.layout.getLayer("App3")!.isInteractive = false
+            this.runtime.signal("submittedJobApp")
         }
         return this.done
     }

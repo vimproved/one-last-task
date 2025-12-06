@@ -1,0 +1,9 @@
+{
+	"name": "Gender",
+	"plugin-id": "List",
+	"sid": 257487374253652,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

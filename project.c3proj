@@ -179,7 +179,8 @@
 			"Sprite7",
 			"Audio",
 			"SpacePrompt",
-			"Bustup"
+			"Bustup",
+			"LikeMagic"
 		],
 		"subfolders": [
 			{
@@ -274,6 +275,7 @@
 					"JobApps",
 					"TarotGame",
 					"ComputerExit",
+<<<<<<< HEAD
 					"Fireflux",
 					"NameInput",
 					"SpellInput1",
@@ -286,6 +288,50 @@
 					"JobSubmit",
 					"Tabs",
 					"TermsAndConds"
+=======
+					"IntroPage"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"Address",
+							"BankAccount",
+							"BankRouting",
+							"Experience",
+							"FavAnimal",
+							"FavColor",
+							"Fireflux",
+							"FullName",
+							"Honors",
+							"HTMLElement",
+							"iframe",
+							"JobSubmit",
+							"OpalInfo",
+							"OtherCerts",
+							"Species",
+							"SSN",
+							"TermsAndConds",
+							"AppP1",
+							"AppP2",
+							"AppP3",
+							"OpalP1",
+							"OpalP2",
+							"OpalP3",
+							"AppInfo",
+							"Cake",
+							"CrimeRecord",
+							"Diploma",
+							"Gender",
+							"HalfHuman",
+							"Leadership",
+							"SpellExperience",
+							"SunMoon",
+							"WithMagic"
+						],
+						"subfolders": [],
+						"name": "job"
+					}
+>>>>>>> fe5c225cfb83e569d71fbda1ec3d3ef02b23dd3a
 				],
 				"subfolders": [],
 				"name": "Computer"

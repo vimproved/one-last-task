@@ -1021,7 +1021,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 34,
+					"uid": 124,
 					"sid": 297762553931961,
 					"tags": "",
 					"instanceVariables": {},
@@ -1064,7 +1064,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 36,
+					"uid": 100,
 					"sid": 720560805087568,
 					"tags": "",
 					"instanceVariables": {},
@@ -1117,7 +1117,7 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 37,
+					"uid": 97,
 					"sid": 571030734828100,
 					"tags": "",
 					"instanceVariables": {},
