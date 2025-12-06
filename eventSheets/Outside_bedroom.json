@@ -38,6 +38,14 @@
 					"sid": 206167222045564
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "Endings",
+					"sid": 486481768126936,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "PlayerMovement",
 					"sid": 258994689631455,
@@ -738,9 +746,300 @@
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 866208596253663
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Endings",
+					"sid": 192516916490903,
+					"parameters": {
+						"animation": "\"Fired\"",
+						"from": "beginning"
+					}
 				}
 			],
 			"sid": 802224947795525
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 409754947485825
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 596887028927751,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 395234187233432,
+					"parameters": {
+						"variable": "DayBegin"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 820235738687480,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 5,
+						"value": "50"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 113059849381524,
+					"parameters": {
+						"variable": "JobMeter",
+						"comparison": 4,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 415869779660909
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 168101833777062,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 789454240892937,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 144186842663440,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 538601619895211,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 168100122553869,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 363695942836368,
+					"parameters": [
+						"\"Opal: Oh wow, it's time for me to get to work!\"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 373970282924565,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 215293443619478,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 123006115315323,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 786753287220644
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Endings",
+					"sid": 705718986709115,
+					"parameters": {
+						"animation": "\"Your Hired\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 916528908309460
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 381164841953211
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 614071402483227,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 851587633491211,
+					"parameters": {
+						"variable": "DayBegin"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 102418127102507,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 5,
+						"value": "50"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 760060847240034,
+					"parameters": {
+						"variable": "JobMeter",
+						"comparison": 3,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 806342602163596
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 124641328036490,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 977533111676910,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 866691476672283,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 450084868549715,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 269017639072474,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 213826748365633,
+					"parameters": [
+						"\"Opal: Oh wow, it's time for me to get to work!\"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 423409528913394,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 313369317883132,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 151335773858624,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 336018644216760
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Endings",
+					"sid": 625323734411633,
+					"parameters": {
+						"animation": "\"Rejected\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 369511809437321
 		},
 		{
 			"eventType": "block",

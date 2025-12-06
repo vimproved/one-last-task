@@ -445,7 +445,45 @@
 					"global": false
 				}
 			],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Bustup",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Opal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 136,
+					"sid": 588098009320356,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 588098009320356,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 150,
+						"y": 403,
+						"width": 158.74096356616604,
+						"height": 190.21546496290588,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 445481603881562,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
@@ -479,7 +517,45 @@
 			"name": "Dialogue",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Bustup",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Opal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 137,
+					"sid": 193639764421814,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 193639764421814,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 100.33353,
+						"y": 479.510926,
+						"width": 158.74096356616604,
+						"height": 190.21546496290588,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 962455167083899,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

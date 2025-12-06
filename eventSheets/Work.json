@@ -41,10 +41,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 522203019240131,
+					"sid": 514235847266926,
 					"parameters": [
-						"\"Manager: Oh good, you're here, customers are already at the register. Punch in quick. \"",
-						"\"None\""
+						"\"Oh good, you're here, customers are already at the register. Punch in quick. \"",
+						"\"Bill\""
 					]
 				},
 				{
@@ -73,10 +73,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 404023595971810,
+					"sid": 169767748282482,
 					"parameters": [
 						"\" Unfortunate, but we have customers waiting, no time to chat. Now like I said before, go punch in.\"\n",
-						"\"None\""
+						"\"Bill\""
 					]
 				},
 				{
@@ -155,9 +155,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 817853408291991,
+					"sid": 107692543040289,
 					"parameters": [
-						"\"good morning!\"\n",
+						"\"Good Morning!\"\n",
 						"\"Opal\""
 					]
 				},
@@ -171,9 +171,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 817200625270910,
+					"sid": 777986089739710,
 					"parameters": [
-						"\"Bill: morning, everything should be the same today\"",
+						"\"Morning, everything should be the same today\"",
 						"\"Bill\""
 					]
 				},
@@ -568,10 +568,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 774765738999212,
+					"sid": 604787556406952,
 					"parameters": [
 						"\"Manager: We were behind on orders all day\"\n",
-						"\"None\""
+						"\"Bill\""
 					]
 				},
 				{
@@ -600,10 +600,10 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 302276985808394,
+					"sid": 453915290661119,
 					"parameters": [
 						"\"No its not, go faster tomorrow. Now get out of here so I can close up\"\n",
-						"\"None\""
+						"\"Bill\""
 					]
 				},
 				{

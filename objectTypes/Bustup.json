@@ -217,6 +217,49 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1895,
+						"height": 2945,
+						"originX": 0.5733509234828496,
+						"originY": 0.433276740237691,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9841300,
+						"collisionPoly": {
+							"points": [
+								0.5197889182058048,
+								0.003395585738539898,
+								0.741424802110818,
+								0.08047538200339559,
+								0.8052770448548812,
+								0.14838709677419354,
+								0.9963060686015831,
+								0.999660441426146,
+								0.0031662269129287598,
+								0.999660441426146,
+								0.27071240105540906,
+								0.07911714770797963,
+								0.40527704485488125,
+								0.01697792869269951
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 231510723735794,
+				"name": "Bill",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []
