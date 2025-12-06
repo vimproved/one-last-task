@@ -246,10 +246,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 644705926955508,
+									"sid": 231247469238474,
 									"parameters": {
 										"object-to-create": "Speaker",
-										"layer": "1",
+										"layer": "\"Dialogue\"",
 										"x": "205",
 										"y": "360",
 										"create-hierarchy": false,
