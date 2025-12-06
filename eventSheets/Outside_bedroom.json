@@ -86,6 +86,10 @@
 					]
 				},
 				{
+					"callFunction": "destroyDialogue",
+					"sid": 177466863490045
+				},
+				{
 					"callFunction": "dialogue",
 					"sid": 780505041409155,
 					"disabled": true,
@@ -321,6 +325,422 @@
 				}
 			],
 			"sid": 530539341429235
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 202613950513951
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 676060989957360,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 784211780586862,
+					"parameters": {
+						"variable": "DayBegin"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 535264381073325,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 387048205808464
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 636987527550132,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 853299117195820,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 179972322338497,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "WorkStartBox",
+					"sid": 565528418838982,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 561467042013373,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 180497105271540,
+					"parameters": {
+						"seconds": "0.00000001",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 115579977396625,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 392507751805915,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 565887281915376,
+					"parameters": [
+						"\"Opal: Oh wow, it's time for me to get to work!\"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 796801535557984,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 802953889633927,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 581863634037876,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 626858775549806
+				}
+			],
+			"sid": 540936596896152
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 124865212013507
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 979697404915706,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 296615826581033,
+					"parameters": {
+						"variable": "DayBegin"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 334643278752133,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 399631400439487
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 784118976225126,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 434992120025458,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 505249374230634,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "WorkStartBox",
+					"sid": 860951604799689,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 354946350957120,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 651003709061980,
+					"parameters": {
+						"seconds": "0.00000001",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 175871389580966,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 425320544633234,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 528233339161720,
+					"parameters": [
+						"\"Opal: Oh wow, it's time for me to get to work!\"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 527341685775040,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 375075555902502,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 803098798812821,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 861306133337537
+				}
+			],
+			"sid": 757922480625257
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 218183441608646
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 600518646430684,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 205455207517617,
+					"parameters": {
+						"variable": "DayBegin"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 786148224045681,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 2,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 662294399160512
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 420302732223225,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 754332049699988,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 628672779370728,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 671999075046146,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 135852336143771,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 606687475667879,
+					"parameters": [
+						"\"Opal: Oh wow, it's time for me to get to work!\"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 249735090822424,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 162942876609152,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 807437740842296,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 866208596253663
+				}
+			],
+			"sid": 802224947795525
 		},
 		{
 			"eventType": "block",

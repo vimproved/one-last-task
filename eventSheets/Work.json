@@ -22,6 +22,16 @@
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 414519785525173
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 147274345100184,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "2"
+					}
 				}
 			],
 			"actions": [
@@ -31,9 +41,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 763155212713851,
+					"sid": 522203019240131,
 					"parameters": [
-						"\"Manager: Oh good, you're here, customers are already at the register. Punch in quick. (insert cutscene and dialogue here)\"",
+						"\"Manager: Oh good, you're here, customers are already at the register. Punch in quick. \"",
 						"\"None\""
 					]
 				},
@@ -47,16 +57,48 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 855703371414798,
+					"sid": 332693008707113,
 					"parameters": [
-						"\"(Pretend we have a shop here, press space to begin making potions)\"",
-						"\"None\""
+						" \"I’m sorry. I just moved into my new apartment and got excited about getting everything in place, lost track of time.\"\n",
+						"\"Opal\""
 					]
 				},
 				{
 					"id": "wait-for-signal",
 					"objectClass": "System",
 					"sid": 847880737458683,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 404023595971810,
+					"parameters": [
+						"\" Unfortunate, but we have customers waiting, no time to chat. Now like I said before, go punch in.\"\n",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 755992565343251,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 383180162746597,
+					"parameters": [
+						"\"ok, I’m sorry\"\n",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 375796908901347,
 					"parameters": {
 						"tag": "\"Next\""
 					}
@@ -76,6 +118,416 @@
 				}
 			],
 			"sid": 617345156271045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 874635921654768
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 627492512843570,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 272482062512548,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 2,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 357890792835822
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 817853408291991,
+					"parameters": [
+						"\"good morning!\"\n",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 166753630120081,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 817200625270910,
+					"parameters": [
+						"\"Bill: morning, everything should be the same today\"",
+						"\"Bill\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 559725798696013,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 747765399762154
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 296134042349183,
+					"parameters": {
+						"variable": "BeganPotion",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 444649883856072
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 618895437728278
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 106715945019613,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 506377999368359,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 5,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 497020453419942
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 594741666938539,
+					"parameters": [
+						"\"You’re late\"\n",
+						"\"Bill\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 623748270174163,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 931820931381971,
+					"parameters": [
+						"\" I’m sorry! I’ve been exhausted and slept through my alarm\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 303477824237735,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 511954272251264,
+					"parameters": [
+						"\"Excuses, don’t let it happen again\"",
+						"\"Bill\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 721400380999677,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 243224847578412,
+					"parameters": [
+						"\" Sorry, will do!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 780355482161338,
+					"parameters": {
+						"variable": "stress",
+						"value": "3"
+					}
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 396164967476697,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 401619462685716
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 366274145958087,
+					"parameters": {
+						"variable": "BeganPotion",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 830781919688284
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 814691335185493
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 635872662543776,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 943708624980586,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 5,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 163746578174635
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 308767436610951,
+					"parameters": [
+						"\"You’re late\"\n",
+						"\"Bill\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 831960929240170,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 284724616044388,
+					"parameters": [
+						"\" I’m sorry! I’ve been exhausted and slept through my alarm\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 524950907517550,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 815550965619935,
+					"parameters": [
+						"\"Excuses, don’t let it happen again\"",
+						"\"Bill\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 550961596446443,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 216253954468343,
+					"parameters": [
+						"\" Sorry, will do!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 890732046864100,
+					"parameters": {
+						"variable": "stress",
+						"value": "3"
+					}
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 850482775968542,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 780488540385658
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 320034597176121,
+					"parameters": {
+						"variable": "BeganPotion",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 811892886787370
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 368784915593919
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 781437623079938,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 920029793514332,
+					"parameters": {
+						"variable": "stress",
+						"comparison": 2,
+						"value": "35"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 715361701239817
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 518906883657477,
+					"parameters": [
+						"\"good morning!\"\n",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 874982394275046,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 539009818912964,
+					"parameters": [
+						"\"Bill: morning, everything should be the same today\"",
+						"\"Bill\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 426988682551753,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 805496624756493
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 701831610443072,
+					"parameters": {
+						"variable": "BeganPotion",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 484561815733281
 		},
 		{
 			"eventType": "block",
@@ -112,6 +564,79 @@
 					"sid": 855076329543257,
 					"parameters": {
 						"tag": "\"WorkDone\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 774765738999212,
+					"parameters": [
+						"\"Manager: We were behind on orders all day\"\n",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 721431792989445,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 532071496299046,
+					"parameters": [
+						"\"Oh, that’s not good\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 437956241154005,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 302276985808394,
+					"parameters": [
+						"\"No its not, go faster tomorrow. Now get out of here so I can close up\"\n",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 282443658685556,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 200499451211612,
+					"parameters": [
+						"\"Alright…\"\n",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 770693647668146,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 665390669216831,
+					"parameters": {
+						"variable": "stress",
+						"value": "10"
 					}
 				},
 				{
