@@ -2,78 +2,6 @@
 	"name": "Work",
 	"layers": [
 		{
-			"name": "Background",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
-				{
-					"type": "WorkBg",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 122,
-					"sid": 847909234855870,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 847909234855870,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 515.4559239841099,
-						"height": 477.88761082818337,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 618381583373909,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.2627450980392157,
-				0.3803921568627451,
-				0.45098039215686275,
-				1
-			],
-			"isTransparent": false,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
 			"name": "MgPotion",
 			"overriden": 0,
 			"subLayers": [
@@ -449,7 +377,7 @@
 			],
 			"sid": 445481603881562,
 			"effectTypes": [],
-			"isInitiallyVisible": false,
+			"isInitiallyVisible": true,
 			"isInitiallyInteractive": false,
 			"isHTMLElementsLayer": false,
 			"color": [

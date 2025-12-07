@@ -140,7 +140,7 @@ export class MgPotion {
                             // if (this.result) {
                             //     this.result.destroy()
                             // }
-                            this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.cauldron!.x, this.cauldron!.y)
+                            this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", 308, 308)
                             this.result.opacity = 1
                             // this.result = this.runtime.objects.Potion.createInstance("MgPotionFg", this.mouse.getMouseX(), this.mouse.getMouseY())
                             this.result.setAnimation(potion)
