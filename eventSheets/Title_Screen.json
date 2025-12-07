@@ -77,7 +77,8 @@
 					"callFunction": "dialogue",
 					"sid": 940092659255904,
 					"parameters": [
-						"\"This is the bedroom!\""
+						"\"This is the bedroom!\"",
+						"\"None\""
 					]
 				},
 				{
@@ -92,7 +93,8 @@
 					"callFunction": "dialogue",
 					"sid": 465553203802672,
 					"parameters": [
-						"\"Text 2\""
+						"\"Text 2\"",
+						"\"None\""
 					]
 				}
 			],

@@ -76,9 +76,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 992560891942970,
+							"sid": 647248137446004,
 							"parameters": {
-								"seconds": ".2",
+								"seconds": ".4",
 								"use-timescale": true
 							}
 						},
@@ -142,6 +142,15 @@
 					"sid": 998394186475937,
 					"parameters": {
 						"variable": "dirtcount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 825508286493101,
+					"parameters": {
+						"variable": "stress",
 						"value": "1"
 					}
 				}

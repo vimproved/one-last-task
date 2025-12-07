@@ -134,8 +134,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 645.707995493147,
-						"y": 392.081371059936,
+						"x": 645.8818241532078,
+						"y": 397.30762946242066,
 						"width": 153.01537374855104,
 						"height": 15.088736665157796,
 						"originX": 0,
@@ -1429,10 +1429,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 319.661330299631,
-						"y": 246.4506761448348,
-						"width": 53.43371279398602,
-						"height": 121.92558147120607,
+						"x": 633.2106754894864,
+						"y": 313.37027277815173,
+						"width": 61.600883779016996,
+						"height": 140.56151409231978,
 						"originX": 0.4928751047778709,
 						"originY": 0.8458077709611452,
 						"color": [
@@ -1461,24 +1461,24 @@
 					"behaviors": {
 						"LeftRight": {
 							"properties": {
-								"max-speed": 150,
+								"max-speed": 80,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "left-right",
 								"set-angle": "smooth",
-								"allow-sliding": false,
+								"allow-sliding": true,
 								"default-controls": true,
 								"enabled": true
 							}
 						},
 						"UpDown": {
 							"properties": {
-								"max-speed": 80,
+								"max-speed": 44,
 								"acceleration": 1200,
 								"deceleration": 1200,
 								"directions": "up-down",
 								"set-angle": "smooth",
-								"allow-sliding": false,
+								"allow-sliding": true,
 								"default-controls": true,
 								"enabled": true
 							}
@@ -2108,6 +2108,49 @@
 							1,
 							1,
 							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpacePrompt",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 35,
+					"sid": 375874891227846,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 375874891227846,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 584.61461,
+						"y": 381.933903,
+						"width": 39.78369524390417,
+						"height": 20.756710562036957,
+						"originX": -0.6304347826086957,
+						"originY": -2.6666666666666665,
+						"color": [
+							1,
+							1,
+							1,
+							0
 						],
 						"angle": 0,
 						"zElevation": 0
