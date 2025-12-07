@@ -161,7 +161,7 @@ export class MgPotion {
                             if (this.goodResult) {
                                 this.result.behaviors.Tween.startTween("position", [this.orders[this.orderToFinish]!.x, this.orders[this.orderToFinish]!.y], 1.0, "out-quadratic")
                             } else {
-                                this.result.behaviors.Tween.startTween("position", [-50, this.cauldron!.y], 1.0, "in-quadratic")
+                                this.result.behaviors.Tween.startTween("position", [-50, 308], 1.0, "in-quadratic")
                             }
                             this.timer!.behaviors.Timer.startTimer(2.0, "levitateTimer", "once")
                             break
