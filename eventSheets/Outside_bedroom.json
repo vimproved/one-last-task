@@ -515,6 +515,103 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
+					"sid": 101216914302392
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 253942455087413,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 104777217938267,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 210284050797692
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 202923858873354,
+					"parameters": {
+						"seconds": "0.00000001",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 795218864870622,
+					"parameters": {
+						"x": "450",
+						"y": "400"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 257775701642569,
+					"parameters": {
+						"frame-number": "\"Hall\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 126641259145424,
+					"parameters": [
+						"\"Wow, I'm tired...\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 648601669878027,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 710801714075800,
+					"parameters": [
+						"\"Still need to get some Job Applications done though.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 298990352538345,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 441644726054428
+				}
+			],
+			"sid": 173087730787317
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
 					"sid": 124865212013507
 				},
 				{
@@ -655,6 +752,103 @@
 				}
 			],
 			"sid": 757922480625257
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 665533394828671
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 920837032687934,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 799725545130012,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 128732962303257
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 616234174816269,
+					"parameters": {
+						"seconds": "0.00000001",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 338723298786486,
+					"parameters": {
+						"x": "450",
+						"y": "400"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 829022327110596,
+					"parameters": {
+						"frame-number": "\"Hall\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 434467997035534,
+					"parameters": [
+						"\"Wow, I'm tired...\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 845230111861130,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 733228678160577,
+					"parameters": [
+						"\"Still need to get some Job Applications done though.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 724363267951647,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 430553797363006
+				}
+			],
+			"sid": 737972792303057
 		},
 		{
 			"eventType": "block",
@@ -1336,14 +1530,14 @@
 				{
 					"id": "wait-for-signal",
 					"objectClass": "System",
-					"sid": 835739508457834,
+					"sid": 728543440051588,
 					"parameters": {
 						"tag": "\"Next\""
 					}
 				},
 				{
 					"callFunction": "destroyDialogue",
-					"sid": 575416273077827
+					"sid": 166753267206125
 				}
 			],
 			"sid": 542121702952182
