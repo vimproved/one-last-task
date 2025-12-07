@@ -275,20 +275,6 @@
 					"JobApps",
 					"TarotGame",
 					"ComputerExit",
-<<<<<<< HEAD
-					"Fireflux",
-					"NameInput",
-					"SpellInput1",
-					"SpellInput2",
-					"SpellInput3",
-					"CertInput",
-					"HTMLElement",
-					"iframe",
-					"IntroPage",
-					"JobSubmit",
-					"Tabs",
-					"TermsAndConds"
-=======
 					"IntroPage"
 				],
 				"subfolders": [
@@ -331,9 +317,7 @@
 						"subfolders": [],
 						"name": "job"
 					}
->>>>>>> fe5c225cfb83e569d71fbda1ec3d3ef02b23dd3a
 				],
-				"subfolders": [],
 				"name": "Computer"
 			},
 			{
