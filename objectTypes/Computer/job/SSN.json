@@ -1,0 +1,9 @@
+{
+	"name": "SSN",
+	"plugin-id": "TextBox",
+	"sid": 720557464989864,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

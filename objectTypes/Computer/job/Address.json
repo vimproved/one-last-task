@@ -1,0 +1,9 @@
+{
+	"name": "Address",
+	"plugin-id": "TextBox",
+	"sid": 285297589324858,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

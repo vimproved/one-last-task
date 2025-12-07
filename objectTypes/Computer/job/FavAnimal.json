@@ -1,0 +1,9 @@
+{
+	"name": "FavAnimal",
+	"plugin-id": "TextBox",
+	"sid": 992900558152908,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

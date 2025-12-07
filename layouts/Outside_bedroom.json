@@ -2411,287 +2411,972 @@
 		{
 			"name": "MgApps",
 			"overriden": 0,
-			"subLayers": [],
+			"subLayers": [
+				{
+					"name": "MgAppsBg",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Fireflux",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 93,
+							"sid": 273307280220548,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 273307280220548,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 0,
+								"y": 0,
+								"width": 854,
+								"height": 480,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Sprite8",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "P1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 35,
+							"sid": 625351832610555,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 625351832610555,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 107,
+								"y": 0,
+								"width": 640,
+								"height": 480,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "OpalInfo",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "P1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 34,
+							"sid": 162156443143171,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 162156443143171,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 107,
+								"y": 0,
+								"width": 640,
+								"height": 480,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "OpalP1",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 52,
+							"sid": 907339251359065,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 907339251359065,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 169.40087054807236,
+								"y": 35,
+								"width": 94.48756719844036,
+								"height": 36.74988889542226,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "OpalP2",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 53,
+							"sid": 213716679270152,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 213716679270152,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 270.46250873036746,
+								"y": 35,
+								"width": 94.48756719844036,
+								"height": 36.74988889542226,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "OpalP3",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 58,
+							"sid": 182236372507280,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 182236372507280,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 371.14765871962084,
+								"y": 35,
+								"width": 94.48756719844036,
+								"height": 36.74988889542226,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "AppP1",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 94,
+							"sid": 364323905873414,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 364323905873414,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 487.3676555636873,
+								"y": 35,
+								"width": 94.48756719844036,
+								"height": 36.74988889542226,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "AppP2",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 95,
+							"sid": 347444271345826,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 347444271345826,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 588.4753553432561,
+								"y": 35,
+								"width": 94.48756719844036,
+								"height": 36.74988889542226,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "AppP3",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 96,
+							"sid": 722776658385396,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 722776658385396,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 689.5595442735676,
+								"y": 35,
+								"width": 94.48756719844036,
+								"height": 36.74988889542226,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 824132390164715,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "App3",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "FavColor",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "text",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 46,
+							"sid": 147578561551973,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 147578561551973,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 529,
+								"y": 124,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "FavAnimal",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "text",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 47,
+							"sid": 327749674651494,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 327749674651494,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 535,
+								"y": 225,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "Honors",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "textarea",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 48,
+							"sid": 876080322970684,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 876080322970684,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 534,
+								"y": 378,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					],
+					"sid": 687794569333475,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "App2",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "BankAccount",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "number",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 40,
+							"sid": 526831047793338,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 526831047793338,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 543,
+								"y": 140,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "BankRouting",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "number",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 41,
+							"sid": 132909688072543,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 132909688072543,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 535,
+								"y": 198,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "FullName",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "text",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 42,
+							"sid": 385965263054106,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 385965263054106,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 529,
+								"y": 271,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "OtherCerts",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "text",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 44,
+							"sid": 983554623362791,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 983554623362791,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 509,
+								"y": 340,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					],
+					"sid": 388885713950804,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "App1",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "JobSubmit",
+							"properties": {
+								"type": "button",
+								"text": "Submit",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"auto-font-size": true,
+								"checked": false,
+								"id": "",
+								"class": ""
+							},
+							"uid": 99,
+							"sid": 992189259692400,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 992189259692400,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 623,
+								"y": 769,
+								"width": 72,
+								"height": 24,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "Species",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "text",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 36,
+							"sid": 976373319519101,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 976373319519101,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 524,
+								"y": 140,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "SSN",
+							"properties": {
+								"text": "",
+								"placeholder": "XXX-XX-XXXX",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "password",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 37,
+							"sid": 495090361046186,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 495090361046186,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 492,
+								"y": 305,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "Address",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "text",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 38,
+							"sid": 784956084713774,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 784956084713774,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 544,
+								"y": 348,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "Experience",
+							"properties": {
+								"text": "",
+								"placeholder": "",
+								"tooltip": "",
+								"initially-visible": true,
+								"enabled": true,
+								"read-only": false,
+								"spell-check": false,
+								"type": "textarea",
+								"auto-font-size": true,
+								"id": "",
+								"class": ""
+							},
+							"uid": 39,
+							"sid": 783283748598710,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 783283748598710,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 474,
+								"y": 420,
+								"width": 150,
+								"height": 22,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					],
+					"sid": 286713262699667,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
 			"instances": [
-				{
-					"type": "Fireflux",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 93,
-					"sid": 273307280220548,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 273307280220548,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 854,
-						"height": 480,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "NameInput",
-					"properties": {
-						"text": "",
-						"placeholder": "Name",
-						"tooltip": "Enter your name here",
-						"initially-visible": true,
-						"enabled": true,
-						"read-only": false,
-						"spell-check": true,
-						"type": "text",
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 94,
-					"sid": 464455776672640,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 464455776672640,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 572,
-						"y": 108,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "SpellInput1",
-					"properties": {
-						"text": "",
-						"placeholder": "Spell",
-						"tooltip": "Enter a spell you know here",
-						"initially-visible": true,
-						"enabled": true,
-						"read-only": false,
-						"spell-check": false,
-						"type": "text",
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 95,
-					"sid": 195434569821064,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 195434569821064,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 573,
-						"y": 164,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "SpellInput2",
-					"properties": {
-						"text": "",
-						"placeholder": "Spell",
-						"tooltip": "Enter a spell you know here",
-						"initially-visible": true,
-						"enabled": true,
-						"read-only": false,
-						"spell-check": false,
-						"type": "text",
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 96,
-					"sid": 282313699499498,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 282313699499498,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 571,
-						"y": 207,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "SpellInput3",
-					"properties": {
-						"text": "",
-						"placeholder": "Spell",
-						"tooltip": "Enter a spell you know here",
-						"initially-visible": true,
-						"enabled": true,
-						"read-only": false,
-						"spell-check": false,
-						"type": "text",
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 97,
-					"sid": 249745953062982,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 249745953062982,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 571,
-						"y": 262,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "JobSubmit",
-					"properties": {
-						"type": "button",
-						"text": "Submit",
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"auto-font-size": true,
-						"checked": false,
-						"id": "",
-						"class": ""
-					},
-					"uid": 99,
-					"sid": 992189259692400,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 992189259692400,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 591,
-						"y": 386,
-						"width": 72,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "CertInput",
-					"properties": {
-						"items": "SCRU Merlin\nSCRU Practico Rank 1\nSCRU Practico Rank 2\nSCRU Practico Rank 3\nSCRU Magician Rank 1\nSCRU Magician Rank 2\nSCRU Magician Rank 3\nSCRU Magician Rank 4\nSCRU Magician Rank 5\nUASC Master Level 3\nUASC Master Level 2\nUASC Master Level 1\nUASC Apprentice Level 3\nUASC Apprentice Level 2\nUASC Apprentice Level 1",
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"type": "dropdown-list",
-						"multi-select": false,
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 100,
-					"sid": 157492268680148,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 157492268680148,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 567,
-						"y": 321,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
 				{
 					"type": "SliderBar",
 					"properties": {
@@ -2825,43 +3510,6 @@
 					}
 				},
 				{
-					"type": "Tabs",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 98,
-					"sid": 940276877808882,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 940276877808882,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 160,
-						"y": 727,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "TermsAndConds",
 					"properties": {
 						"type": "checkbox",
@@ -2886,8 +3534,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 532,
-						"y": 357,
+						"x": 649,
+						"y": 676,
 						"width": 268,
 						"height": 24,
 						"originX": 0,

@@ -1,0 +1,9 @@
+{
+	"name": "OtherCerts",
+	"plugin-id": "TextBox",
+	"sid": 211605099311045,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

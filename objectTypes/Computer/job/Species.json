@@ -1,0 +1,9 @@
+{
+	"name": "Species",
+	"plugin-id": "TextBox",
+	"sid": 666038607344437,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

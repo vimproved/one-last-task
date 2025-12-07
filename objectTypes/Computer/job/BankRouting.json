@@ -1,0 +1,9 @@
+{
+	"name": "BankRouting",
+	"plugin-id": "TextBox",
+	"sid": 939277300777067,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}
