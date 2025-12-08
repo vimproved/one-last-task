@@ -151,7 +151,8 @@
 			"FullApartment",
 			"SliderBar",
 			"Audio",
-			"Endings"
+			"Endings",
+			"Instructions"
 		],
 		"subfolders": [
 			{
