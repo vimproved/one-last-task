@@ -305,7 +305,9 @@
 					"Particles",
 					"Sink",
 					"spr_Dirt",
-					"spr_Sponge"
+					"spr_Sponge",
+					"Rag",
+					"Smear"
 				],
 				"subfolders": [],
 				"name": "Sink"

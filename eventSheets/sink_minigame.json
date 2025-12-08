@@ -2,6 +2,10 @@
 	"name": "sink_minigame",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
 			"eventType": "variable",
 			"name": "dirtcount",
 			"type": "number",
@@ -10,6 +14,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 745006837481668
+		},
+		{
+			"eventType": "variable",
+			"name": "smearcount",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 623368057031830
 		},
 		{
 			"eventType": "block",
@@ -60,9 +74,9 @@
 						{
 							"id": "set-opacity",
 							"objectClass": "spr_Dirt",
-							"sid": 291709858082325,
+							"sid": 548268657349757,
 							"parameters": {
-								"opacity": "Self.Opacity -5"
+								"opacity": "Self.Opacity -1"
 							}
 						},
 						{
@@ -76,9 +90,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 647248137446004,
+							"sid": 242357424556302,
 							"parameters": {
-								"seconds": ".4",
+								"seconds": ".8",
 								"use-timescale": true
 							}
 						},
@@ -92,6 +106,30 @@
 						}
 					],
 					"sid": 582004811000677
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Rag",
+							"sid": 641513227462501,
+							"parameters": {
+								"object": "Smear"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Smear",
+							"sid": 113616871554387,
+							"parameters": {
+								"opacity": "Self.Opacity -1"
+							}
+						}
+					],
+					"sid": 397649062730764
 				}
 			]
 		},
@@ -144,18 +182,40 @@
 						"variable": "dirtcount",
 						"value": "1"
 					}
+				}
+			],
+			"sid": 301276090473575
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-opacity",
+					"objectClass": "Smear",
+					"sid": 842013160470477,
+					"parameters": {
+						"comparison": 3,
+						"opacity": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Smear",
+					"sid": 107416009840827
 				},
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 825508286493101,
+					"sid": 851134070709138,
 					"parameters": {
-						"variable": "stress",
+						"variable": "smearcount",
 						"value": "1"
 					}
 				}
 			],
-			"sid": 301276090473575
+			"sid": 184632152037112
 		},
 		{
 			"eventType": "block",
@@ -168,6 +228,16 @@
 						"variable": "dirtcount",
 						"comparison": 0,
 						"value": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 752220102763704,
+					"parameters": {
+						"first-value": "smearcount",
+						"comparison": 0,
+						"second-value": "0"
 					}
 				}
 			],

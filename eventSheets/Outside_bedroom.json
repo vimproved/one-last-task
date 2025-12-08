@@ -86,6 +86,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 247826497198244,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "dialogue",
 					"sid": 855954557259323,
 					"parameters": [
@@ -113,15 +122,6 @@
 						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
 						"\"None\""
 					]
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 936570255152173,
-					"parameters": {
-						"variable": "DayBegin",
-						"value": "false"
-					}
 				}
 			],
 			"sid": 974113826591588

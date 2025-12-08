@@ -1,0 +1,58 @@
+{
+	"name": "Smear",
+	"plugin-id": "Sprite",
+	"sid": 516562400260639,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 694,
+						"height": 882,
+						"originX": 0.5547550432276657,
+						"originY": 0.48639455782312924,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1188808,
+						"collisionPoly": {
+							"points": [
+								0.69164265129683,
+								0.0011337868480725624,
+								0.8515850144092219,
+								0.01927437641723356,
+								0.9985590778097982,
+								0.5158730158730159,
+								0.8919308357348703,
+								0.6394557823129252,
+								0.1829971181556196,
+								0.9841269841269841,
+								0.04610951008645533,
+								0.9852607709750567,
+								0.011527377521613832,
+								0.7789115646258503
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 374457148528168,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
