@@ -1174,6 +1174,14 @@
 					"parameters": {
 						"object": "Bedroom"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 647315761330128,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
 				}
 			],
 			"actions": [
@@ -1385,6 +1393,14 @@
 						"comparison": 1,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 798552625166702,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
 				}
 			],
 			"actions": [
@@ -1506,6 +1522,24 @@
 					"parameters": {
 						"object": "StartBoxes"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 181882429783295,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 195104778702360,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -1551,6 +1585,80 @@
 				}
 			],
 			"sid": 109373221483622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 144791662440308,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 313221067522998,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 531379036903416,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 507649147697637
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 432664397054464,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 867929442236128,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 995184671600197,
+					"behaviorType": "LeftRight",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 191499628389782,
+					"behaviorType": "UpDown",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 144944204923483
 		},
 		{
 			"eventType": "block",
@@ -1665,6 +1773,16 @@
 					"parameters": {
 						"layer": "\"ComputerScreen\""
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 213327439433769,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -1724,6 +1842,7 @@
 					"id": "layer-is-visible",
 					"objectClass": "System",
 					"sid": 574939562765647,
+					"disabled": true,
 					"parameters": {
 						"layer": "\"ComputerScreen\""
 					}
@@ -1750,6 +1869,42 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 736578542380994,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 393589983365304,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 112242037338590,
+					"behaviorType": "LeftRight",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 308373458867445,
+					"behaviorType": "UpDown",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
 				{
 					"callFunction": "dialogue",
 					"sid": 902998369024201,

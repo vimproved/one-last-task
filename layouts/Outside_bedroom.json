@@ -1504,7 +1504,7 @@
 								"directions": "left-right",
 								"set-angle": "smooth",
 								"allow-sliding": true,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						},
@@ -1516,7 +1516,7 @@
 								"directions": "up-down",
 								"set-angle": "smooth",
 								"allow-sliding": true,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						}

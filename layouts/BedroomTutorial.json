@@ -157,7 +157,7 @@
 				{
 					"type": "Instructions",
 					"properties": {
-						"text": "Arrows keys to move\nE to interact with highlighted objects",
+						"text": "WASD to move\nE to interact with highlighted objects",
 						"enable-bbcode": true,
 						"font": "Segoe Print",
 						"size": 12,
@@ -519,7 +519,7 @@
 								"directions": "left-right",
 								"set-angle": "smooth",
 								"allow-sliding": true,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						},
@@ -531,7 +531,7 @@
 								"directions": "up-down",
 								"set-angle": "smooth",
 								"allow-sliding": true,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						}
