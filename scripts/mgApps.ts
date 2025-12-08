@@ -100,17 +100,21 @@ export class MgApps {
 
         this.submit!.addEventListener("click", () => {
             if (
-                this.address!.text == "123 Kelp Lane, Aquaville Atlantis" &&
+                this.address!.text.includes("123") &&
+                this.address!.text.includes("Kelp") &&
+                this.address!.text.includes("Atlantis") &&
                 this.bankAccount!.text == "12345678" &&
                 this.bankRouting!.text == "87654321" &&
-                this.experience!.text.length > 12 &&
-                this.favAnimal!.text == "Ferret" &&
-                this.favColor!.text == "Green" &&
-                this.fullName!.text == "Opal Codson" &&
-                this.honors!.text.length > 12 &&
-                this.otherCerts!.text.length > 12 &&
-                (this.species!.text == "Human" || this.species!.text == "human") &&
-                this.ssn!.text == "111-11-1112" &&
+                this.experience!.text.length > 4 &&
+                (this.favAnimal!.text.includes("Ferret") || this.favAnimal!.text.includes("ferret")) &&
+                (this.favColor!.text.includes("Green") || this.favColor!.text.includes("green")) &&
+                this.fullName!.text.includes("Opal") &&
+                this.fullName!.text.includes("Codson") &&
+                this.honors!.text.length > 4 &&
+                this.otherCerts!.text.length > 4 &&
+                (this.species!.text.includes("Human") || this.species!.text.includes("human")) &&
+                this.ssn!.text.includes("111") &&
+                this.ssn!.text.includes("2") &&
                 this.halfHuman!.isChecked &&
                 this.withMagic!.isChecked &&
                 this.gender!.getItemText(this.gender!.selectedIndex) == "Other" &&
