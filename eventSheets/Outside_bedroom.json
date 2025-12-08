@@ -2207,6 +2207,87 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 365343733429926,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ComputerExit"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 204413383655573,
+					"parameters": {
+						"layer": "\"ComputerScreen\""
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 512729497509202,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 348389484488156,
+					"parameters": {
+						"variable": "ComputerUsed"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 361609812084066,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 200177495583293,
+					"parameters": {
+						"layer": "\"ComputerScreen\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 216405437260947,
+					"behaviorType": "LeftRight",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 961079742894239,
+					"behaviorType": "UpDown",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 833572538166750
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 939590500131432,
 					"parameters": {
 						"mouse-button": "left",
@@ -2234,13 +2315,11 @@
 					}
 				},
 				{
-					"id": "compare-two-values",
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 501341079566159,
+					"sid": 597897347098081,
 					"parameters": {
-						"first-value": "JobMeter",
-						"comparison": 5,
-						"second-value": "1"
+						"variable": "ComputerUsed"
 					}
 				}
 			],
@@ -2374,16 +2453,6 @@
 					"parameters": {
 						"layer": "\"ComputerScreen\""
 					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 201254087987808,
-					"parameters": {
-						"first-value": "Day",
-						"comparison": 1,
-						"second-value": "1"
-					}
 				}
 			],
 			"actions": [
@@ -2479,16 +2548,6 @@
 					"sid": 270690427284767,
 					"parameters": {
 						"layer": "\"ComputerScreen\""
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 361139224968548,
-					"parameters": {
-						"first-value": "Day",
-						"comparison": 1,
-						"second-value": "1"
 					}
 				}
 			],
@@ -2728,16 +2787,6 @@
 						"first-value": "Day",
 						"comparison": 0,
 						"second-value": "1"
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 710159961877480,
-					"parameters": {
-						"first-value": "DailyJobAppCount",
-						"comparison": 1,
-						"second-value": "0"
 					}
 				}
 			],
@@ -3035,22 +3084,21 @@
 					}
 				},
 				{
-					"id": "compare-two-values",
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 480871430119689,
+					"sid": 841159685273946,
 					"parameters": {
-						"first-value": "DailyJobAppCount",
-						"comparison": 0,
-						"second-value": "0"
-					}
+						"variable": "ComputerUsed"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"callFunction": "dialogue",
-					"sid": 885058673836040,
+					"sid": 764880565163142,
 					"parameters": [
-						"\"I need to get at least one job application done today.\"",
+						"\"I need to at least do something today...\"",
 						"\"Opal\""
 					]
 				},
