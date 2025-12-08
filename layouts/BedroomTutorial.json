@@ -191,8 +191,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 16,
-						"y": 425,
+						"x": 8,
+						"y": 7,
 						"width": 338,
 						"height": 45,
 						"originX": 0,
