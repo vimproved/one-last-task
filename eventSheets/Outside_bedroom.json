@@ -1718,6 +1718,10 @@
 			],
 			"actions": [
 				{
+					"callFunction": "destroyDialogue",
+					"sid": 593469952094074
+				},
+				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
 					"sid": 449268874281748,
@@ -1733,6 +1737,24 @@
 					"parameters": {
 						"layer": "\"ComputerScreen\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 935541295349504,
+					"behaviorType": "LeftRight",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 872689151334328,
+					"behaviorType": "UpDown",
+					"parameters": {
+						"state": "disabled"
 					}
 				}
 			],
@@ -1807,6 +1829,24 @@
 					"parameters": {
 						"layer": "\"ComputerScreen\"",
 						"interactive": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 958176215502264,
+					"behaviorType": "LeftRight",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerMovement",
+					"sid": 592323329659471,
+					"behaviorType": "UpDown",
+					"parameters": {
+						"state": "enabled"
 					}
 				}
 			],
@@ -2098,6 +2138,16 @@
 					"parameters": {
 						"object": "WorkStartBox"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 225278224952098,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 5,
+						"second-value": "2"
+					}
 				}
 			],
 			"actions": [
@@ -2115,6 +2165,42 @@
 				}
 			],
 			"sid": 568831103738023
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 568914069032160,
+					"parameters": {
+						"tag": "\"wrongInfo\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 301112261795083,
+					"parameters": [
+						"\"Wait, I think I entered some info in wrong! I should check all 3 tabs.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 248810172478430,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 276898161921738
+				}
+			],
+			"sid": 993673058524513
 		}
 	],
 	"sid": 412262354200698

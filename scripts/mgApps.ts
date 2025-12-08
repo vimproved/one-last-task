@@ -128,6 +128,8 @@ export class MgApps {
             ) {
                 this.done = true
                 this.submitted = true
+            } else {
+                this.runtime.signal("wrongInfo")
             }
         })
     }
