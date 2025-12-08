@@ -336,45 +336,7 @@
 					"global": false
 				}
 			],
-			"instances": [
-				{
-					"type": "Bustup",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Opal",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 136,
-					"sid": 588098009320356,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 588098009320356,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 150,
-						"y": 403,
-						"width": 158.74096356616604,
-						"height": 190.21546496290588,
-						"originX": 0.5,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 445481603881562,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
