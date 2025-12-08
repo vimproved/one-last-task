@@ -1,7 +1,7 @@
 {
 	"name": "StressMeter",
 	"plugin-id": "Sprite",
-	"sid": 563097481028554,
+	"sid": 514282473593799,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,25 +12,27 @@
 			{
 				"frames": [
 					{
-						"width": 3514,
-						"height": 1220,
-						"originX": 0.0864586315488119,
-						"originY": 0.3121951219512195,
+						"width": 3176,
+						"height": 753,
+						"originX": 0,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6357085,
+						"imageSpriteId": 1921335,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								0.9997137131405669,
-								0,
-								0.9997137131405669,
-								0.9990243902439024,
-								0,
-								0.9990243902439024
+								0.11429471032745592,
+								0.00398406374501992,
+								0.9883501259445844,
+								0.26162018592297476,
+								0.9974811083123426,
+								0.3346613545816733,
+								0.9574937027707808,
+								0.8034528552456838,
+								0.04848866498740554,
+								0.899070385126162
 							]
 						},
 						"useCollisionPoly": true,
@@ -38,7 +40,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 373411714179248,
+				"sid": 600982377904111,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -84,20 +84,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "progressbar",
-			"name": "Progress bar",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "sliderbar",
-			"name": "Slider bar",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -145,15 +131,13 @@
 		"items": [
 			"Keyboard",
 			"Mouse",
-			"ProgressBar",
-			"StressMeter",
 			"Start_Sink_minigame",
 			"FullApartment",
-			"SliderBar",
 			"Audio",
 			"Endings",
 			"Instructions",
-			"welcomeMat"
+			"welcomeMat",
+			"StressText"
 		],
 		"subfolders": [
 			{
@@ -210,7 +194,9 @@
 			{
 				"items": [
 					"StressBar_background",
-					"StressLevel"
+					"StressLevel",
+					"StressFiller",
+					"StressMeter"
 				],
 				"subfolders": [],
 				"name": "Stressbar"

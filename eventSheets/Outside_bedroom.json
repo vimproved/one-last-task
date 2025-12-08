@@ -44,6 +44,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 200895128697469,
+					"parameters": {
+						"variable": "stress",
+						"value": "0"
+					}
+				},
+				{
 					"callFunction": "destroyDialogue",
 					"sid": 206167222045564
 				},
@@ -342,22 +351,6 @@
 					}
 				},
 				{
-					"callFunction": "dialogue",
-					"sid": 714225865610166,
-					"parameters": [
-						"\"Still need to get some Job Applications done though.\"",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 433443752543283,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
 					"callFunction": "destroyDialogue",
 					"sid": 530882714261025
 				}
@@ -579,9 +572,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 710801714075800,
+					"sid": 196537930364512,
 					"parameters": [
-						"\"Still need to get some Job Applications done though.\"",
+						"\"It might be a good idea for me to get some job applications done.\"",
 						"\"Opal\""
 					]
 				},
@@ -599,6 +592,242 @@
 				}
 			],
 			"sid": 173087730787317
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 501242626238527
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 137027151604424,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 802939674433022,
+					"parameters": {
+						"variable": "DayBegin"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 983883770306724,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 839713142909190
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 693213930424293,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 659428282182805,
+					"parameters": {
+						"frame-number": "\"Bed\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 194931039028423,
+					"behaviorType": "FadeOut"
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 406667964898483,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 239225768468751,
+					"parameters": {
+						"seconds": "0.00000001",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 227702921963461,
+					"parameters": {
+						"x": "350",
+						"y": "240"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 790640344636695,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 831714937787552,
+					"parameters": [
+						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 122216335888796,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 919647811564809,
+					"disabled": true,
+					"parameters": [
+						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
+						"\"None\""
+					]
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 390851737158432,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 364037432391728
+				}
+			],
+			"sid": 252622552868056
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 625583178419348
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 840732544600121,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 683260426479615,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 596411424715480
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 769098905194564,
+					"parameters": {
+						"seconds": "0.00000001",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerMovement",
+					"sid": 913082012943769,
+					"parameters": {
+						"x": "450",
+						"y": "400"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "FullApartment",
+					"sid": 851681973106177,
+					"parameters": {
+						"frame-number": "\"Hall\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 416132734995353,
+					"parameters": [
+						"\"Wow, I'm tired...\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 123165031227835,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 854069153114427,
+					"parameters": [
+						"\"Still need to get some job applications done though if I want a chance at landing something.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 544891321404504,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 372005949043698
+				}
+			],
+			"sid": 131955515683663
 		},
 		{
 			"eventType": "block",
@@ -684,9 +913,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 334376788947293,
+					"sid": 895953070396431,
 					"parameters": [
-						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Huh, it looks like I got some mail outside! Let me go check.\"",
 						"\"Opal\""
 					]
 				},
@@ -708,21 +937,21 @@
 					]
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "DialogueBox",
-					"sid": 807437740842296,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"callFunction": "destroyDialogue",
 					"sid": 866208596253663
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "Endings",
+					"sid": 353899560301789,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "Endings",
-					"sid": 192516916490903,
+					"sid": 747650887367890,
 					"parameters": {
 						"animation": "\"Fired\"",
 						"from": "beginning"
@@ -747,14 +976,6 @@
 						"variable": "Day",
 						"comparison": 0,
 						"value": "5"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 395234187233432,
-					"parameters": {
-						"variable": "DayBegin"
 					}
 				},
 				{
@@ -825,9 +1046,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 295252869841620,
+					"sid": 757464319474798,
 					"parameters": [
-						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Huh, it looks like I got some mail outside! Let me go check.\"",
 						"\"Opal\""
 					]
 				},
@@ -849,16 +1070,16 @@
 					]
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "DialogueBox",
-					"sid": 123006115315323,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"callFunction": "destroyDialogue",
 					"sid": 786753287220644
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Endings",
+					"sid": 225064973098328,
+					"parameters": {
+						"visibility": "visible"
+					}
 				},
 				{
 					"id": "set-animation",
@@ -966,9 +1187,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 976857364201770,
+					"sid": 879069666492739,
 					"parameters": [
-						"\"Oh wow, it's time for me to get to work!\"",
+						"\"Huh, it looks like I got some mail outside! Let me go check.\"",
 						"\"Opal\""
 					]
 				},
@@ -990,16 +1211,16 @@
 					]
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "DialogueBox",
-					"sid": 151335773858624,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"callFunction": "destroyDialogue",
 					"sid": 336018644216760
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Endings",
+					"sid": 353260485701070,
+					"parameters": {
+						"visibility": "visible"
+					}
 				},
 				{
 					"id": "set-animation",
@@ -1998,28 +2219,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 322296150379898
-				}
-			],
-			"actions": [
-				{
-					"id": "set-progress",
-					"objectClass": "ProgressBar",
-					"sid": 927276840667423,
-					"parameters": {
-						"value": "stress"
-					}
-				}
-			],
-			"sid": 980339702519802,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 611362771601522,
@@ -2556,6 +2755,13 @@
 					"sid": 462436263297743
 				},
 				{
+					"callFunction": "addStress",
+					"sid": 768547966578946,
+					"parameters": [
+						"5"
+					]
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 608575151551377,
@@ -2700,10 +2906,17 @@
 			],
 			"actions": [
 				{
-					"callFunction": "dialogue",
-					"sid": 107088939747437,
+					"callFunction": "addStress",
+					"sid": 297451653217430,
 					"parameters": [
-						"\"Submitted!\"",
+						"10"
+					]
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 244716206396971,
+					"parameters": [
+						"\"Submitted! That was stressful.\"",
 						"\"Opal\""
 					]
 				},
@@ -2739,6 +2952,70 @@
 				}
 			],
 			"sid": 805045014766893
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 361435543505030
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "StressFiller",
+					"sid": 517286093591330,
+					"parameters": {
+						"frame-number": "stress"
+					}
+				}
+			],
+			"sid": 800177475000536
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 904428566703846,
+					"parameters": {
+						"tag": "\"memoryDone\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "addStress",
+					"sid": 279761359381956,
+					"parameters": [
+						"-25"
+					]
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 472504887565149,
+					"parameters": [
+						"\"Wow, that was really fun!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 415635480106060,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 751258213012583
+				}
+			],
+			"sid": 209745288544290
 		}
 	],
 	"sid": 412262354200698

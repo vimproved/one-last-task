@@ -783,6 +783,125 @@
 			"sid": 826448344204255
 		},
 		{
+			"functionName": "addStress",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "increment",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 934019056606302
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 860884280898020,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 320557146253305,
+							"parameters": {
+								"first-value": "increment",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 964421108091687,
+							"parameters": {
+								"first-value": "stress + increment",
+								"comparison": 4,
+								"second-value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 474234362059674,
+							"parameters": {
+								"variable": "stress",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 533796439905169
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 918400478983120,
+							"parameters": {
+								"first-value": "increment",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 921665020110389,
+							"parameters": {
+								"first-value": "stress - increment",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 700009202591412,
+							"parameters": {
+								"variable": "stress",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 161690240258588
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 388922426029957
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 923065772399830,
+							"parameters": {
+								"variable": "stress",
+								"value": "increment"
+							}
+						}
+					],
+					"sid": 462735651463855
+				}
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -804,13 +923,11 @@
 			],
 			"actions": [
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 711774764171978,
-					"parameters": {
-						"variable": "stress",
-						"value": "1"
-					}
+					"callFunction": "addStress",
+					"sid": 147208329159262,
+					"parameters": [
+						"1"
+					]
 				},
 				{
 					"id": "set-text",
@@ -821,11 +938,11 @@
 					}
 				},
 				{
-					"id": "set-progress",
-					"objectClass": "ProgressBar",
-					"sid": 450785545883333,
+					"id": "set-animation-frame",
+					"objectClass": "StressFiller",
+					"sid": 841294393434506,
 					"parameters": {
-						"value": "stress"
+						"frame-number": "stress"
 					}
 				}
 			],
@@ -1478,13 +1595,11 @@
 			],
 			"actions": [
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 316180042218290,
-					"parameters": {
-						"variable": "stress",
-						"value": "-5"
-					}
+					"callFunction": "addStress",
+					"sid": 825758823858707,
+					"parameters": [
+						"-5"
+					]
 				}
 			],
 			"sid": 390872938039494
@@ -1503,13 +1618,11 @@
 			],
 			"actions": [
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 614005435940277,
-					"parameters": {
-						"variable": "stress",
-						"value": "5"
-					}
+					"callFunction": "addStress",
+					"sid": 624808180512454,
+					"parameters": [
+						"5"
+					]
 				}
 			],
 			"sid": 926208549560092

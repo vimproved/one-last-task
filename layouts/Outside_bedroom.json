@@ -150,42 +150,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "ProgressBar",
-					"properties": {
-						"value": 0,
-						"maximum": 100,
-						"tooltip": "",
-						"initially-visible": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 63,
-					"sid": 671850966573704,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 671850966573704,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 566,
-						"y": 603,
-						"width": 153.01537374855104,
-						"height": 15.088736665157796,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
 					"type": "StressMeter",
 					"properties": {
 						"initially-visible": true,
@@ -195,23 +159,113 @@
 						"live-preview": false
 					},
 					"uid": 64,
-					"sid": 747493815367755,
+					"sid": 625164732764303,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 747493815367755,
+						"sid": 625164732764303,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 566,
-						"y": 635,
-						"width": 152.86803618961304,
-						"height": 48.031073061185616,
-						"originX": 0.0864586315488119,
-						"originY": 0.3121951219512195,
+						"x": 26,
+						"y": 54,
+						"width": 151.27369231492395,
+						"height": 35.865582592297756,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StressFiller",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 100,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 151,
+					"sid": 848271481546364,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 848271481546364,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 57,
+						"y": 54,
+						"width": 110.09030401086817,
+						"height": 8.972359776885753,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StressText",
+					"properties": {
+						"text": "Stress",
+						"enable-bbcode": true,
+						"font": "Segoe Print",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 63,
+					"sid": 463470423960388,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 463470423960388,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 29,
+						"y": 15,
+						"width": 142,
+						"height": 28,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -3787,45 +3841,6 @@
 				}
 			],
 			"instances": [
-				{
-					"type": "SliderBar",
-					"properties": {
-						"value": 0,
-						"minimum": 0,
-						"maximum": 100,
-						"step": 1,
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 101,
-					"sid": 668390321431018,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 668390321431018,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 112,
-						"y": 553,
-						"width": 200,
-						"height": 25,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
 				{
 					"type": "TermsAndConds",
 					"properties": {
