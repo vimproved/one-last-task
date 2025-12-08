@@ -2629,6 +2629,11 @@
 					"sid": 831543104583557
 				},
 				{
+					"id": "destroy",
+					"objectClass": "SleepBox",
+					"sid": 818787220362908
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "Sleep",
 					"sid": 750411690693053,
@@ -2794,6 +2799,11 @@
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 167508930129796
+				},
+				{
+					"id": "destroy",
+					"objectClass": "SleepBox",
+					"sid": 858251878538561
 				},
 				{
 					"id": "set-visible",
