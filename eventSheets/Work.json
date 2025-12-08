@@ -468,11 +468,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 920029793514332,
+					"sid": 923268267451082,
 					"parameters": {
 						"variable": "stress",
 						"comparison": 2,
-						"value": "35"
+						"value": "25"
 					}
 				}
 			],
