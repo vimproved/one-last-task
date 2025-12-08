@@ -366,10 +366,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "PlayerMovement",
-					"sid": 388639847750693,
+					"sid": 574017884702504,
 					"parameters": {
-						"x": "450",
-						"y": "400"
+						"x": "280",
+						"y": "330"
 					}
 				},
 				{
@@ -604,10 +604,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "PlayerMovement",
-					"sid": 795218864870622,
+					"sid": 749090638557781,
 					"parameters": {
-						"x": "450",
-						"y": "400"
+						"x": "280",
+						"y": "330"
 					}
 				},
 				{
@@ -858,10 +858,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "PlayerMovement",
-					"sid": 913082012943769,
+					"sid": 466826382646871,
 					"parameters": {
-						"x": "450",
-						"y": "400"
+						"x": "280",
+						"y": "330"
 					}
 				},
 				{
