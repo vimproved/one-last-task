@@ -16,6 +16,16 @@
 			"sid": 219665584363220
 		},
 		{
+			"eventType": "variable",
+			"name": "ComputerUsed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 368912386969539
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -50,6 +60,24 @@
 					"parameters": {
 						"variable": "stress",
 						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 433432737667791,
+					"parameters": {
+						"variable": "DailyJobAppCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 383518077823972,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "false"
 					}
 				},
 				{
@@ -182,6 +210,24 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 484713516124138,
+					"parameters": {
+						"variable": "DailyJobAppCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 374039768125599,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 389737528952444
@@ -394,6 +440,24 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 628404230216075,
+					"parameters": {
+						"variable": "DailyJobAppCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 893006738869915,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 387048205808464
@@ -631,6 +695,24 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 344345793851367,
+					"parameters": {
+						"variable": "DailyJobAppCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 188109619689272,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "destroyDialogue",
 					"sid": 839713142909190
 				},
@@ -846,27 +928,27 @@
 						"comparison": 0,
 						"value": "5"
 					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 205455207517617,
-					"parameters": {
-						"variable": "DayBegin"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 786148224045681,
-					"parameters": {
-						"variable": "stress",
-						"comparison": 2,
-						"value": "50"
-					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 189179297695073,
+					"parameters": {
+						"variable": "DailyJobAppCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 592637519527935,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 662294399160512
@@ -939,300 +1021,9 @@
 				{
 					"callFunction": "destroyDialogue",
 					"sid": 866208596253663
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Endings",
-					"sid": 353899560301789,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Endings",
-					"sid": 747650887367890,
-					"parameters": {
-						"animation": "\"Fired\"",
-						"from": "beginning"
-					}
 				}
 			],
 			"sid": 802224947795525
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 409754947485825
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 596887028927751,
-					"parameters": {
-						"variable": "Day",
-						"comparison": 0,
-						"value": "5"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 820235738687480,
-					"parameters": {
-						"variable": "stress",
-						"comparison": 5,
-						"value": "50"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 113059849381524,
-					"parameters": {
-						"variable": "JobMeter",
-						"comparison": 4,
-						"value": "4"
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 415869779660909
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Sleep",
-					"sid": 168101833777062,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "FullApartment",
-					"sid": 789454240892937,
-					"parameters": {
-						"frame-number": "\"Bed\""
-					}
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "Sleep",
-					"sid": 144186842663440,
-					"behaviorType": "FadeOut"
-				},
-				{
-					"id": "set-position",
-					"objectClass": "PlayerMovement",
-					"sid": 538601619895211,
-					"parameters": {
-						"x": "350",
-						"y": "240"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 168100122553869,
-					"parameters": {
-						"seconds": "1.0",
-						"use-timescale": true
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 757464319474798,
-					"parameters": [
-						"\"Huh, it looks like I got some mail outside! Let me go check.\"",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 373970282924565,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 215293443619478,
-					"disabled": true,
-					"parameters": [
-						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
-						"\"None\""
-					]
-				},
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 786753287220644
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Endings",
-					"sid": 225064973098328,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Endings",
-					"sid": 705718986709115,
-					"parameters": {
-						"animation": "\"Your Hired\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 916528908309460
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 381164841953211
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 614071402483227,
-					"parameters": {
-						"variable": "Day",
-						"comparison": 0,
-						"value": "5"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 851587633491211,
-					"parameters": {
-						"variable": "DayBegin"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 102418127102507,
-					"parameters": {
-						"variable": "stress",
-						"comparison": 5,
-						"value": "50"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 760060847240034,
-					"parameters": {
-						"variable": "JobMeter",
-						"comparison": 3,
-						"value": "4"
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 806342602163596
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Sleep",
-					"sid": 124641328036490,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "FullApartment",
-					"sid": 977533111676910,
-					"parameters": {
-						"frame-number": "\"Bed\""
-					}
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "Sleep",
-					"sid": 866691476672283,
-					"behaviorType": "FadeOut"
-				},
-				{
-					"id": "set-position",
-					"objectClass": "PlayerMovement",
-					"sid": 450084868549715,
-					"parameters": {
-						"x": "350",
-						"y": "240"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 269017639072474,
-					"parameters": {
-						"seconds": "1.0",
-						"use-timescale": true
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 879069666492739,
-					"parameters": [
-						"\"Huh, it looks like I got some mail outside! Let me go check.\"",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 423409528913394,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 313369317883132,
-					"disabled": true,
-					"parameters": [
-						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
-						"\"None\""
-					]
-				},
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 336018644216760
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Endings",
-					"sid": 353260485701070,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Endings",
-					"sid": 625323734411633,
-					"parameters": {
-						"animation": "\"Rejected\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 369511809437321
 		},
 		{
 			"eventType": "block",
@@ -1474,6 +1265,16 @@
 						"comparison": 1,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 393943334302841,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -1499,6 +1300,68 @@
 				}
 			],
 			"sid": 794421133212088
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 952605392862178,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 415077891831589,
+					"parameters": {
+						"object": "BoxStartBox"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 376259520769030,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 785889878805706,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 901336840510930,
+					"parameters": [
+						"\"I wanna go check that mail outside.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 536097419364682,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 199055886783578
+				}
+			],
+			"sid": 183135955599904
 		},
 		{
 			"eventType": "block",
@@ -1622,6 +1485,16 @@
 					"parameters": {
 						"variable": "WorkComplete"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 755027639846543,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -1699,6 +1572,16 @@
 						"variable": "WorkComplete"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 512794255529754,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -1724,6 +1607,60 @@
 				}
 			],
 			"sid": 342061775029354
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 740633988490371,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 953094949341762,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 614800164349515,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 319957706951300,
+					"parameters": [
+						"\"I wanna go check that mail outside.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 190777021848415,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 428263188921067
+				}
+			],
+			"sid": 493539737408303
 		},
 		{
 			"eventType": "block",
@@ -1761,6 +1698,25 @@
 						"comparison": 1,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 274209955179793,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 779841654153665,
+					"parameters": {
+						"variable": "ComputerUsed"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -1806,6 +1762,86 @@
 				}
 			],
 			"sid": 109373221483622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 712706264130661,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 157428754015574,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 353030724276361,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 812318796027142,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 621579228378622,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 118449061834116,
+					"parameters": {
+						"variable": "ComputerUsed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 648204302732034,
+					"parameters": [
+						"\"I don't have time to use the computer more today.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 387577520133934,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 297198896239837
+				}
+			],
+			"sid": 780807223939993
 		},
 		{
 			"eventType": "block",
@@ -1918,6 +1954,16 @@
 						"comparison": 1,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 940294932730155,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -1943,6 +1989,60 @@
 				}
 			],
 			"sid": 732586841134377
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 557558016485115,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 171970930382703,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 587839417156541,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 616573102222739,
+					"parameters": [
+						"\"I wanna go check that mail outside.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 453157940373336,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 481150139850891
+				}
+			],
+			"sid": 340618365183585
 		},
 		{
 			"eventType": "block",
@@ -2163,6 +2263,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 168025697878851,
+					"parameters": {
+						"variable": "ComputerUsed"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "layer-is-visible",
 					"objectClass": "System",
 					"sid": 467607657675427,
@@ -2188,12 +2297,75 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 461729310946546,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "JobApps"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 306044282309882,
+					"parameters": {
+						"variable": "ComputerUsed"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 509789703277231,
+					"parameters": {
+						"layer": "\"ComputerScreen\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 988406453031483,
+					"parameters": [
+						"\"I don't have time to use the computer more today.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 791646286877795,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 639867982026024
+				}
+			],
+			"sid": 867829748832048
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 111261735297453,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "TarotGame"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 642901913797288,
+					"parameters": {
+						"variable": "ComputerUsed"
+					},
+					"isInverted": true
 				},
 				{
 					"id": "layer-is-visible",
@@ -2214,6 +2386,60 @@
 				}
 			],
 			"sid": 788260252847199
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 262523369864329,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TarotGame"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 915732434709937,
+					"parameters": {
+						"variable": "ComputerUsed"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 270690427284767,
+					"parameters": {
+						"layer": "\"ComputerScreen\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 868000613714826,
+					"parameters": [
+						"\"I don't have time to use the computer more today.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 367912425838273,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 824480311685713
+				}
+			],
+			"sid": 177748007478003
 		},
 		{
 			"eventType": "block",
@@ -2250,6 +2476,16 @@
 					"sid": 512323328446128,
 					"parameters": {
 						"variable": "WorkComplete"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 701271573946939,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
 					}
 				}
 			],
@@ -2288,15 +2524,6 @@
 					"parameters": {
 						"variable": "DayBegin",
 						"value": "true"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 860940952540456,
-					"parameters": {
-						"variable": "WorkComplete",
-						"value": "false"
 					}
 				},
 				{
@@ -2373,6 +2600,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 691286747621539,
+					"parameters": {
+						"variable": "WorkComplete",
+						"value": "false"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 726871592811046,
@@ -2443,15 +2679,6 @@
 					"behaviorType": "FadeIn"
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 720187538986041,
-					"parameters": {
-						"variable": "Day",
-						"value": "1"
-					}
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 382644586591654,
@@ -2492,6 +2719,15 @@
 					"sid": 745299264279158,
 					"parameters": {
 						"tag": "\"Next\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 844027785188554,
+					"parameters": {
+						"variable": "Day",
+						"value": "1"
 					}
 				},
 				{
@@ -2590,6 +2826,16 @@
 						"variable": "WorkComplete"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 314308080592524,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -2615,6 +2861,60 @@
 				}
 			],
 			"sid": 485707497433296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 920409205235848,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 185239470433722,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 584335925660400,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 176585595428807,
+					"parameters": [
+						"\"I wanna go check that mail outside.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 220259753567086,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 735618591309734
+				}
+			],
+			"sid": 677323665928982
 		},
 		{
 			"eventType": "block",
@@ -2747,6 +3047,16 @@
 						"variable": "WorkComplete"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 101263567395767,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -2771,6 +3081,206 @@
 				}
 			],
 			"sid": 568831103738023
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 842269565958881,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 959659942483566,
+					"parameters": {
+						"object": "WorkStartBox"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 285804802162906,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 939799420949654,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 665012824285465,
+							"parameters": {
+								"first-value": "JobMeter",
+								"comparison": 5,
+								"second-value": "4"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 873453687072293,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 5,
+								"second-value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Endings",
+							"sid": 604151760102722,
+							"parameters": {
+								"animation": "\"Hired\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Endings",
+							"sid": 509073090348612,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 291178880835442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 443312494096709,
+							"parameters": {
+								"first-value": "JobMeter",
+								"comparison": 3,
+								"second-value": "3"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 983366835965023,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 2,
+								"second-value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Endings",
+							"sid": 510282274734414,
+							"parameters": {
+								"animation": "\"Rejected\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Endings",
+							"sid": 960377908401688,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 832101779414559
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 724871215206404,
+							"parameters": {
+								"first-value": "JobMeter",
+								"comparison": 3,
+								"second-value": "3"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 517067565561564,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 5,
+								"second-value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Endings",
+							"sid": 755792530047660,
+							"parameters": {
+								"animation": "\"Fired\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Endings",
+							"sid": 991213780566823,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 470445210856740
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 412973308627001
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Endings",
+							"sid": 503981219801602,
+							"parameters": {
+								"animation": "\"Hired\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Endings",
+							"sid": 426379019036059,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 938192669232514
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -2906,6 +3416,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 386760918341205,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "true"
+					}
+				},
+				{
 					"callFunction": "addStress",
 					"sid": 297451653217430,
 					"parameters": [
@@ -2987,6 +3506,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 614130589003658,
+					"parameters": {
+						"variable": "ComputerUsed",
+						"value": "true"
+					}
+				},
 				{
 					"callFunction": "addStress",
 					"sid": 279761359381956,

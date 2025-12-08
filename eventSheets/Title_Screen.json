@@ -39,10 +39,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 513639333146829,
+					"sid": 809447162739120,
 					"parameters": {
 						"variable": "Day",
-						"value": "5"
+						"value": "2"
 					}
 				},
 				{
