@@ -2,7 +2,7 @@ export class MgMemory {
     private readonly runtime: IRuntime
     private state = State.Normal
     private readonly mouse: IMouseObjectType
-    private lastClick = false
+    private lastClick = true
     private controlsDisabled = false
     private firstSelection = -1
     private done = false
