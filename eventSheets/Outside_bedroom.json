@@ -2793,6 +2793,14 @@
 						"comparison": 0,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 146526365393659,
+					"parameters": {
+						"variable": "ComputerUsed"
+					}
 				}
 			],
 			"actions": [
