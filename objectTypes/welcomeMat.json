@@ -1,0 +1,93 @@
+{
+	"name": "welcomeMat",
+	"plugin-id": "Sprite",
+	"sid": 713818809486229,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 4776,
+						"height": 3595,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 443821,
+						"collisionPoly": {
+							"points": [
+								0.2315745393634841,
+								0.6322670375521557,
+								0.30590452261306533,
+								0.686230876216968,
+								0.30569514237855944,
+								0.7696801112656467,
+								0.2537688442211055,
+								0.7885952712100139,
+								0.20142378559463986,
+								0.7463143254520167
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 945766066281703,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 4776,
+						"height": 3595,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 840701,
+						"collisionPoly": {
+							"points": [
+								0.2315745393634841,
+								0.6322670375521557,
+								0.30590452261306533,
+								0.686230876216968,
+								0.30569514237855944,
+								0.7696801112656467,
+								0.2520938023450586,
+								0.7924895688456189,
+								0.19828308207705192,
+								0.745201668984701
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 237054016520332,
+				"name": "hl",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

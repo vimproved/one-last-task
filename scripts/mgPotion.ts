@@ -228,8 +228,8 @@ export class MgPotion {
             }
         }
         if (done) {
-            this.runtime.layout.getLayer("MgPotion")!.isVisible = false
-            this.runtime.layout.getLayer("MgPotion")!.isInteractive = false
+            // this.runtime.layout.getLayer("MgPotion")!.isVisible = false
+            // this.runtime.layout.getLayer("MgPotion")!.isInteractive = false
             this.runtime.signal("WorkDone")
         }
         return done

@@ -152,7 +152,8 @@
 			"SliderBar",
 			"Audio",
 			"Endings",
-			"Instructions"
+			"Instructions",
+			"welcomeMat"
 		],
 		"subfolders": [
 			{
@@ -248,8 +249,6 @@
 			},
 			{
 				"items": [
-					"Card",
-					"MgMemoryBg",
 					"Screen",
 					"JobApps",
 					"TarotGame",
@@ -295,6 +294,15 @@
 						],
 						"subfolders": [],
 						"name": "job"
+					},
+					{
+						"items": [
+							"Card",
+							"ComputerExit3",
+							"MgMemoryBg"
+						],
+						"subfolders": [],
+						"name": "memory"
 					}
 				],
 				"name": "Computer"

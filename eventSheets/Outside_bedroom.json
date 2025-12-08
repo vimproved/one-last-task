@@ -6,6 +6,16 @@
 			"includeSheet": "Global"
 		},
 		{
+			"eventType": "variable",
+			"name": "DailyJobAppCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 219665584363220
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -96,9 +106,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 342357878612911,
+					"sid": 499829788059137,
 					"parameters": [
-						"\"I need to get some job applications done on the computer. Or maybe I could play some games to reduce my stress.\"",
+						"\"I need to get some job applications done on the computer. That's so stressful though. Maybe I could play some games to reduce my stress instead.\"",
 						"\"Opal\""
 					]
 				},
@@ -188,14 +198,6 @@
 					"objectClass": "Sleep",
 					"sid": 227736922572093,
 					"behaviorType": "FadeOut"
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "WorkStartBox",
-					"sid": 289751331040623,
-					"parameters": {
-						"visibility": "visible"
-					}
 				},
 				{
 					"id": "set-boolean-eventvar",
@@ -325,9 +327,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 637169778666840,
+					"sid": 250228307712132,
 					"parameters": [
-						"\"Wow, I'm tired...\"",
+						"\"Wow, I'm tired ... still need to get some job applications done though. Or just 5 minutes of that memory game ...\"",
 						"\"Opal\""
 					]
 				},
@@ -424,14 +426,6 @@
 					"objectClass": "Sleep",
 					"sid": 179972322338497,
 					"behaviorType": "FadeOut"
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "WorkStartBox",
-					"sid": 565528418838982,
-					"parameters": {
-						"visibility": "visible"
-					}
 				},
 				{
 					"id": "set-boolean-eventvar",
@@ -605,250 +599,6 @@
 				}
 			],
 			"sid": 173087730787317
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 124865212013507
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 979697404915706,
-					"parameters": {
-						"variable": "Day",
-						"comparison": 0,
-						"value": "4"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 296615826581033,
-					"parameters": {
-						"variable": "DayBegin"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 334643278752133,
-					"parameters": {
-						"variable": "WorkComplete"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 399631400439487
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Sleep",
-					"sid": 784118976225126,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "FullApartment",
-					"sid": 434992120025458,
-					"parameters": {
-						"frame-number": "\"Bed\""
-					}
-				},
-				{
-					"id": "start-fade",
-					"objectClass": "Sleep",
-					"sid": 505249374230634,
-					"behaviorType": "FadeOut"
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "WorkStartBox",
-					"sid": 860951604799689,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 354946350957120,
-					"parameters": {
-						"variable": "DayBegin",
-						"value": "false"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 651003709061980,
-					"parameters": {
-						"seconds": "0.00000001",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "PlayerMovement",
-					"sid": 175871389580966,
-					"parameters": {
-						"x": "350",
-						"y": "240"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 425320544633234,
-					"parameters": {
-						"seconds": "1.0",
-						"use-timescale": true
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 454140913916476,
-					"parameters": [
-						"\"Oh wow, it's time for me to get to work!\"",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 527341685775040,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 375075555902502,
-					"disabled": true,
-					"parameters": [
-						"\"Opal: Hmm... Maybe I should go to the laptop and work... \"",
-						"\"None\""
-					]
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialogueBox",
-					"sid": 803098798812821,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 861306133337537
-				}
-			],
-			"sid": 757922480625257
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 665533394828671
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 920837032687934,
-					"parameters": {
-						"variable": "Day",
-						"comparison": 0,
-						"value": "4"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 799725545130012,
-					"parameters": {
-						"variable": "WorkComplete"
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 128732962303257
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 616234174816269,
-					"parameters": {
-						"seconds": "0.00000001",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "PlayerMovement",
-					"sid": 338723298786486,
-					"parameters": {
-						"x": "450",
-						"y": "400"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "FullApartment",
-					"sid": 829022327110596,
-					"parameters": {
-						"frame-number": "\"Hall\""
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 434467997035534,
-					"parameters": [
-						"\"Wow, I'm tired...\"",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 845230111861130,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
-					"callFunction": "dialogue",
-					"sid": 733228678160577,
-					"parameters": [
-						"\"Still need to get some Job Applications done though.\"",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 724363267951647,
-					"parameters": {
-						"tag": "\"Next\""
-					}
-				},
-				{
-					"callFunction": "destroyDialogue",
-					"sid": 430553797363006
-				}
-			],
-			"sid": 737972792303057
 		},
 		{
 			"eventType": "block",
@@ -1404,90 +1154,6 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 193018033158406,
-					"parameters": {
-						"key": 69
-					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 355281059440094,
-					"parameters": {
-						"object": "BoxStartBox"
-					}
-				},
-				{
-					"id": "evaluate-expression",
-					"objectClass": "System",
-					"sid": 756251134551755,
-					"parameters": {
-						"value": "BoxesDone"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 173385416684845,
-					"parameters": {
-						"object": "Bedroom"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "signal",
-					"objectClass": "System",
-					"sid": 829117465904427,
-					"parameters": {
-						"tag": "\"StartBoxe\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 227865402529089,
-					"parameters": {
-						"variable": "PlayerX",
-						"value": "PlayerMovement.X"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 708038178188588,
-					"parameters": {
-						"variable": "PlayerY",
-						"value": "PlayerMovement.Y"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 228990227945253,
-					"parameters": {
-						"layout": "Box Minigame"
-					}
-				},
-				{
-					"id": "wait-for-signal",
-					"objectClass": "System",
-					"sid": 748049859140547,
-					"disabled": true,
-					"parameters": {
-						"tag": "\"Boxgamedone\""
-					}
-				}
-			],
-			"sid": 289913162421274
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
 					"sid": 970974989880213,
 					"parameters": {
 						"key": 69
@@ -1499,14 +1165,6 @@
 					"sid": 660308472558503,
 					"parameters": {
 						"object": "BoxStartBox"
-					}
-				},
-				{
-					"id": "evaluate-expression",
-					"objectClass": "System",
-					"sid": 681310922702067,
-					"parameters": {
-						"value": "BoxesDone"
 					}
 				},
 				{
@@ -1541,6 +1199,77 @@
 				}
 			],
 			"sid": 542121702952182
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 686490605438542,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 176702876467641,
+					"parameters": {
+						"object": "BoxStartBox"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 959935094466185,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 509167472180077,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 768758973817020,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 362113874574830,
+					"parameters": [
+						"\"I really need to get to work, I'm gonna be late!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 645406763572513,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 549737445238121
+				}
+			],
+			"sid": 794421133212088
 		},
 		{
 			"eventType": "block",
@@ -1702,6 +1431,69 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
+					"sid": 257711069048092,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 738712776553293,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 268380957793689,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 357344488414166,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 194774115551619,
+					"parameters": [
+						"\"I really need to get to work, I'm gonna be late!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 866294330329855,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 270725387994562
+				}
+			],
+			"sid": 342061775029354
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
 					"sid": 912667170793903,
 					"parameters": {
 						"key": 69
@@ -1759,6 +1551,69 @@
 				}
 			],
 			"sid": 109373221483622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 454196892864412,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 992617700031706,
+					"parameters": {
+						"object": "StartBoxes"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 974274095969901,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 155655396624574,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 595046488856195,
+					"parameters": [
+						"\"I really need to get to work, I'm gonna be late!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 920325115629079,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 184381713270571
+				}
+			],
+			"sid": 732586841134377
 		},
 		{
 			"eventType": "block",
@@ -1851,6 +1706,72 @@
 				}
 			],
 			"sid": 280110133117497
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 939590500131432,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ComputerExit"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 574939562765647,
+					"parameters": {
+						"layer": "\"ComputerScreen\""
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 562715243936990,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 501341079566159,
+					"parameters": {
+						"first-value": "JobMeter",
+						"comparison": 5,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 902998369024201,
+					"parameters": [
+						"\"I need to go to sleep at some point, I have to wake up for work tomorrow.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 579041898822410,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 933948108179642
+				}
+			],
+			"sid": 254327816929911
 		},
 		{
 			"eventType": "block",
@@ -1957,6 +1878,24 @@
 					"sid": 598815509961230,
 					"parameters": {
 						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 305037665939023,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 512323328446128,
+					"parameters": {
+						"variable": "WorkComplete"
 					}
 				}
 			],
@@ -2094,6 +2033,303 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 912259693490126,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 417770704891332,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 454540970700981,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 710159961877480,
+					"parameters": {
+						"first-value": "DailyJobAppCount",
+						"comparison": 1,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 167508930129796
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sleep",
+					"sid": 224849960180868,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Sleep",
+					"sid": 303930587631820,
+					"behaviorType": "FadeIn"
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 720187538986041,
+					"parameters": {
+						"variable": "Day",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 382644586591654,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 185257917917240,
+					"parameters": {
+						"variable": "WorkComplete",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 368877373139805,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 762510885632439,
+					"parameters": [
+						"\"...\"\n",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 745299264279158,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 860662715982893,
+					"parameters": {
+						"audio-file": "alarm",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"alarm\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 305181795633242,
+					"parameters": [
+						"\"(Waking up to DAY \" & Day & \")\"\n",
+						"\"None\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 543407241605153,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 903425999474247,
+					"parameters": {
+						"tag": "\"alarm\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 512022919256915,
+					"parameters": {
+						"audio-file": "button",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 301403890704297,
+					"parameters": {
+						"layout": "Outside_bedroom"
+					}
+				}
+			],
+			"sid": 689191650883323
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 213660445668285,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 259860129199721,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 134537186037560,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 300959011580827,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 170880837774821,
+					"parameters": [
+						"\"I really need to get to work, I'm gonna be late!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 655287441388363,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 166684119905537
+				}
+			],
+			"sid": 485707497433296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 153656711547252,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 532643054870650,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 372615064145465,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 480871430119689,
+					"parameters": {
+						"first-value": "DailyJobAppCount",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 885058673836040,
+					"parameters": [
+						"\"I need to get at least one job application done today.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 228673393507715,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 714070243233368
+				}
+			],
+			"sid": 235707279776949
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 211819942430496
@@ -2148,6 +2384,15 @@
 						"comparison": 5,
 						"second-value": "2"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 359938600472465,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -2165,6 +2410,90 @@
 				}
 			],
 			"sid": 568831103738023
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 702657179161589
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 314386847620673,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 5,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 400279020093318,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "welcomeMat",
+					"sid": 499247978634487,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 877184248910537
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 315117181165520,
+					"parameters": {
+						"variable": "Day",
+						"comparison": 5,
+						"value": "2"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 590939924256043,
+					"parameters": {
+						"object": "WorkStartBox"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 984683675846922,
+					"parameters": {
+						"variable": "WorkComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "welcomeMat",
+					"sid": 276600515250572,
+					"parameters": {
+						"animation": "\"hl\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 692055367039282
 		},
 		{
 			"eventType": "block",
@@ -2201,6 +2530,60 @@
 				}
 			],
 			"sid": 993673058524513
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 226643032629810,
+					"parameters": {
+						"tag": "\"submittedJobApp\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 107088939747437,
+					"parameters": [
+						"\"Submitted!\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 526868766803786,
+					"parameters": {
+						"variable": "JobMeter",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 691325683170987,
+					"parameters": {
+						"variable": "DailyJobAppCount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 527354451385173,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 474809411655862
+				}
+			],
+			"sid": 805045014766893
 		}
 	],
 	"sid": 412262354200698

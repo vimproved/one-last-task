@@ -42,6 +42,43 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "welcomeMat",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "normal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 148,
+					"sid": 623484316729167,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 623484316729167,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 85,
+						"y": 0,
+						"width": 685.22,
+						"height": 480,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 364614392030283,
@@ -1602,10 +1639,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 497.9864325389582,
-						"y": 439.6200656456045,
-						"width": 66.33919458343955,
-						"height": 38.31202078125214,
+						"x": 269.8452408852259,
+						"y": 351.4759467514161,
+						"width": 58.33539553323768,
+						"height": 11.159326977685879,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1614,7 +1651,7 @@
 							1,
 							1
 						],
-						"angle": 5.794493116621174,
+						"angle": 0.4886921905584123,
 						"zElevation": 0
 					}
 				}
@@ -2247,6 +2284,43 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "ComputerExit3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 149,
+					"sid": 419364275560622,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 419364275560622,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 53.728583,
+						"y": 35.779367,
+						"width": 122.17828034346235,
+						"height": 70.91736146118951,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 226636149510892,
@@ -2840,10 +2914,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 444,
-								"y": 412,
-								"width": 286,
-								"height": 55,
+								"x": 448,
+								"y": 411,
+								"width": 279,
+								"height": 56,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -3550,10 +3624,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 446,
-								"y": 416,
-								"width": 283,
-								"height": 41,
+								"x": 448,
+								"y": 411,
+								"width": 279,
+								"height": 56,
 								"originX": 0,
 								"originY": 0,
 								"color": [

@@ -2,6 +2,7 @@ export class MgMemory {
     private readonly runtime: IRuntime
     private state = State.Normal
     private readonly mouse: IMouseObjectType
+    private lastClick = false
     private controlsDisabled = false
     private firstSelection = -1
     private done = false
@@ -18,6 +19,10 @@ export class MgMemory {
         "star",
         "death",
     ]
+
+    private exit?: InstanceType.ComputerExit3
+
+    private finished = false
 
     constructor(runtime: IRuntime) {
         this.runtime = runtime
@@ -46,6 +51,8 @@ export class MgMemory {
             [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
         }
 
+        this.exit = this.runtime.objects.ComputerExit3.getFirstInstance()!
+
         // DON'T USE
         // cards = cards
         // 	.map(value => ({ value, sort: Math.random() }))
@@ -54,8 +61,13 @@ export class MgMemory {
     }
 
     tick() {
+        if (this.mouse.isMouseButtonDown(0)) {
+            if (this.exit!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                this.done = true
+            }
+        }
         if (this.state == State.Normal) {
-            if (this.mouse.isMouseButtonDown(0)) {
+            if (this.mouse.isMouseButtonDown(0) && this.lastClick == false) {
                 for (let i = 0; i < 16; ++i) {
                     if (this.cards[i].containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())
                         && this.cards[i].animationName == "back") {
@@ -67,7 +79,7 @@ export class MgMemory {
                 }
             }
         } else if (this.state == State.Selecting) {
-            if (this.mouse.isMouseButtonDown(0)) {
+            if (this.mouse.isMouseButtonDown(0) && this.lastClick == false) {
                 for (let i = 0; i < 16; ++i) {
                     if (this.cards[i].containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())
                         && this.cards[i].animationName == "back") {
@@ -85,6 +97,7 @@ export class MgMemory {
                                 }
                             }
                             if (doneChecker) {
+                                this.finished = true
                                 setTimeout(() => this.done = true, 1000)
                             }
                         }
@@ -93,12 +106,16 @@ export class MgMemory {
                 }
             }
         } else { }
+        this.lastClick = this.mouse.isMouseButtonDown(0)
     }
 
     isDone(): boolean {
         if (this.done) {
             for (let card of this.cards) {
                 card.destroy()
+            }
+            if (this.finished) {
+                this.runtime.signal("memoryDone")
             }
             this.runtime.layout.getLayer("MgMemory")!.isVisible = false
             this.runtime.layout.getLayer("MgMemory")!.isInteractive = false
