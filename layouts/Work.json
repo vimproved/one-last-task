@@ -11,6 +11,43 @@
 					"subLayers": [],
 					"instances": [
 						{
+							"type": "MgPotionFullBg",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 8,
+							"sid": 178542626296609,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 178542626296609,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 0,
+								"y": 0,
+								"width": 854,
+								"height": 480,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
 							"type": "MainPotionBg",
 							"properties": {
 								"initially-visible": true,
@@ -140,7 +177,7 @@
 								"expanded": true
 							},
 							"showing": true,
-							"locked": false,
+							"locked": true,
 							"world": {
 								"x": 107,
 								"y": 0,

@@ -1,7 +1,7 @@
 {
-	"name": "MainPotionBg",
+	"name": "MgPotionFullBg",
 	"plugin-id": "Sprite",
-	"sid": 569126352951292,
+	"sid": 518299589848435,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,39 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 2752,
-						"height": 2064,
+						"width": 1920,
+						"height": 1080,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6066549,
-						"collisionPoly": {
-							"points": [
-								0.8128633720930233,
-								0.027131782945736434,
-								0.9709302325581395,
-								0.0377906976744186,
-								0.8989825581395349,
-								0.9728682170542635,
-								0.2285610465116279,
-								0.9573643410852714,
-								0.19040697674418605,
-								0.9336240310077519,
-								0.12790697674418605,
-								0.8657945736434108,
-								0.043968023255813955,
-								0.028585271317829456
-							]
-						},
+						"imageSpriteId": 1782165,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 952474207480032,
+				"sid": 145668062949137,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

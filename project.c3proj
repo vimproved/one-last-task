@@ -234,7 +234,8 @@
 					"IngButton",
 					"Cauldron",
 					"OrderTray",
-					"Timer"
+					"Timer",
+					"MgPotionFullBg"
 				],
 				"subfolders": [],
 				"name": "MgPotion"
