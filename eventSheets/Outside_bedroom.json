@@ -2319,6 +2319,16 @@
 					"parameters": {
 						"layer": "\"ComputerScreen\""
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 201254087987808,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -2415,6 +2425,16 @@
 					"parameters": {
 						"layer": "\"ComputerScreen\""
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 361139224968548,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -2509,24 +2529,6 @@
 					"behaviorType": "FadeIn"
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 468397478483427,
-					"parameters": {
-						"variable": "Day",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 327841556974881,
-					"parameters": {
-						"variable": "DayBegin",
-						"value": "true"
-					}
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 928168770049401,
@@ -2564,11 +2566,36 @@
 					}
 				},
 				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 616394537019438,
+					"parameters": {
+						"variable": "Day",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 150684966006093,
+					"parameters": {
+						"variable": "DayBegin",
+						"value": "true"
+					}
+				},
+				{
 					"callFunction": "dialogue",
 					"sid": 261580686939173,
 					"parameters": [
 						"\"(Waking up to DAY \" & Day & \")\"\n",
 						"\"None\""
+					]
+				},
+				{
+					"callFunction": "addStress",
+					"sid": 826059053612080,
+					"parameters": [
+						"-15"
 					]
 				},
 				{
@@ -2748,6 +2775,13 @@
 					"parameters": [
 						"\"(Waking up to DAY \" & Day & \")\"\n",
 						"\"None\""
+					]
+				},
+				{
+					"callFunction": "addStress",
+					"sid": 233053538500877,
+					"parameters": [
+						"-15"
 					]
 				},
 				{
@@ -3254,9 +3288,24 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
+							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 412973308627001
+							"sid": 818912845637873,
+							"parameters": {
+								"first-value": "JobMeter",
+								"comparison": 5,
+								"second-value": "4"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 968124414972983,
+							"parameters": {
+								"first-value": "stress",
+								"comparison": 2,
+								"second-value": "50"
+							}
 						}
 					],
 					"actions": [

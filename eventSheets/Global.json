@@ -907,9 +907,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 668177499854776,
+					"sid": 937277989281713,
 					"parameters": {
-						"interval-seconds": "5"
+						"interval-seconds": "8"
 					}
 				},
 				{
@@ -918,6 +918,16 @@
 					"sid": 991237601442825,
 					"parameters": {
 						"variable": "false"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 506002727465013,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "0"
 					}
 				}
 			],
