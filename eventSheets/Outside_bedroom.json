@@ -976,6 +976,61 @@
 					"behaviorType": "FadeOut"
 				},
 				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 894741406503338,
+					"parameters": {
+						"tag": "\"stress1\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 492707291766663,
+					"parameters": {
+						"tag": "\"stress2\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 356657081359123,
+					"parameters": {
+						"tag": "\"stress3\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 324029320498586,
+					"parameters": {
+						"tag": "\"stress4\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 199189231452231,
+					"parameters": {
+						"tag": "\"stress5\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "keep-playing"
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "PlayerMovement",
 					"sid": 671999075046146,

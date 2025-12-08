@@ -1157,6 +1157,16 @@
 								"comparison": 3,
 								"second-value": "20"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 469754123066834,
+							"parameters": {
+								"first-value": "day",
+								"comparison": 1,
+								"second-value": "5"
+							}
 						}
 					],
 					"actions": [
@@ -1221,6 +1231,16 @@
 				{
 					"eventType": "block",
 					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 930550113476595,
+							"parameters": {
+								"first-value": "day",
+								"comparison": 1,
+								"second-value": "5"
+							}
+						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
@@ -1307,6 +1327,16 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
+							"sid": 105352845100203,
+							"parameters": {
+								"first-value": "day",
+								"comparison": 1,
+								"second-value": "5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
 							"sid": 481395874438845,
 							"parameters": {
 								"first-value": "stress",
@@ -1390,6 +1420,16 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
+							"sid": 933448986061185,
+							"parameters": {
+								"first-value": "day",
+								"comparison": 1,
+								"second-value": "5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
 							"sid": 882050775450154,
 							"parameters": {
 								"first-value": "stress",
@@ -1470,6 +1510,16 @@
 				{
 					"eventType": "block",
 					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 669455787850361,
+							"parameters": {
+								"first-value": "day",
+								"comparison": 1,
+								"second-value": "5"
+							}
+						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
