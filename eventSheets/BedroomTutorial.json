@@ -3,16 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Slept",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 663683978858320
-		},
-		{
-			"eventType": "variable",
 			"name": "CutscenesDone",
 			"type": "boolean",
 			"initialValue": "false",
@@ -32,6 +22,15 @@
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 607271483176365
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 352110394253818,
+					"parameters": {
+						"variable": "BoxesDone"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -235,6 +234,39 @@
 					}
 				},
 				{
+					"id": "set-x",
+					"objectClass": "PlayerMovement",
+					"sid": 983057006803229,
+					"parameters": {
+						"x": "350"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "PlayerMovement",
+					"sid": 714432611786108,
+					"parameters": {
+						"y": "250"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "OnlyBedroom",
+					"sid": 174500126387513,
+					"parameters": {
+						"animation": "\"after\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "TutorialAfterBoundaries",
+					"sid": 286976872794057,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
 					"id": "start-fade",
 					"objectClass": "Sleep",
 					"sid": 118195024234028,
@@ -412,39 +444,39 @@
 				{
 					"id": "wait-for-signal",
 					"objectClass": "System",
-					"sid": 488471884988466,
+					"sid": 619100791052320,
 					"parameters": {
 						"tag": "\"Next\""
 					}
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 589202983714079,
+					"sid": 644829826138868,
 					"parameters": [
-						"\"Wow I’m exhausted, can’t wait to try out my new bed.\"\n",
+						"\"I should probably finish unpacking...\"",
 						"\"Opal\""
 					]
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 520567364671718,
+					"parameters": {
+						"variable": "CutscenesDone",
+						"value": "true"
+					}
+				},
+				{
 					"id": "wait-for-signal",
 					"objectClass": "System",
-					"sid": 214011551401931,
+					"sid": 488471884988466,
 					"parameters": {
 						"tag": "\"Next\""
 					}
 				},
 				{
 					"callFunction": "destroyDialogue",
-					"sid": 262166713410018
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 278841141992489,
-					"parameters": {
-						"variable": "CutscenesDone",
-						"value": "true"
-					}
+					"sid": 784550145791210
 				},
 				{
 					"type": "comment",
@@ -526,41 +558,55 @@
 				{
 					"id": "evaluate-expression",
 					"objectClass": "System",
-					"sid": 838544706420559,
-					"parameters": {
-						"value": "Slept"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "evaluate-expression",
-					"objectClass": "System",
 					"sid": 688279688586017,
 					"parameters": {
 						"value": "CutscenesDone"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 201907818471176,
+					"parameters": {
+						"variable": "BoxesDone"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"callFunction": "dialogue",
-					"sid": 567965525922667,
-					"parameters": [
-						"\"I'll unpack tomorrow, I'm exhausted.\"\n",
-						"\"Opal\""
-					]
-				},
-				{
-					"id": "wait-for-signal",
+					"id": "signal",
 					"objectClass": "System",
-					"sid": 173941052377238,
+					"sid": 712953814729502,
 					"parameters": {
-						"tag": "\"Next\""
+						"tag": "\"StartBoxe\""
 					}
 				},
 				{
-					"callFunction": "destroyDialogue",
-					"sid": 538640864048149
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 195451819456331,
+					"parameters": {
+						"variable": "PlayerX",
+						"value": "PlayerMovement.X"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 742624746242655,
+					"parameters": {
+						"variable": "PlayerY",
+						"value": "PlayerMovement.Y"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 933503188626283,
+					"parameters": {
+						"layout": "Box Minigame"
+					}
 				}
 			],
 			"sid": 874923812544581
@@ -569,71 +615,61 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 352743153788817
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerMovement",
-					"sid": 370461102649379,
-					"parameters": {
-						"object": "StartBoxes"
-					}
-				},
-				{
-					"id": "key-is-down",
+					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 198747645820190,
+					"sid": 720300226203615,
 					"parameters": {
 						"key": 69
 					}
 				},
 				{
-					"id": "evaluate-expression",
-					"objectClass": "System",
-					"sid": 751785114119003,
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 794025259112433,
 					"parameters": {
-						"value": "Slept"
+						"object": "StartBoxes"
 					}
 				},
 				{
 					"id": "evaluate-expression",
 					"objectClass": "System",
-					"sid": 574907157211026,
+					"sid": 720889205205646,
 					"parameters": {
 						"value": "CutscenesDone"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 101221007039044,
+					"parameters": {
+						"variable": "BoxesDone"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "signal",
-					"objectClass": "System",
-					"sid": 170488842052569,
-					"parameters": {
-						"tag": "\"StartBoxe\""
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 475365617643273,
-					"parameters": {
-						"layout": "Box Minigame"
-					}
+					"callFunction": "dialogue",
+					"sid": 633450511423657,
+					"parameters": [
+						"\"I think I unpacked already.\"\n",
+						"\"Opal\""
+					]
 				},
 				{
 					"id": "wait-for-signal",
 					"objectClass": "System",
-					"sid": 222743809021734,
+					"sid": 266123440528074,
 					"parameters": {
-						"tag": "\"Boxgamedone\""
+						"tag": "\"Next\""
 					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 959773437882336
 				}
 			],
-			"sid": 385763363310620,
-			"disabled": true
+			"sid": 636737394364044
 		},
 		{
 			"eventType": "block",
@@ -721,13 +757,12 @@
 					}
 				},
 				{
-					"id": "evaluate-expression",
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 241628799298365,
+					"sid": 989713812631308,
 					"parameters": {
-						"value": "Slept"
-					},
-					"isInverted": true
+						"variable": "BoxesDone"
+					}
 				}
 			],
 			"actions": [
@@ -855,6 +890,67 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 142977894337008,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 396265955889914,
+					"parameters": {
+						"object": "SleepBox"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 782225307373955,
+					"parameters": {
+						"value": "CutscenesDone"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 994439058917264,
+					"parameters": {
+						"variable": "BoxesDone"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 289857801394463,
+					"parameters": [
+						"\"I still need to unpack.\"\n",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 377606563580989,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 592677188946014
+				}
+			],
+			"sid": 148547334777952
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 692341976772643
@@ -908,6 +1004,80 @@
 				}
 			],
 			"sid": 989363445045201
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 202046024800456
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 385788350322174,
+					"parameters": {
+						"variable": "BoxesDone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "TutorialAfterBoundaries",
+					"sid": 137928035812811,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "OnlyBedroom",
+					"sid": 839672721479120,
+					"parameters": {
+						"animation": "\"afterafter\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "PlayerMovement",
+					"sid": 778423280576963,
+					"parameters": {
+						"x": "PlayerX"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "PlayerMovement",
+					"sid": 284090086558862,
+					"parameters": {
+						"y": "PlayerY"
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 589202983714079,
+					"parameters": [
+						"\"Wow I’m exhausted, can’t wait to try out my new bed.\"\n",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 214011551401931,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 262166713410018
+				}
+			],
+			"sid": 327806721121400
 		}
 	],
 	"sid": 214246851524803

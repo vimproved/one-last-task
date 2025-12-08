@@ -1,7 +1,7 @@
 {
-	"name": "BoxMgBedroom",
+	"name": "BookFragment",
 	"plugin-id": "Sprite",
-	"sid": 177057552270971,
+	"sid": 766007869773957,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,33 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1055,
-						"height": 973,
-						"originX": 0.4872037914691943,
-						"originY": 0.5015416238437821,
+						"width": 4776,
+						"height": 3595,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 160469,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.0010277492291880781,
-								0.9990521327014218,
-								0.0010277492291880781,
-								0.9990521327014218,
-								1,
-								0,
-								1
-							]
-						},
+						"imageSpriteId": 3197725,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 966137499192114,
+				"sid": 829899305496875,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

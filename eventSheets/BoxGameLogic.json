@@ -60,12 +60,28 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Box1",
+							"sid": 254157863427508,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "set-position-to-another-object",
 							"objectClass": "Box1",
 							"sid": 643418336749335,
 							"parameters": {
 								"object": "Box1End",
 								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PillowFragment",
+							"sid": 943475731752384,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],
@@ -94,12 +110,28 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Box2",
+							"sid": 828905348168586,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "set-position-to-another-object",
 							"objectClass": "Box2",
 							"sid": 556187109029180,
 							"parameters": {
 								"object": "box2end",
 								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PosterFragment",
+							"sid": 234938630821310,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],
@@ -128,12 +160,28 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Box3",
+							"sid": 894417989902356,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "set-position-to-another-object",
 							"objectClass": "Box3",
 							"sid": 817398766685341,
 							"parameters": {
 								"object": "box3end",
 								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BookFragment",
+							"sid": 669920783645060,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],
@@ -162,12 +210,28 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Box4",
+							"sid": 777017011886003,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "set-position-to-another-object",
 							"objectClass": "Box4",
 							"sid": 760309525612750,
 							"parameters": {
 								"object": "box4end",
 								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PeripheralFragment",
+							"sid": 941796008977094,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],
@@ -237,9 +301,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 276246960892133,
+					"sid": 207537883991322,
 					"parameters": {
-						"layout": "Outside_bedroom"
+						"layout": "BedroomTutorial"
 					}
 				}
 			],

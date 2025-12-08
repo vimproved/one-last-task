@@ -96,9 +96,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 855954557259323,
+					"sid": 342357878612911,
 					"parameters": [
-						"\"I should probably finish unpacking...\"",
+						"\"I need to get some job applications done on the computer. Or maybe I could play some games to reduce my stress.\"",
 						"\"Opal\""
 					]
 				},
@@ -1603,6 +1603,16 @@
 					"parameters": {
 						"object": "Bathroom"
 					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 164265526229336,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -1635,6 +1645,16 @@
 					"sid": 273777002427427,
 					"parameters": {
 						"object": "Start_Sink_minigame"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 232868576605303,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
 					}
 				}
 			],

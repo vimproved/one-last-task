@@ -184,7 +184,12 @@
 					"Box1End",
 					"box2end",
 					"box4end",
-					"box3end"
+					"box3end",
+					"BookFragment",
+					"BoxMgBedroom",
+					"PeripheralFragment",
+					"PillowFragment",
+					"PosterFragment"
 				],
 				"subfolders": [],
 				"name": "Organize Bedroom"
@@ -196,8 +201,7 @@
 					"BoxHighlight",
 					"OnlyBedHighlight",
 					"SleepBox",
-					"Sleep",
-					"BoxMgBedroom"
+					"Sleep"
 				],
 				"subfolders": [],
 				"name": "Bedroom"
@@ -218,7 +222,8 @@
 					"Bathroom",
 					"Bedroom",
 					"BoxStartBox",
-					"WorkStartBox"
+					"WorkStartBox",
+					"TutorialAfterBoundaries"
 				],
 				"subfolders": [],
 				"name": "Playerboundaries"
