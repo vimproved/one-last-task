@@ -154,14 +154,6 @@
 							"id": "typewriter-finish",
 							"objectClass": "DialogueText",
 							"sid": 953910350671797
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "TestingObject",
-							"sid": 184710500387278,
-							"parameters": {
-								"visibility": "visible"
-							}
 						}
 					],
 					"sid": 437382425433888

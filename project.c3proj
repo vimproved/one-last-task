@@ -22,13 +22,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "HTMLElement",
-			"name": "HTML Element",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -92,13 +85,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "iframe",
-			"name": "iframe",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "progressbar",
 			"name": "Progress bar",
 			"author": "Scirra",
@@ -157,28 +143,14 @@
 	"uniqueId": "k43vav0srtm",
 	"objectTypes": {
 		"items": [
-			"TestingObject",
 			"Keyboard",
 			"Mouse",
-			"TiledBackground",
-			"TiledBackground2",
-			"Sprite5",
 			"ProgressBar",
-			"Sprite2",
+			"StressMeter",
 			"Start_Sink_minigame",
-			"Sink",
-			"spr_Sponge",
-			"spr_Dirt",
-			"Particles",
-			"Sprite6",
 			"FullApartment",
 			"SliderBar",
-			"FullApartment2",
-			"Sprite3",
-			"Sprite4",
-			"Sprite7",
 			"Audio",
-			"LikeMagic",
 			"Endings"
 		],
 		"subfolders": [
@@ -219,19 +191,19 @@
 			{
 				"items": [
 					"PlayerMovement",
-					"Full_background",
 					"OnlyBedroom",
 					"BoxHighlight",
 					"OnlyBedHighlight",
 					"SleepBox",
-					"Sleep"
+					"Sleep",
+					"BoxMgBedroom"
 				],
 				"subfolders": [],
 				"name": "Bedroom"
 			},
 			{
 				"items": [
-					"StresBar_background",
+					"StressBar_background",
 					"StressLevel"
 				],
 				"subfolders": [],
@@ -262,8 +234,7 @@
 					"IngButton",
 					"Cauldron",
 					"OrderTray",
-					"Timer",
-					"WorkBg"
+					"Timer"
 				],
 				"subfolders": [],
 				"name": "MgPotion"
@@ -290,8 +261,6 @@
 							"Fireflux",
 							"FullName",
 							"Honors",
-							"HTMLElement",
-							"iframe",
 							"JobSubmit",
 							"OpalInfo",
 							"OtherCerts",
@@ -314,7 +283,8 @@
 							"SpellExperience",
 							"SunMoon",
 							"WithMagic",
-							"ComputerExit2"
+							"ComputerExit2",
+							"LikeMagic"
 						],
 						"subfolders": [],
 						"name": "job"
@@ -328,6 +298,16 @@
 				],
 				"subfolders": [],
 				"name": "Opal"
+			},
+			{
+				"items": [
+					"Particles",
+					"Sink",
+					"spr_Dirt",
+					"spr_Sponge"
+				],
+				"subfolders": [],
+				"name": "Sink"
 			}
 		]
 	},

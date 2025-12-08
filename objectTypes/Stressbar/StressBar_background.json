@@ -1,7 +1,7 @@
 {
-	"name": "WorkBg",
+	"name": "StressBar_background",
 	"plugin-id": "Sprite",
-	"sid": 827822719173094,
+	"sid": 765029213266971,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 2209,
-						"height": 2048,
-						"originX": 0,
-						"originY": 0,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5354643,
+						"imageSpriteId": 5324798,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 379908275146721,
+				"sid": 885740862807612,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -415,14 +415,6 @@
 							"objectClass": "SpacePrompt",
 							"sid": 259450001807385,
 							"behaviorType": "Tween"
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "TestingObject",
-							"sid": 513922526684520,
-							"parameters": {
-								"visibility": "visible"
-							}
 						}
 					],
 					"sid": 382400213055169

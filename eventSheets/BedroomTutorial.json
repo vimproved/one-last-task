@@ -461,7 +461,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "StresBar_background",
+					"objectClass": "StressBar_background",
 					"sid": 643320972751001,
 					"disabled": true,
 					"parameters": {

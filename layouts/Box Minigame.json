@@ -44,7 +44,7 @@
 					}
 				},
 				{
-					"type": "Sprite7",
+					"type": "BoxMgBedroom",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
