@@ -243,6 +243,22 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 909062733129710,
+					"parameters": {
+						"variable": "BathroomClean",
+						"value": "true"
+					}
+				},
+				{
+					"callFunction": "addStress",
+					"sid": 995446196972728,
+					"parameters": [
+						"-8"
+					]
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 143727714184855,

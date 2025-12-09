@@ -112,6 +112,16 @@
 			"sid": 567782844540019
 		},
 		{
+			"eventType": "variable",
+			"name": "BathroomClean",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 413264121610013
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Dialogue",
@@ -907,9 +917,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 937277989281713,
+					"sid": 468755588003015,
 					"parameters": {
-						"interval-seconds": "8"
+						"interval-seconds": "7"
 					}
 				},
 				{

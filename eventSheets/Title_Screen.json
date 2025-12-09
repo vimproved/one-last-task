@@ -49,10 +49,20 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 920041049221367,
+					"sid": 850634874143335,
 					"disabled": true,
 					"parameters": {
 						"variable": "DayBegin",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 710747587489146,
+					"disabled": true,
+					"parameters": {
+						"variable": "WorkComplete",
 						"value": "true"
 					}
 				},

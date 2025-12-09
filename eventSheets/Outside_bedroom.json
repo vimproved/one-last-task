@@ -81,6 +81,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 907803499473475,
+					"parameters": {
+						"variable": "BathroomClean",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "destroyDialogue",
 					"sid": 206167222045564
 				},
@@ -229,6 +238,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 656976405848153,
+					"parameters": {
+						"variable": "BathroomClean",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "destroyDialogue",
 					"sid": 389737528952444
 				},
@@ -347,6 +365,15 @@
 					"parameters": {
 						"variable": "WorkComplete"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 932701793240396,
+					"parameters": {
+						"variable": "BathroomClean"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -382,9 +409,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 250228307712132,
+					"sid": 675953735273605,
 					"parameters": [
-						"\"Wow, I'm tired ... still need to get some job applications done though. Or just 5 minutes of that memory game ...\"",
+						"\"Wow, I'm tired, I still need to get some job applications done though. Or just 5 minutes of that memory game ...\"",
 						"\"Opal\""
 					]
 				},
@@ -392,6 +419,22 @@
 					"id": "wait-for-signal",
 					"objectClass": "System",
 					"sid": 703160081449750,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "dialogue",
+					"sid": 725522289193956,
+					"parameters": [
+						"\"That mirror in the bathroom gets dirty every day. If I clean it then I won't have to stress so much about mold growth.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 743456884336991,
 					"parameters": {
 						"tag": "\"Next\""
 					}
@@ -455,6 +498,15 @@
 					"sid": 893006738869915,
 					"parameters": {
 						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 724154117004697,
+					"parameters": {
+						"variable": "BathroomClean",
 						"value": "false"
 					}
 				},
@@ -585,6 +637,15 @@
 					"parameters": {
 						"variable": "WorkComplete"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 181674895839675,
+					"parameters": {
+						"variable": "BathroomClean"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -636,9 +697,9 @@
 				},
 				{
 					"callFunction": "dialogue",
-					"sid": 196537930364512,
+					"sid": 374069442282404,
 					"parameters": [
-						"\"It might be a good idea for me to get some job applications done.\"",
+						"\"It might be a good idea for me to get some job applications done. That mirror gunk is back again too.\"",
 						"\"Opal\""
 					]
 				},
@@ -709,6 +770,15 @@
 					"sid": 188109619689272,
 					"parameters": {
 						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 634553595806229,
+					"parameters": {
+						"variable": "BathroomClean",
 						"value": "false"
 					}
 				},
@@ -839,6 +909,15 @@
 					"parameters": {
 						"variable": "WorkComplete"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 171605805383384,
+					"parameters": {
+						"variable": "BathroomClean"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -946,6 +1025,15 @@
 					"sid": 592637519527935,
 					"parameters": {
 						"variable": "ComputerUsed",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 575496819352575,
+					"parameters": {
+						"variable": "BathroomClean",
 						"value": "false"
 					}
 				},
@@ -1170,6 +1258,14 @@
 					"parameters": {
 						"object": "Bathroom"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 207553239739848,
+					"parameters": {
+						"variable": "BathroomClean"
+					}
 				}
 			],
 			"actions": [
@@ -1184,6 +1280,45 @@
 				}
 			],
 			"sid": 341327687068457
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 504665069437885
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 964023172035680,
+					"parameters": {
+						"object": "Bathroom"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 229575232242190,
+					"parameters": {
+						"variable": "BathroomClean"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 109939786375364,
+					"parameters": {
+						"animation": "\"DirtyBath\"",
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 611970070853903
 		},
 		{
 			"eventType": "block",
@@ -1489,6 +1624,14 @@
 						"comparison": 1,
 						"second-value": "1"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 976121103803785,
+					"parameters": {
+						"variable": "BathroomClean"
+					}
 				}
 			],
 			"actions": [
@@ -1503,6 +1646,63 @@
 				}
 			],
 			"sid": 509862206650370
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 179951805084517
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 721124858448477,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 611218383555317,
+					"parameters": {
+						"object": "Bathroom"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 195164853808993,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 559632366605365,
+					"parameters": {
+						"variable": "BathroomClean"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "FullApartment",
+					"sid": 502340458900101,
+					"parameters": {
+						"animation": "\"DirtyBathHL\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 348516747899502
 		},
 		{
 			"eventType": "block",
@@ -1550,6 +1750,15 @@
 						"comparison": 1,
 						"second-value": "5"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 783637432293961,
+					"parameters": {
+						"variable": "BathroomClean"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -1589,6 +1798,86 @@
 				}
 			],
 			"sid": 146960828237697
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 599767779673061,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 352249103633588,
+					"parameters": {
+						"object": "Start_Sink_minigame"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 897583021908173,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 369039870745791,
+					"parameters": {
+						"variable": "WorkComplete"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 789583886310816,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 1,
+						"second-value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 101175753394293,
+					"parameters": {
+						"variable": "BathroomClean"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 243093258666945,
+					"parameters": [
+						"\"That mirror looks pretty clean to me already.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 725266010108823,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 932696114839115
+				}
+			],
+			"sid": 576601364708351
 		},
 		{
 			"eventType": "block",
@@ -2901,9 +3190,9 @@
 				},
 				{
 					"callFunction": "addStress",
-					"sid": 233053538500877,
+					"sid": 550900063950525,
 					"parameters": [
-						"-15"
+						"-7"
 					]
 				},
 				{
@@ -3596,9 +3885,9 @@
 				},
 				{
 					"callFunction": "addStress",
-					"sid": 297451653217430,
+					"sid": 859866613812139,
 					"parameters": [
-						"10"
+						"12"
 					]
 				},
 				{
