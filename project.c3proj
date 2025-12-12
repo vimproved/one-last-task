@@ -194,7 +194,6 @@
 			{
 				"items": [
 					"StressBar_background",
-					"StressLevel",
 					"StressFiller",
 					"StressMeter"
 				],
@@ -217,7 +216,6 @@
 			},
 			{
 				"items": [
-					"MgPotionBg",
 					"Potion",
 					"MainPotionBg",
 					"Recipes",
@@ -253,7 +251,6 @@
 							"Fireflux",
 							"FullName",
 							"Honors",
-							"JobSubmit",
 							"OpalInfo",
 							"OtherCerts",
 							"Species",
@@ -276,7 +273,8 @@
 							"SunMoon",
 							"WithMagic",
 							"ComputerExit2",
-							"LikeMagic"
+							"LikeMagic",
+							"AppSubmit"
 						],
 						"subfolders": [],
 						"name": "job"

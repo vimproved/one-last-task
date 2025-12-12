@@ -42,6 +42,24 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 126047244419253,
+					"parameters": {
+						"variable": "dirtcount",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 246167648767011,
+					"parameters": {
+						"variable": "smearcount",
+						"value": "4"
+					}
 				}
 			],
 			"sid": 791595510137321

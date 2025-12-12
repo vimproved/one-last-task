@@ -501,15 +501,6 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "StressLevel",
-					"sid": 282199490591933,
-					"disabled": true,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
 					"callFunction": "destroyDialogue",
 					"sid": 117486725211879,
 					"disabled": true

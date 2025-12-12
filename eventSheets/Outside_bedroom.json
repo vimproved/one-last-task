@@ -1416,6 +1416,68 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
+					"sid": 561449122110287,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 870563671596682,
+					"parameters": {
+						"object": "BoxStartBox"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlayerMovement",
+					"sid": 964312244589568,
+					"parameters": {
+						"object": "Bedroom"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 315245106968777,
+					"parameters": {
+						"first-value": "Day",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dialogue",
+					"sid": 688487389405335,
+					"parameters": [
+						"\"I think I finished unpacking.\"",
+						"\"Opal\""
+					]
+				},
+				{
+					"id": "wait-for-signal",
+					"objectClass": "System",
+					"sid": 619826638481395,
+					"parameters": {
+						"tag": "\"Next\""
+					}
+				},
+				{
+					"callFunction": "destroyDialogue",
+					"sid": 676878597226904
+				}
+			],
+			"sid": 869552799906659
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
 					"sid": 686490605438542,
 					"parameters": {
 						"key": 69
@@ -3885,10 +3947,18 @@
 				},
 				{
 					"callFunction": "addStress",
-					"sid": 859866613812139,
+					"sid": 861780637520763,
 					"parameters": [
-						"12"
+						"2"
 					]
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "StressFiller",
+					"sid": 703585650502990,
+					"parameters": {
+						"frame-number": "stress"
+					}
 				},
 				{
 					"callFunction": "dialogue",
@@ -3980,6 +4050,14 @@
 					"parameters": [
 						"-25"
 					]
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "StressFiller",
+					"sid": 673111360979525,
+					"parameters": {
+						"frame-number": "stress"
+					}
 				},
 				{
 					"callFunction": "dialogue",

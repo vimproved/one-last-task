@@ -36,7 +36,7 @@ export class MgApps {
     private sunMoon?: InstanceType.SunMoon
     private likeMagic?: InstanceType.LikeMagic
 
-    private submit?: InstanceType.JobSubmit
+    private submit?: InstanceType.AppSubmit
 
     private exit?: InstanceType.ComputerExit2
 
@@ -93,45 +93,9 @@ export class MgApps {
 
         this.experience = this.runtime.objects.Experience.getFirstInstance()!
 
-        this.submit = this.runtime.objects.JobSubmit.getFirstInstance()!
+        this.submit = this.runtime.objects.AppSubmit.getFirstInstance()!
 
         this.exit = this.runtime.objects.ComputerExit2.getFirstInstance()!
-
-
-        this.submit!.addEventListener("click", () => {
-            if (
-                this.address!.text.includes("123") &&
-                this.address!.text.includes("Kelp") &&
-                this.address!.text.includes("Atlantis") &&
-                this.bankAccount!.text == "12345678" &&
-                this.bankRouting!.text == "87654321" &&
-                this.experience!.text.length > 4 &&
-                (this.favAnimal!.text.includes("Ferret") || this.favAnimal!.text.includes("ferret")) &&
-                (this.favColor!.text.includes("Green") || this.favColor!.text.includes("green")) &&
-                this.fullName!.text.includes("Opal") &&
-                this.fullName!.text.includes("Codson") &&
-                this.honors!.text.length > 4 &&
-                this.otherCerts!.text.length > 4 &&
-                (this.species!.text.includes("Human") || this.species!.text.includes("human")) &&
-                this.ssn!.text.includes("111") &&
-                this.ssn!.text.includes("2") &&
-                this.halfHuman!.isChecked &&
-                this.withMagic!.isChecked &&
-                this.gender!.getItemText(this.gender!.selectedIndex) == "Other" &&
-                this.diploma!.isChecked &&
-                !(this.crimeRecord!.isChecked) &&
-                this.spellExperience!.isChecked &&
-                this.leadership!.isChecked &&
-                this.cake!.getItemText(this.cake!.selectedIndex) == "Yes" &&
-                this.sunMoon!.getItemText(this.sunMoon!.selectedIndex) == "Moon" &&
-                this.likeMagic!.getItemText(this.likeMagic!.selectedIndex) == "Yes"
-            ) {
-                this.done = true
-                this.submitted = true
-            } else {
-                this.runtime.signal("wrongInfo")
-            }
-        })
     }
 
     tick() {
@@ -188,6 +152,39 @@ export class MgApps {
                 this.runtime.layout.getLayer("App1")!.isInteractive = false
                 this.runtime.layout.getLayer("App2")!.isInteractive = false
                 this.runtime.layout.getLayer("App3")!.isInteractive = true
+            } else if (this.submit!.containsPoint(this.mouse.getMouseX(), this.mouse.getMouseY())) {
+                if (
+                    this.address!.text.includes("123") &&
+                    this.address!.text.includes("Kelp") &&
+                    this.address!.text.includes("Atlantis") &&
+                    this.bankAccount!.text == "12345678" &&
+                    this.bankRouting!.text == "87654321" &&
+                    this.experience!.text.length > 4 &&
+                    (this.favAnimal!.text.includes("Ferret") || this.favAnimal!.text.includes("ferret")) &&
+                    (this.favColor!.text.includes("Green") || this.favColor!.text.includes("green")) &&
+                    this.fullName!.text.includes("Opal") &&
+                    this.fullName!.text.includes("Codson") &&
+                    this.honors!.text.length > 4 &&
+                    this.otherCerts!.text.length > 4 &&
+                    (this.species!.text.includes("Human") || this.species!.text.includes("human")) &&
+                    this.ssn!.text.includes("111") &&
+                    this.ssn!.text.includes("2") &&
+                    this.halfHuman!.isChecked &&
+                    this.withMagic!.isChecked &&
+                    this.gender!.getItemText(this.gender!.selectedIndex) == "Other" &&
+                    this.diploma!.isChecked &&
+                    !(this.crimeRecord!.isChecked) &&
+                    this.spellExperience!.isChecked &&
+                    this.leadership!.isChecked &&
+                    this.cake!.getItemText(this.cake!.selectedIndex) == "Yes" &&
+                    this.sunMoon!.getItemText(this.sunMoon!.selectedIndex) == "Moon" &&
+                    this.likeMagic!.getItemText(this.likeMagic!.selectedIndex) == "Yes"
+                ) {
+                    this.done = true
+                    this.submitted = true
+                } else {
+                    this.runtime.signal("wrongInfo")
+                }
             }
         }
     }

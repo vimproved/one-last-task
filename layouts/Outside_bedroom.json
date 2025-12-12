@@ -2712,45 +2712,6 @@
 							}
 						},
 						{
-							"type": "JobSubmit",
-							"properties": {
-								"type": "button",
-								"text": "Submit",
-								"tooltip": "",
-								"initially-visible": true,
-								"enabled": true,
-								"auto-font-size": true,
-								"checked": false,
-								"id": "",
-								"class": ""
-							},
-							"uid": 125,
-							"sid": 844694747270047,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 844694747270047,
-								"expanded": true
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 765,
-								"y": 443,
-								"width": 72,
-								"height": 24,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						},
-						{
 							"type": "AppInfo",
 							"properties": {
 								"initially-visible": true,
@@ -2812,6 +2773,43 @@
 								"y": 35.779367,
 								"width": 122.17828034346235,
 								"height": 70.91736146118951,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "AppSubmit",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 101,
+							"sid": 386310136688806,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 386310136688806,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 797.7118536543327,
+								"y": 464.32050275921625,
+								"width": 98.40594409899421,
+								"height": 20.20836352032916,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -3490,45 +3488,6 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "JobSubmit",
-							"properties": {
-								"type": "button",
-								"text": "Submit",
-								"tooltip": "",
-								"initially-visible": true,
-								"enabled": true,
-								"auto-font-size": true,
-								"checked": false,
-								"id": "",
-								"class": ""
-							},
-							"uid": 99,
-							"sid": 992189259692400,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 992189259692400,
-								"expanded": true
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 623,
-								"y": 769,
-								"width": 72,
-								"height": 24,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						},
-						{
 							"type": "Species",
 							"properties": {
 								"text": "",
@@ -3885,7 +3844,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": false,
-			"isHTMLElementsLayer": false,
+			"isHTMLElementsLayer": true,
 			"color": [
 				1,
 				1,

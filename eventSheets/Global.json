@@ -950,14 +950,6 @@
 					]
 				},
 				{
-					"id": "set-text",
-					"objectClass": "StressLevel",
-					"sid": 101822252807039,
-					"parameters": {
-						"text": "stress"
-					}
-				},
-				{
 					"id": "set-animation-frame",
 					"objectClass": "StressFiller",
 					"sid": 841294393434506,
